@@ -1,0 +1,7 @@
+header nav .menu li:first-child a{
+    color: var(--primary-color);
+}
+
+.container{
+    height: 3000px;
+}

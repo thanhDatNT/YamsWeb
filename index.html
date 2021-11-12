@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/home.css">
+
+</head>
+<body>
+    <div class="app">
+        <!-- Start Header -->
+        <header>
+            <nav >
+                <!-- Logo Yams -->
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+                </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <li><a href="index.html" class="item">Trang chủ</a><div class="underline"></div></li>
+                    <li><a href="product.html" class="item">Sản phẩm</a><div class="underline"></div></li>
+                    <li><a href="diet.html" class="item">Ăn kiêng</a><div class="underline"></div></li>
+                    <li><a href="blog.html" class="item">Blog</a><div class="dot"></div></li>
+                    <li><a href="aboutus.html" class="item">Về chúng tôi</a><div class="dot"></div></li>
+                    
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <a href="#" id="find-btn">Tìm</a>
+                    <a href="#" id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></a>
+                    <!-- Cart icon and status -->
+                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <div class="non-empty"></div>
+                        </div>
+                    </a>
+                    
+                    <!-- Account icon -->
+                    <a href="#" id="account-icon">
+                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- ==========Start layout container============= -->
+        <div class="container">
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+        </div>
+        <!-- ===========End Container=========== -->
+        <!-- ===========Start Footer============ -->
+        <footer></footer>
+        <!-- Start scripts -->
+        <script src="./js/home.js"></script>
+    </div>
+</body>
+</html>

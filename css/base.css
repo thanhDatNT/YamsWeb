@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Mulish:wght@200;300;400;500;600;700&family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* 
+font-family: 'Coiny', cursive;
+font-family: 'Mulish', sans-serif;
+font-family: 'Nunito', sans-serif;
+*/
+:root{
+    --primary-color: #FA4E88;
+    --background: #F9F6F1;
+    --text-color: #333333;
+    --inactive: #97989A;
+    --item-1: #DBEAED;
+    --item-2: #F3DFE0;
+    --item-3: #E4EEE3;
+    --item-4: #E8E1CF;
+    --black: #000;
+    --black-1: #252627;
+    --black-2: #666;
+    --black-3: #262626;
+    --black-4: rgba(38,38,38,0.5);
+    --black-6: rgba(38,38,38,0.5);
+    --black-5: rgba(0,0,0,0.35);
+}
+
+*{
+    box-sizing: inherit;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.71rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+.clear{
+    clear: both;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    font-family: 'Coiny', cursive;
+    color: var(--primary-color);
+}
+
+h3, h4, h5, h6{
+    font-family: 'Nunito', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img{ width: 100%;}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+.underline{
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    transform: translateY(4px);
+    transform-origin: left;
+    transition: width 0.3s ease-in;
+    
+}
+
+/* =========== Key frames=========== */
+@keyframes display{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
