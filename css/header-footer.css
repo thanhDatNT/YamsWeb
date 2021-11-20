@@ -1,20 +1,37 @@
 /* =========HEADER======== */
 header nav{
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     background-color: white;
     width: 100%;
     height: 60px;
+    line-height: 0;
     padding: 0 12px;
     box-shadow: 2px 2px 8px rgb(0 0 0 / 10%);
     z-index: 100;
+    transform-origin: top;
+    transform: translateY(0);
+    transition: transform 0.4s linear;
 }
 
 header nav .logo{
     width: 60px;
     padding: 8px;
     float: left;
+}
+
+#menu-icon{
+    float: left;
+    font-size: 2.8rem;
+    line-height: 60px;
+    margin-left: 12px;
+    transform: scale(1);
+    transition: all 0.3s;
+    display: none;
+}
+
+#menu-icon:hover{
+    color: var(--primary-color);
+    transform: scale(1.5);
 }
 
 header nav .menu{
@@ -24,11 +41,13 @@ header nav .menu{
     align-items: center;
     margin: 0 12px;
     float: left;
+    line-height: 1.71rem;
 }
 
 header nav .menu li{
     width: fit-content;
     margin: 0 12px;
+    position: relative;
 }
 
 header nav .menu li a{
@@ -39,25 +58,64 @@ header nav .menu li a:hover{
     color: var(--primary-color);
 }
 
-header nav .menu li a:hover ~ .dot{
-    transform: translateY(4px);
+header nav .menu li a:hover ~ .dot,
+header nav .menu #menu:hover .dot{
+    transform: scale(1);
     display: block;
 }
 
-header nav .menu li a:hover ~ .underline{
-    width: 100%;
+header nav .menu #menu{padding: 12px 0;}
+
+header nav .menu #menu:hover .child-1{display: block;}
+
+header nav .menu #menu:hover .item{
+    color: var(--primary-color);
+} 
+
+header nav .menu #menu::after{
+    content: "";
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    left: 0;
 }
 
-header nav .menu li .dot{
-    width: 8px;
-    height: 8px;
-    background-color: var(--primary-color);
+/* Sub menu */
+
+header nav .menu #menu .child-1{
+    position: absolute;
+    top: 50px;
+    left:0;
     border-radius: 4px;
-    margin: 0 auto;
-    transform: translateY(15px);
-    transition: transform 0.5s ease-in;
+    width: 200px;
+    background-color: white;
+    z-index: 100;
     display: none;
 }
+
+header nav .menu #menu .child-1 ul li{
+    width: 100%;
+    padding: 10px 14px;
+    margin: 0;
+}
+
+header nav .menu #menu .child-1 ul li:hover{background-color: var(--item-2);}
+
+header nav .menu #menu .child-1 ul li:last-child .child-2{
+    position: absolute;
+    border-radius: 4px;
+    width: 200px;
+    background-color: white;
+    z-index: 100;
+    left: 100%;
+    top: 0px;
+    display: none;
+}
+
+header nav .menu #menu .child-1 ul li:last-child:hover .child-2{display: block;}
+
+/* Right group icons */
 
 header nav .group-icons{
     float: right;
@@ -65,6 +123,7 @@ header nav .group-icons{
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.71rem
 }
 
 header nav .group-icons a{
@@ -76,6 +135,8 @@ header nav .group-icons a{
 header nav .group-icons a:hover{
     color: var(--primary-color);
 }
+
+/* Search area */
 
 #search-input{
     width: 400px;
@@ -106,9 +167,7 @@ header nav .group-icons a:hover{
     display: none;
 }
 
-/* #search-icon:focus ~ #search-input{
-    transform: scaleX(1);
-} */
+/* Cart */
 
 #cart-icon{position: relative;}
 
@@ -145,7 +204,170 @@ header nav .group-icons .cart-box::before{
     z-index: 101;
 }
 
-header nav .group-icons .cart-box .empty-cart{
-    width: 300px;
-    height: 180px;
+header nav .group-icons .cart-box .empty-cart{width: 300px;}
+
+/* Responsive for header */
+/* Small Desktop */
+@media (max-width: 1152px){
+    #search-input{width: 200px}
+}
+
+/* Tablet */
+@media (max-width: 968px){
+    header nav .menu{display: none;}
+    #menu-icon{display: block;}
+    header nav .logo{
+        position: absolute;
+        float: none;
+        left: 40%;
+        top: 0;}
+}
+
+/* Smart phone */
+@media (max-width: 428px){
+    header nav .logo{display: none;}
+    #search-icon{display: none;}
+    #search-input{
+        width: 200px;
+        transform: scaleX(1);
+    }
+    #find-btn{display: none;}
+    header nav .group-icons a{padding: 0 4px;}
+    #cart-icon:hover .cart-box{display: none;
+        transform: scaleY(0);}
+}
+/* 
+    ==============
+    FOOTER
+    ==============
+*/
+footer{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer .wrapper{
+    width: 100%;
+    padding: 44px 40px;
+    text-align: left;
+}
+
+footer .wrapper .big-logo{
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+footer .wrapper .big-logo .logo{
+    width: 50%;
+    margin: 0 auto;
+}
+
+footer .wrapper .big-logo h3{
+    font-size: 2.8rem;
+    margin-top: 20px;
+    line-height: 2.8rem;
+    color: white;
+}
+
+footer .wrapper .links{
+    width: 76%;
+    margin-left: 4%;
+    float: left;
+}
+
+footer .wrapper .links .aboutus h3,
+footer .wrapper .links .contact h3,
+footer .wrapper .links .follow h3{
+    color: white;
+    font-size: 2rem;
+    margin: 12px 0;
+    cursor:text;
+    line-height: 2rem;
+}
+
+footer .wrapper .links .aboutus{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+footer .wrapper .links .aboutus .item{
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+footer .wrapper .links .contact{
+    width: 50%;
+    float: left;
+    margin-right: 5%;
+}
+
+footer .wrapper .links .contact ul li{
+    margin-bottom: 14px;
+    width: fit-content;
+}
+
+footer .wrapper .links .contact ul li .icon{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 2rem;
+    margin-right: 4px;
+    float: left;
+    font-size: 1.6rem;
+}
+
+footer .wrapper .links .contact ul li a{
+    font-size: 1.4rem;
+}
+
+footer .wrapper .links .follow{
+    width: 20%;
+    float: right;
+    text-align: center;
+}
+
+footer .wrapper .links .follow .media{
+    font-size: 2.8rem;
+}
+
+footer a{
+    color: white;
+    transform-origin: left;
+    transform:scale(1);
+    transition: 0.3s;
+}
+
+footer a:hover{
+    transform:scale(1.1);
+    color: var(--item-2);
+}
+
+footer hr{
+    margin: 36px 0;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* Responsive for Footer*/
+@media (max-width: 428px){
+    footer, footer .wrapper{height: fit-content;}
+    footer .wrapper .big-logo{margin-top: 20px;}
+    footer .wrapper .big-logo, footer .wrapper .links,
+    footer .wrapper .links .aboutus,
+    footer .wrapper .links .contact,
+    footer .wrapper .links .follow{
+        float: none;
+        width: 100%;}
+    footer .wrapper .links .aboutus h3,
+    footer .wrapper .links .contact h3{text-align: center;
+    margin: 20px 0;}
+    footer .wrapper .clear{display: none;}
 }

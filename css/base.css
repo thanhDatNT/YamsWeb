@@ -5,8 +5,10 @@ font-family: 'Coiny', cursive;
 font-family: 'Mulish', sans-serif;
 font-family: 'Nunito', sans-serif;
 */
+/* Base.css use for managing: THEME, RESET CSS, COMMON ELEMENTS, KEYFRAMES */
 :root{
     --primary-color: #FA4E88;
+    --secondary: #FF9472;
     --background: #F9F6F1;
     --text-color: #333333;
     --inactive: #97989A;
@@ -19,9 +21,10 @@ font-family: 'Nunito', sans-serif;
     --black-2: #666;
     --black-3: #262626;
     --black-4: rgba(38,38,38,0.5);
-    --black-6: rgba(38,38,38,0.5);
     --black-5: rgba(0,0,0,0.35);
 }
+
+/* RESET CSS */
 
 *{
     box-sizing: inherit;
@@ -39,8 +42,9 @@ html {
     scroll-behavior: smooth;
 }
 
-.clear{
-    clear: both;
+::selection{
+    color: white;
+    background-color: var(--primary-color);
 }
 
 h1,h2,h3,h4,h5,h6, p {
@@ -53,8 +57,11 @@ h1, h2{
     color: var(--primary-color);
 }
 
+h2{font-size: 5.4rem; line-height: 5rem;}
+
 h3, h4, h5, h6{
     font-family: 'Nunito', sans-serif;
+    color: var(--text-color);
 }
 
 a{
@@ -62,12 +69,30 @@ a{
     color: var(--text-color);
 }
 
+del{color: var(--inactive);}
+
 ul, ol{
     list-style: none;
 }
 
-img{ width: 100%;}
+hr{border: 1px solid white;}
 
+img{ 
+    width: 100%;
+}
+
+/* COMMON ELEMENTS */
+.clear{clear: both;}
+/* clear: Handle float for a group of child elements when using float*/
+
+.font-xxl{
+    font-size: 96px;
+    line-height: 84px;
+}
+
+.font-xl{
+    font-size: 40px;
+}
 .active{
     display: block;
 }
@@ -84,15 +109,137 @@ img{ width: 100%;}
     transform: translateY(4px);
     transform-origin: left;
     transition: width 0.3s ease-in;
-    
 }
 
-/* =========== Key frames=========== */
+.dot{
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease-in;
+    display: none;
+    z-index: 1;
+}
+
+/* Button Types */
+/* General button */
+.btn{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+/* Customize button */
+.btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-second{
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-third{
+    font-weight: 700;
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 0 1px 4px var(--black-4);
+}
+
+/* Image background with bubble floating animation */
+
+.floating-buble{
+    width: 400px;
+    transform: translateY(200px);
+    animation: translateVertical 30s ease-in infinite;
+}
+
+/* Product item view holder */
+.product-item{
+    width: 100%;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: var(--item-1);
+    position: relative;
+}
+
+.product-item .tag{
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    width: 40px;
+    height: 36px;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 32px;
+    border-top-left-radius: 6px;
+    background: linear-gradient(var(--primary-color), var(--secondary));
+}
+
+.product-item .tag::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-width: 0 20px 6px;
+    border-style: solid;
+    border-color: transparent var(--secondary) transparent var(--secondary);
+}
+
+.product-item .thumb{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+.product-item .thumb img{height: 100%;}
+.product-item .detail{
+    width: 100%;
+    padding: 20px 14px;
+}
+
+.product-item .detail .name{margin-bottom: 22px; font-size: 2.5rem; line-height: 2.6rem;}
+
+.product-item .detail .price{color: var(--primary-color); font-size: 2rem;}
+
+.product-item .detail .price .iconify{margin-right: 6px; font-size: 1.7rem;}
+
+.product-item .detail .add{font-size: 5rem; color: var(--primary-color); position: absolute; bottom: 12px; right: 14px; transform-origin: center;transform: scale(1); transition: 0.4s;}
+.product-item .detail .add:hover{transform: scale(1.2);}
+
+@media (min-width: 769px) and (max-width: 1200px){
+    .product-item{height: 400px;}
+    .product-item .detail .name{font-size: 2rem; margin-bottom: 16px;line-height: 2rem;}
+}
+
+@media (max-width: 428px){
+    .product-item{margin: 16px 0; border-radius: 16px;}
+}
+
+/* Product item with tag */
+
+/* =========== KEYFREAMES FOR ANIMATIONS =========== */
 @keyframes display{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+    from{transform:scaleX(0);}
+    to{transform: scaleX(1);}
+}
+
+@keyframes zoomIn{
+    0%{transform: scale(1, 1)}
+    100%{transform:scale(1.1, 1.1)}
+}
+
+@keyframes translateVertical{
+    0%{transform: translateY(200px);}
+    25%{transform: translateY(100px);}
+    75%{transform: translateY(300px);}
+    100%{transform: translateY(200px);}
 }

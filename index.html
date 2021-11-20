@@ -7,7 +7,7 @@
     <title>Yams</title>
     <!-- Mandatory links -->
     <!-- Logo on Tabs -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png"> -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
     <link rel="manifest" href="./images/favicons/site.webmanifest">
     <!-- CSS base source, Header - Footer and Icons for all HTML files -->
@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="app">
-        <!-- Start Header -->
+        <!-- ==========Start Header=========== -->
         <header>
             <nav >
                 <!-- Logo Yams -->
@@ -28,10 +28,30 @@
                     <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
                 </div>
                 <!-- Menu -->
+                <a href="#" id="menu-icon"><span class="iconify" data-icon="eva:menu-fill"></span></a>
                 <ul class="menu">
-                    <li><a href="index.html" class="item">Trang chủ</a><div class="underline"></div></li>
-                    <li><a href="product.html" class="item">Sản phẩm</a><div class="underline"></div></li>
-                    <li><a href="diet.html" class="item">Ăn kiêng</a><div class="underline"></div></li>
+                    <li><a href="index.html" class="item">Trang chủ</a><div class="dot"></div></li>
+                    <li id="menu"><a href="menu.html" class="item">Menu</a><div class="dot"></div>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="#" class="sub-item-2">Macaroon</a></li>
+                                            <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a><div class="dot"></div></li>
                     <li><a href="blog.html" class="item">Blog</a><div class="dot"></div></li>
                     <li><a href="aboutus.html" class="item">Về chúng tôi</a><div class="dot"></div></li>
                     
@@ -60,18 +80,458 @@
             </nav>
         </header>
         <!-- ==========Start layout container============= -->
-        <div class="container">
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
+        <div id="container">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item"></div>
+                    <div class="slider-item"></div>
+                    <div class="slider-item"></div>
+                </div>
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1 class="font-xxl title">You Are My <br>
+                        Sweetie...</h1>
+                    <h3 class="description">Chọn bánh ưa thích của bạn và đặt hàng <br>để thưởng thức ngay thôi nào!</p>
+                </div>
+            </section>
+            <!-- Start Hightlight session -->
+            <section id="hightlight">
+                <!-- Summary box -->
+                <div class="summary">
+                    <div class="wrapper">
+                        <div class="item"><span class="iconify" data-icon="ci:cupcake"></span>
+                            <p class="description">Hơn 100 loại bánh với hương vị khác nhau</p>
+                        </div>
+                        <div class="item"><span class="iconify" data-icon="carbon:delivery"></span>
+                            <p class="description">Thời gian giao hàng linh hoạt theo yêu cầu khách hàng</p></div>
+                        <div class="item"><span class="iconify" data-icon="carbon:airline-passenger-care"></span>
+                            <p class="description">Nhiều ưu đãi hấp dẫn dành cho Yams’ member</p></div>
+                        <div class="item"><span class="iconify" data-icon="ri:secure-payment-fill"></span>
+                            <p class="description">Phương thức thanh toán an toàn và bảo mật</p></div>
+                    </div>
+                </div>
+                <!-- Hightlight box -->
+                <div class="hl-box">
+                    <div class="wrapper">
+                        <div class="content-box">
+                            <div class="logo">
+                                <div class="image"><img src="./images/logo/Logo_NoBg_Pink.png" alt="logo"></div>
+                                <hr>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">Điểm nổi bật của Yams</h3>
+                                <p class="description">Yams tự hào là công ty start-up về bánh ngọt lớn nhất khu vực Đông Nam Bộ với hơn 10 chi nhánh tại các quận, huyện thuộc TP. Hồ Chí Minh.
+                                    <br><br>
+                                    Đến với Yams, bạn sẽ được trải nghiệm cảm giác như đang lạc vào vương quốc của những loại bánh mang nhiều hương vị khác nhau.</p>
+                                <a href="aboutus.html" class="more"><b>Xem thêm</b><span class="iconify" data-icon="akar-icons:chevron-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <img src="https://eatsy.bold-themes.com/burger/wp-content/uploads/sites/2/2021/02/home_03_image_02.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_01.svg" alt="">
+                </div>
+            </section>
+            <!-- Start Best Sellers -->
+            <section id="bestseller">
+                <div class="wrapper">
+                    <h2 class="title">Best sellers</h2>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Lemon Pound Muffin with chocolate cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>79.000 <u>đ</u></p>
+                                    <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://drive.google.com/file/d/14WDm1wWpQQ9rbCeqQ6Z_Dg1vnCc0PDj1/view" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Lemon Pound Muffin</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>79.000 <u>đ</u></p>
+                                    <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                             <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/product_override_12.png" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Lemon Pound Muffin</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>79.000 <u>đ</u></p>
+                                 <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                             </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/product_override_12.png" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Lemon Pound Muffin</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>79.000 <u>đ</u></p>
+                                    <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/home_image_3.png" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Lemon Pound Muffin</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>79.000 <u>đ</u></p>
+                                    <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/product_override_12.png" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Lemon Pound Muffin</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>79.000 <u>đ</u></p>
+                                    <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Start offer -->
+            <section id="offer">
+                <div class="wrapper">
+                    <div class="item">
+                        <h2 class="title">Đề xuất</h2>
+                        <!-- 1 Item -->
+                        <div class="container left">
+                            <div class="content">
+                                <h3 class="combo"><u>Combo</u></h3>
+                                <h4 class="name">Trái cây nhiệt đới</h4>
+                                <p class="price"><del>120000đ</del><b> 99000đ</b></p>
+                                <a href="#" class="btn btn-third">Đặt mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 item -->
+                    <div class="item">
+                        <div class="container right">
+                            <div class="pad"></div>
+                            <div class="content">
+                                <h3 class="combo"><u>Combo</u></h3>
+                                <h4 class="name">Donut kẹo que</h4>
+                                <p class="price"><del>140000đ</del><b> 119000đ</b></p>
+                                <a href="#" class="btn btn-third">Đặt mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_07.svg" alt="">
+                </div>
+            </section>
+            <section id="review">
+                <div class="wrapper">
+                    <h2 class="title">Review của khách hàng</h2>
+                    <div class="slider-wrapper">
+                        <div class="slider-post">
+                            
+                            <!-- 1 post -->
+                            <div class="post first">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                        và có thể đặt trước nữa.
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2021/2/22/882449/Ed.jpg?w=888&h=592&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">Ed Sheeran</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 post -->
+                            <div class="post">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                        và có thể đặt trước nữa.
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2021/2/22/882449/Ed.jpg?w=888&h=592&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">Ed Sheeran</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 post -->
+                            <div class="post">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                        và có thể đặt trước nữa.
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2021/2/22/882449/Ed.jpg?w=888&h=592&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">Ed Sheeran</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 post -->
+                            <div class="post">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                        và có thể đặt trước nữa.
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2021/2/22/882449/Ed.jpg?w=888&h=592&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">Ed Sheeran</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 post -->
+                            <div class="post">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh sinh nhật ở Yams đặc biệt ngon luôn á mọi người. Trang trí cũng đẹp nữa. Lại được chọn thời gian giao hàng. Tuyệt!
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2017/12/6/580043/Dwayne.jpg?w=414&h=276&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">The Rock</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 post -->
+                            <div class="post">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                        và có thể đặt trước nữa.
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2021/2/22/882449/Ed.jpg?w=888&h=592&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">Ed Sheeran</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 post -->
+                            <div class="post">
+                                <div class="detail">
+                                    <h2 class="open-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-left"></span></h2>
+                                    <p class="content">
+                                        Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                        và có thể đặt trước nữa.
+                                    </p>
+                                    <h2 class="close-quote"><span class="iconify" data-icon="bx:bxs-quote-alt-right"></span></h2>
+                                    
+                                </div>
+                                <div class="author">
+                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2017/12/6/580043/Dwayne.jpg?w=414&h=276&crop=auto&scale=both" alt=""></div>
+                                    <div class="name-star">
+                                        <h5 class="name">The Rock</h5>
+                                        <div class="star">
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-fill"></span>
+                                            <span class="iconify" data-icon="bi:star-half"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="indicator">
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <!-- Automatic navigation radio-->
+                            <div class="navigation-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                            </div>
+                            <!-- Manual nav radio -->
+                            <div class="nav-manual">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Start order -->
+            <section id="order">
+                <div class="wrapper">
+                    <h2 class="title">Đặt hàng</h2>
+                    <!-- Left column -->
+                    <div class="left"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/inner_image_03.jpg" alt=""></div>
+                    <!-- Center column -->
+                    <div class="center">
+                        <p class="icon"><span class="iconify" data-icon="bi:patch-check"></span></p>
+                        <div class="dash-line-ver"></div>
+                        <p class="icon"><span class="iconify" data-icon="icon-park-outline:delivery"></span></p>
+                        <div class="dash-line-ver"></div>
+                        <p class="icon"><span class="iconify" data-icon="emojione-monotone:pizza"></span></p>
+                    </div>
+                    <!-- Right column -->
+                    <div class="right">
+                        <div class="step">
+                            <h3 class="action">Chọn loại bánh</h3>
+                            <p class="description">Vào trang sản phẩm để tìm loại bánh phù hợp với nhu cầu của bạn và cho ngay vào giỏ hàng.</p>
+                        </div>
+                        <div class="step">
+                            <h3 class="action">Chọn điều kiện giao hàng và thanh toán</h3>
+                            <p class="description">Bạn cần chọn thời gian, địa điểm, phương thức giao hàng và thanh toán để đặt hàng thành công.</p>
+                        </div>
+                        <div class="step">
+                            <h3 class="action">Thưởng thức</h3>
+                            <p class="description">Yams sẽ giao bánh đến bạn và bạn hãy thưởng thức thật ngon nhé!</p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
+                </div>
+            </section>
         </div>
         <!-- ===========End Container=========== -->
         <!-- ===========Start Footer============ -->
-        <footer></footer>
-        <!-- Start scripts -->
-        <script src="./js/home.js"></script>
+        <footer>
+            <div class="wrapper">
+                <div class="big-logo">
+                    <div class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></div>
+                    <h3>Yams Bakery</h3>
+                </div>
+                <div class="links">
+                    <div class="aboutus">
+                        <h3>Về chúng tôi</h3>
+                        <a href="#" class="item">Về chúng tôi</a>
+                        <a href="#" class="item">Chính sách</a>
+                    </div>
+                    <div class="contact">
+                        <h3>Liên Hệ</h3>
+                        <ul>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                                <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                                <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                                <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="media">
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </footer>
+        <!-- ========== Start scripts ============-->
+        <!-- Compulsory -->
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        <script src="./js/index.js"></script>
+        
     </div>
 </body>
 </html>
