@@ -51,13 +51,11 @@ h1,h2,h3,h4,h5,h6, p {
     margin: 0;
     padding: 0;
 }
-
+/* Session name */
 h1, h2{
     font-family: 'Coiny', cursive;
     color: var(--primary-color);
 }
-
-h2{font-size: 5.4rem; line-height: 5rem;}
 
 h3, h4, h5, h6{
     font-family: 'Nunito', sans-serif;
@@ -91,7 +89,8 @@ img{
 }
 
 .font-xl{
-    font-size: 40px;
+    font-size: 5.4rem;
+    line-height: 5rem;
 }
 .active{
     display: block;
@@ -99,29 +98,6 @@ img{
 
 .inactive{
     display: none;
-}
-
-.underline{
-    width: 0;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--primary-color);
-    transform: translateY(4px);
-    transform-origin: left;
-    transition: width 0.3s ease-in;
-}
-
-.dot{
-    width: 8px;
-    height: 8px;
-    background-color: var(--primary-color);
-    border-radius: 4px;
-    margin: 0 auto;
-    transform-origin: 50% 50%;
-    transform: scale(0);
-    transition: transform 0.5s ease-in;
-    display: none;
-    z-index: 1;
 }
 
 /* Button Types */
@@ -132,6 +108,8 @@ img{
     padding: 10px 16px;
     border-radius: 4px;
     margin: 8px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 /* Customize button */
@@ -140,10 +118,21 @@ img{
     color: white;
 }
 
+.btn-primary:hover{
+    color: var(--primary-color);
+    background-color: white;
+    box-shadow:0px 0px 0px 2px var(--primary-color) inset;
+}
+
 .btn-second{
     background-color: white;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
+}
+
+.btn-second:hover{
+    color: white;
+    background-color: var(--primary-color);
 }
 
 .btn-third{
@@ -151,6 +140,11 @@ img{
     background-color: white;
     color: var(--primary-color);
     box-shadow: 0 1px 4px var(--black-4);
+}
+
+.btn-third:hover{
+    color: white;
+    background-color: var(--primary-color);
 }
 
 /* Image background with bubble floating animation */
@@ -167,8 +161,9 @@ img{
     height: 500px;
     border-radius: 24px;
     overflow: hidden;
-    background-color: var(--item-1);
     position: relative;
+    user-select: all;
+    cursor: pointer;
 }
 
 .product-item .tag{
@@ -200,7 +195,7 @@ img{
     height: 70%;
     overflow: hidden;
 }
-.product-item .thumb img{height: 100%;}
+.product-item .thumb img{height: 100%; object-fit: cover;}
 .product-item .detail{
     width: 100%;
     padding: 20px 14px;
@@ -224,7 +219,7 @@ img{
     .product-item{margin: 16px 0; border-radius: 16px;}
 }
 
-/* Product item with tag */
+/* Product item without tag */
 
 /* =========== KEYFREAMES FOR ANIMATIONS =========== */
 @keyframes display{
