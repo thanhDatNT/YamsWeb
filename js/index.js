@@ -48,7 +48,7 @@
         const nextBtn= $('#review .indicator .next')
         var counter= 0
         const size= posts[0].clientWidth
-
+        
         slide.style.transform= 'translateX('+ 0 +'px)';
 
         // Button listener

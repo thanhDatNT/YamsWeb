@@ -1,12 +1,12 @@
 const $= document.querySelector.bind(document)
 const $$= document.querySelectorAll.bind(document)
-// =======Search area===========
-const searchIcon= $('#search-icon')
-const searchInput= $('#search-input')
-const findBtn= $('#find-btn')
 
 // Immediately invoked function expression (IIFE)
 ;(function(){
+    // =======Search area===========
+    const searchIcon= $('#search-icon')
+    const searchInput= $('#search-input')
+    const findBtn= $('#find-btn')
     if(screen.width < 500){
         findBtn.style.display= 'none'
         searchIcon.style.display = 'none'
@@ -30,6 +30,16 @@ const findBtn= $('#find-btn')
             searchIcon.style.display = 'inline-block'
         }
     }
+    // Drawer menu
+    var menu= $('header nav .menu')
+    var menuBtn= $('#menu-icon')
+    var closeBtn= $('.menu .close-btn')
+    menuBtn.addEventListener('click', () =>{
+        menu.classList.add('active')
+    })
+    closeBtn.addEventListener('click', () =>{
+        menu.classList.remove('active')
+    })
 })()
 
 // Catching scrolling event (px) => Header animation
