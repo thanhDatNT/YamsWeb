@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png"> -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/product-detail.css">
+</head>
+<body>
+    <div class="app">
+        <!-- ==========Start Header=========== -->
+        <header>
+            <nav >
+                
+                <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+                <!-- Logo Yams -->
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+                </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                    <li><a href="index.html" class="item">Home</a></li>
+                    <li id="menu"><a href="menu.html" class="item">Menu</a>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                    <li><a href="blog.html" class="item">Yams Blog</a></li>
+                    <li><a href="aboutus.html" class="item">About us</a></li>
+                    
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <button id="find-btn">Tìm</button>
+                    <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                    <!-- Cart icon and status -->
+                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <div class="non-empty"></div>
+                        </div>
+                    </a>
+                    
+                    <!-- Account icon -->
+                    <a href="#" id="account-icon">
+                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    </a>
+                </div>
+            </nav>
+
+        </header>
+        <!-- ==========Start layout container============= -->
+        <div id="container">
+            <!-- Product detail -->
+            <section id="product-detail">
+                <!-- Left side: Current Product detail-->
+                <div class="product-wrapper">
+                    <div class="thumbnail">
+                        <img src="https://yt.cdnxbvn.com/medias/uploads/186/186906-trang-tri-banh-flan-gato.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <h3 class="name">Special gato chocolate cake</h3>
+                        <p class="price">45000<u>đ</u></p>
+                        <h4>Nguyên liệu</h4>
+                        <p class="material">Chocolate, vanilla, flour, eggs, fresh milk, sugar, whipped cream</p>
+                        <div class="choose">
+                            <input type="number" class="btn btn-second" name="quantity" min="1" max="100" value="1">
+                            <button class="btn btn-second">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="description">
+                        <h3 class="title">Mô tả</h3>
+                        <p class="content">Nếu valentine đã quá quen thuộc với những viên socola. 
+                            Vậy tại sao không tạo bất ngờ cho nửa yêu thương bằng cách tự tay làm 
+                            1 chiếc bánh Gato phủ chocolate ngọt ngào</p>
+                    </div>
+                </div>
+                <!-- Right side: Cart -->
+                <div class="cart-wrapper">
+                    <h3 class="title">GIỎ HÀNG</h3>
+                    <div class="item-list">
+                        <!-- 1 Item -->
+                        <div class="item">
+                            <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                            <div class="detail">
+                                <p class="name">Mango CupCake</p>
+                                <p><span class="quantity">2</span> x <span class="price">20000đ</span></p>
+                            </div>
+                        </div>
+                        <!-- 1 Item -->
+                        <div class="item">
+                            <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                            <div class="detail">
+                                <p class="name">Mango CupCake</p>
+                                <p><span class="quantity">2</span> x <span class="price">20000đ</span></p>
+                            </div>
+                        </div>
+                        <!-- 1 Item -->
+                        <div class="item">
+                            <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                            <div class="detail">
+                                <p class="name">Mango CupCake</p>
+                                <p><span class="quantity">2</span> x <span class="price">20000đ</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End list -->
+                    <hr>
+                    <!-- Total of bill -->
+                    <div class="total">
+                        <h3>Tổng cộng</h3>
+                        <p class="total-bill">120000<u>đ</u></p>
+                    </div>
+                    <!-- Buttons check list -->
+                    <div class="btn-group">
+                        <button class="btn btn-primary to-cart">Xem giỏ hàng</button>
+                        <button class="btn btn-primary pay">Thanh toán</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <!-- Relevant products -->
+            <section id="relevant">
+                <h3 class="font-xl title">Sản phẩm liên quan</h3>
+                <div class="wrapper">
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                             <div class="tag">Top</div>
+                             <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Cupcake with strawberry cream</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                 <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                             </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                         <div class="product-item">
+                             <div class="tag">Top</div>
+                             <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Macaron</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                 <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                             </div>
+                         </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="tag">Top</div>
+                            <div class="thumb"><img src="https://cf.shopee.vn/file/22ce3acfd6d8928d32534c5a7e7cf8e4" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Donut vani</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>105.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Evaluation -->
+            <section id="evaluate">
+                <h3 class="font-xl">Đánh giá</h3>
+                <div class="container">
+                    <div class="item">
+                        <div class="avatar"><img src="https://static01.nyt.com/images/2021/10/29/arts/29sheeran-review/29sheeran-review-mediumSquareAt3X.jpg" alt=""></div>
+                        <div class="content">
+                            <h3 class="name">Ed Sheeran</h3>
+                            <div class="star">
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-half"></span>
+                            </div>
+                            <p class="comment">Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                và có thể đặt trước nữa.</p>
+                            <div class="image">
+                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
+                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
+                            </div>
+                            <p class="time">23:10, 21-12-2021</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="avatar"><img src="https://static01.nyt.com/images/2021/10/29/arts/29sheeran-review/29sheeran-review-mediumSquareAt3X.jpg" alt=""></div>
+                        <div class="content">
+                            <h3 class="name">Ed Sheeran</h3>
+                            <div class="star">
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-half"></span>
+                            </div>
+                            <p class="comment">Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
+                                và có thể đặt trước nữa.</p>
+                            <div class="image">
+                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
+                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
+                            </div>
+                            <p class="time">23:10, 21-12-2021</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Your evaluation -->
+            <section id="cus-evaluate">
+                <h3 class="font-xl">Viết đánh giá</h3>
+                <div class="container">
+                    <div class="rating">Rating: 
+                        <div class="star">
+                            <span class="iconify" data-icon="bi:star-fill"></span>
+                            <span class="iconify" data-icon="bi:star-fill"></span>
+                            <span class="iconify" data-icon="bi:star-fill"></span>
+                            <span class="iconify" data-icon="bi:star-fill"></span>
+                            <span class="iconify" data-icon="bi:star-half"></span>
+                        </div>
+                    </div>
+                    <div class="comment">Viết đánh giá:
+                        <textarea class="text" rows="4" placeholder="Đánh giá của bạn"></textarea>
+                    </div>
+                    <div class="upload-photo">Tải ảnh lên: 
+                        <label for="myfile" class="btn btn-third">Chọn ảnh</label>
+                        <input type="file" id="myfile" name="myfile" accept="image/png, image/jpeg" multiple>
+                    </div>
+                    <div class="image"></div>
+                    <button href="#" class="btn btn-primary submit">Đánh giá</button>
+                </div>
+            </section>
+        </div>
+        <!-- ===========End Container=========== -->
+        <!-- ===========Start Footer============ -->
+        <footer>
+            <div class="wrapper">
+                <div class="big-logo">
+                    <div class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></div>
+                    <h3>Yams Bakery</h3>
+                </div>
+                <div class="links">
+                    <div class="aboutus">
+                        <h3>Về chúng tôi</h3>
+                        <a href="#" class="item">Về chúng tôi</a>
+                        <a href="#" class="item">Chính sách</a>
+                    </div>
+                    <div class="contact">
+                        <h3>Liên Hệ</h3>
+                        <ul>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                                <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                                <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                                <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="media">
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </footer>
+        <!-- ========== Start scripts ============-->
+        <!-- Compulsory -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        <script src="./js/product-detail.js"></script>
+    </div>
+</body>
+</html>

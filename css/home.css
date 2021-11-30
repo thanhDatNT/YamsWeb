@@ -268,7 +268,7 @@ section{
 }
 
 @media (max-width: 428px){
-    #bestseller .wrapper .container{display: block; height: fit-content;position: relative;margin-top: 16p;}
+    #bestseller .wrapper .container{display: block; height: fit-content;position: relative;margin-top: 16px;}
     #bestseller .wrapper .container .item{
         width: 100%;
         position: relative;}
@@ -442,7 +442,7 @@ section{
 
 #review .wrapper .slider-wrapper .slider-post .post .author .name{font-size: 1.4rem;}
 
-#review .wrapper .slider-wrapper .slider-post .post .author .star{color: #FFD233;font-size: 1.4rem;margin-top: 8px;}
+#review .wrapper .slider-wrapper .slider-post .post .author .star{margin-top: 8px;}
 
 /* Radio navigation */
 #review .wrapper .indicator{position: relative; width: 100px; margin: 0 auto;}
