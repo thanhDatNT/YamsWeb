@@ -62,7 +62,8 @@ h3, h4, h5, h6{
     color: var(--text-color);
 }
 
-a{
+a, p{
+    font-size: 1.4rem;
     text-decoration: none;
     color: var(--text-color);
 }
@@ -80,6 +81,8 @@ img{
     height: 100%;
     object-fit: cover;
 }
+
+button{background: none; cursor: pointer;}
 
 .star{color: #FFD233;font-size: 1.4rem}
 
@@ -213,7 +216,7 @@ img{
 
 .product-item .detail .price .iconify{margin-right: 6px; font-size: 1.7rem;}
 
-.product-item .detail .add{font-size: 5rem; color: var(--primary-color); position: absolute; bottom: 12px; right: 14px; transform-origin: center;transform: scale(1); transition: 0.4s;}
+.product-item .detail .add{font-size: 5rem; color: var(--primary-color); position: absolute; bottom: 4px; right: 12px; transform-origin: center;transform: scale(1); transition: 0.4s;}
 .product-item .detail .add:hover{transform: scale(1.2);}
 
 @media (min-width: 769px) and (max-width: 1200px){

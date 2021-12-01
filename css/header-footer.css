@@ -438,7 +438,7 @@ footer .wrapper .links .follow{
     text-align: center;
 }
 
-footer .wrapper .links .follow .media{
+footer .wrapper .links .follow .media a{
     font-size: 2.8rem;
 }
 
@@ -461,7 +461,7 @@ footer hr{
 footer .copyright{
     width: 100%;
     text-align: center;
-    font-size: 1.4rem;
+    color: white;
 }
 
 /* Responsive for Footer*/
