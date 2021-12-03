@@ -82,9 +82,16 @@ img{
     object-fit: cover;
 }
 
+
+select, input{outline: var(--primary-color);}
+
 button{background: none; cursor: pointer;}
 
 .star{color: #FFD233;font-size: 1.4rem}
+
+table{width: 100%;}
+
+.iconify{vertical-align: middle;}
 
 /* COMMON ELEMENTS */
 .clear{clear: both;}
@@ -101,14 +108,8 @@ button{background: none; cursor: pointer;}
     line-height: 5rem;
     color: var(--primary-color);
 }
-.active{
-    display: block;
-}
 
-.inactive{
-    display: none;
-}
-
+.inactive{display: none;}
 /* Button Types */
 /* General button */
 .btn{
@@ -157,6 +158,17 @@ button{background: none; cursor: pointer;}
     background-color: var(--primary-color);
 }
 
+.btn-fourth{
+    background-color: var(--background);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-fourth:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+
 /* Image background with bubble floating animation */
 
 .floating-buble{
@@ -164,6 +176,8 @@ button{background: none; cursor: pointer;}
     transform: translateY(200px);
     animation: translateVertical 30s ease-in infinite;
 }
+
+.floating-buble img{height: auto; transform: rotate(180deg);}
 
 /* Product item view holder */
 .product-item{
@@ -214,7 +228,7 @@ button{background: none; cursor: pointer;}
 
 .product-item .detail .price{color: var(--primary-color); font-size: 2rem;}
 
-.product-item .detail .price .iconify{margin-right: 6px; font-size: 1.7rem;}
+.product-item .detail .price .iconify{margin-right: 6px; font-size: 1.7rem; vertical-align: baseline;}
 
 .product-item .detail .add{font-size: 5rem; color: var(--primary-color); position: absolute; bottom: 4px; right: 12px; transform-origin: center;transform: scale(1); transition: 0.4s;}
 .product-item .detail .add:hover{transform: scale(1.2);}

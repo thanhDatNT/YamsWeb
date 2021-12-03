@@ -18,13 +18,766 @@
     <link rel="stylesheet" href="./css/admin.css">
 </head>
 <body>
-    <div class="app">
-        <div id="container"></div>
-        <!-- ========== Start scripts ============-->
-        <!-- Compulsory -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <!-- Customize your script here -->
-        <script src="./js/admin.js"></script>
+    <div id="container">
+        <!-- Top Right, Admin photo and notification -->
+        <div class="admin">
+            <a href="#" class="notify">
+                <span class="iconify" data-icon="clarity:bell-line"></span>
+                <span class="iconify inactive" data-icon="clarity:bell-outline-badged"></span>
+            </a>
+            <a href="login.html" class="admin-photo">
+                <img src="./images/logo/Logo_PinkBg-01.png" alt="">
+            </a>
+            <div class="log-out">Đăng xuất</div>
+        </div>
+        <!-- Navigation Panel -->
+        <div class="nav">
+            <!-- Pink yams logo -->
+            <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_Pink.png" alt=""></a>
+            <!-- Navigation -->
+            <ul>
+                <li><a href="#" class="item active">
+                    <span class="iconify icon" data-icon="ic:baseline-center-focus-weak"></span>
+                    <span class="title">Tổng quan</span></a>
+                </li>
+                <li><a href="#" class="item expand">
+                        <span class="iconify icon" data-icon="la:file-invoice-dollar"></span>
+                        <span class="title">Đơn hàng</span>
+                        <span class="iconify down" data-icon="akar-icons:chevron-down"></span>
+                    </a>
+                    <ul class="child">
+                        <li><a href="#" class="item">Tất cả đơn hàng</a></li>
+                        <li><a href="#" class="item">Chờ xác nhận <span class="number">1</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="item expand">
+                        <span class="iconify icon" data-icon="icon-park-outline:ad-product"></span>
+                        <span class="title">Sản phẩm</span>
+                        <span class="iconify down" data-icon="akar-icons:chevron-down"></span>
+                    </a>
+                    <ul class="child">
+                        <li><a href="#" class="item">Tất cả sản phẩm</a></li>
+                        <li><a href="#" class="item">Tồn kho</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="item">
+                    <span class="iconify icon" data-icon="carbon:delivery"></span>
+                    <span class="title">Vận chuyển</span></a>
+                </li>
+                <li><a href="#" class="item">
+                    <span class="iconify icon" data-icon="bi:people"></span>
+                    <span class="title">Khách hàng</span></a>
+                </li>
+                <li><a href="#" class="item">
+                    <span class="iconify icon" data-icon="carbon:blog"></span>
+                    <span class="title">Blog</span></a>
+                </li>
+            </ul>
+            <!-- Toggle button -->
+            <button class="toggle"><span class="iconify" data-icon="bi:arrow-right-short"></span></button>
+        </div>
+        <!-- Information Panel -->
+        <div class="infor-wrapper">
+            <!-- Start Overview Section -->
+            <section class="fragment overview active">
+                <h3 class="title">Tổng quan</h3>
+                <div class="top-left panel">
+                    <div class="filter">
+                        <select name="time" id="time" class="btn btn-fourth">
+                            <option value="today">Hôm nay</option>
+                            <option value="thisweek">Tuần này</option>
+                            <option value="thismonth">Tháng này</option>
+                            <option value="quarter">Qúy này</option>
+                        </select>
+                        <select name="channel" id="channel" class="btn btn-fourth">
+                            <option value="all">Tất cả kênh bán hàng</option>
+                            <option value="website">Yams website</option>
+                            <option value="app">Yams app</option>
+                            <option value="shopee">Shopee</option>
+                            <option value="lazada">Lazada</option>
+                        </select>
+                        <button class="refresh btn btn-fourth"><span class="iconify" data-icon="eva:sync-fill"></span></button>
+                    </div>
+                    <ul class="lv-overview">
+                        <li>
+                            <p>DOANH THU THUẦN - TẤT CẢ KÊNH BÁN HÀNG</p>
+                            <p class="rev"><b>1670000đ</b></p>
+                        </li>
+                        <li>
+                            <p>TỔNG ĐƠN HÀNG</p>
+                            <p class="order"><b>05</b></p>
+                        </li>
+                        <li>
+                            <p>SỐ LƯỢNG HÀNG ĐÃ BÁN</p>
+                            <p class="products"><b>12</b></p>
+                        </li>
+                        <li>
+                            <p>SẢN PHẨM BÁN CHẠY</p>
+                            <div class="best-sell">
+                                <div class="item">
+                                    <div class="thumb"><img src="https://www.elephantasticvegan.com/wp-content/uploads/2014/12/coconut-panna-cotta-blueberry-topping.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <p>Coconut Panna Cotta</p>
+                                        <p>55000<u>đ</u></p>
+                                    </div>
+                                    <div class="quantity">
+                                        <p class="number"><b>05</b><span><b> Sản phẩm</b></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="more">
+                        <a href="#">Xem chi tiết <span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                    </div>
+                </div>
+                <div class="top-right panel">
+                    <h3 class="heading-text">Hoạt động</h3>
+                    <div class="wrapper">
+                            <div class="item">
+                                <div class="progress first">
+                                    <div class="clock"><span class="iconify" data-icon="eva:clock-outline"></span></div>
+                                    <div class="line"></div>
+                                </div>
+                                <p><b>12/12/2021</b></p>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress">
+                                    <div class="dot"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p><b>Nguyễn Thành Đạt - 4:35 pm</b></p>
+                                    <p>Nguyễn Thành Đạt đã tạo một sản phẩm mới trong phân loại pudding <u>Chocolate cake</u></p>
+                                </div>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress">
+                                    <div class="dot"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p><b>Võ Thị Như Quỳnh - 1:05 pm</b></p>
+                                    <p>Võ Thị Như Quỳnh đã tạo một sản phẩm mới trong phân loại donut <u>Cheese donut</u></p></div>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress">
+                                    <div class="dot"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p><b>Trần Thị Minh Xuân - 11:55 am</b></p>
+                                    <p>Trần Thị Minh Xuân đã tạo một khách hàng mới <u>xuanttm11@hotmail.com</u></p></div>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress">
+                                    <div class="dot"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p><b>Mai Thị Thu  Trang - 10:45 am</b></p>
+                                    <p>Mai Thị Thu  Trang đã xác nhận đơn hàng <u>#12122102</u></p></div>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress">
+                                    <div class="dot"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p><b>Bùi Uyển Nhi - 9:05 am</b></p>
+                                    <p>Bùi Uyển Nhi đã thêm một sự kiện mới <u>#EVENT1201</u></p>
+                                </div>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress first">
+                                    <div class="clock"><span class="iconify" data-icon="eva:clock-outline"></span></div>
+                                    <div class="line"></div>
+                                </div>
+                                <p><b>11/12/2021</b></p>
+                            </div>
+                            <!-- 1 Activity -->
+                            <div class="item">
+                                <div class="progress">
+                                    <div class="dot"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p><b>Nguyễn Thành Đạt - 10:35 am</b></p>
+                                    <p>Nguyễn Thành Đạt đã tạo một sản phẩm mới trong phân loại cupcake <u>Chocolate cupcake</u></p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="more">
+                        <a href="#">Xem chi tiết <span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="bottom-part panel">
+                    <h3 class="heading-text">Trạng thái đơn hàng</h3>
+                    <select name="status" id="status" class="btn btn-fourth">
+                        <option value="all">Tất cả</option>
+                        <option value="pending">Chưa thanh toán</option>
+                    </select>
+                    <div class="clear"></div>
+                    <!-- Listview Order Status -->
+                    <table>
+                        <tr>
+                            <td><p>Đơn hàng chưa thanh toán</p></td>
+                            <td><p class="number"><b>02</b></p></td>
+                            <td>
+                                <div class="more">
+                                    <a href="#">Xem chi tiết <span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p>Đơn hàng đang chuẩn bị</p></td>
+                            <td><p class="number"><b>03</b></p></td>
+                            <td>
+                                <div class="more">
+                                    <a href="#">Xem chi tiết <span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p>Đơn hàng đang giao</p></td>
+                            <td><p class="number"><b>05</b></p></td>
+                            <td>
+                                <div class="more">
+                                    <a href="#">Xem chi tiết <span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p>Đơn hàng đã hủy</p></td>
+                            <td><p class="number"><b>01</b></p></td>
+                            <td>
+                                <div class="more">
+                                    <a href="#">Xem chi tiết <span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!-- Start Order/ All orders -->
+            <section class="fragment order all-order inactive">
+                <h3 class="title">Đơn hàng/Tất cả đơn hàng</h3>
+                <div class="panel">
+                    <!-- Navigation Tabs -->
+                    <div class="tabs">
+                        <div class="tab-item active">
+                            Tất cả đơn hàng
+                        </div>
+                        <div class="tab-item">
+                            Đơn hàng mới
+                        </div>
+                        <div class="tab-item">
+                            Chưa giao hàng
+                        </div>
+                        <div class="tab-item">
+                            Chưa thanh toán
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <!-- Filter and search -->
+                    <div class="task">
+                        <button class="btn btn-fourth"><span class="iconify" data-icon="bi:filter"></span> Thêm điều kiện lọc</button>
+                        <button class="btn btn-fourth"><span class="iconify" data-icon="fe:list-task"></span> Tác vụ</button>
+                        <div class="search"><input type="search" name="search" placeholder="Tìm kiếm"></div>
+                    </div>
+                    <!-- Data table: 5 rows, 8 columns -->
+                    <table>
+                        <tr>
+                            <th>&nbsp</th>
+                            <th>Mã</th>
+                            <th>Ngày tạo</th>
+                            <th>Khách hàng</th>
+                            <th>Thanh toán</th>
+                            <th>Trạng thái</th>
+                            <th>Tổng tiền</th>
+                            <th>Kênh</th>
+                        </tr>
+                        <tr>
+                            <td class="expand"><span class="iconify" data-icon="ant-design:caret-down-outlined"></span></td>
+                            <td><input type="checkbox"> #120112</td>
+                            <td>01/12/2021</td>
+                            <td>Nguyễn Thành Đạt</td>
+                            <td>COD</td>
+                            <td>Đang giao</td>
+                            <td>130000 <u>đ</u></td>
+                            <td>Website</td>
+                        </tr>
+                        <tr>
+                            <td class="expand"><span class="iconify" data-icon="ant-design:caret-down-outlined"></span></td>
+                            <td><input type="checkbox"> #120113</td>
+                            <td>01/12/2021</td>
+                            <td>Minh Xuân</td>
+                            <td>MOMO</td>
+                            <td>Chờ xác nhận</td>
+                            <td>545000 <u>đ</u></td>
+                            <td>App</td>
+                        </tr>
+                        <tr>
+                            <td class="expand"><span class="iconify" data-icon="ant-design:caret-down-outlined"></span></td>
+                            <td><input type="checkbox"> #120114</td>
+                            <td>01/12/2021</td>
+                            <td>Như Quỳnh Võ</td>
+                            <td>Shopee Pay</td>
+                            <td>Đang chuẩn bị</td>
+                            <td>242000 <u>đ</u></td>
+                            <td>Shopee</td>
+                        </tr>
+                        <tr>
+                            <td class="expand"><span class="iconify" data-icon="ant-design:caret-down-outlined"></span></td>
+                            <td><input type="checkbox"> #120115</td>
+                            <td>01/12/2021</td>
+                            <td>Uyển Nhi</td>
+                            <td>Zalo Pay</td>
+                            <td>Đã giao</td>
+                            <td>480000 <u>đ</u></td>
+                            <td>Website</td>
+                        </tr>
+                        <tr>
+                            <td class="expand"><span class="iconify" data-icon="ant-design:caret-down-outlined"></span></td>
+                            <td><input type="checkbox"> #113045</td>
+                            <td>30/11/2021</td>
+                            <td>Mai Trang</td>
+                            <td>Internet-Banking: ACB</td>
+                            <td>Đã giao</td>
+                            <td>200000 <u>đ</u></td>
+                            <td>Website</td>
+                        </tr>
+                    </table>
+                    <ul class="child">
+                        <li> <img src="https://www.elephantasticvegan.com/wp-content/uploads/2014/12/coconut-panna-cotta-blueberry-topping.jpg" alt=""></li>
+                        <li><b>Coconut pannacotta blueberry topping</b></li>
+                        <li>
+                            <p>x2</p>
+                            <p>50000 <u>đ</u></p>
+                            <p><b>Tổng: 100000 đ</b></p>
+                        </li>
+                        <li>
+                            <p><b>Thông tin giao hàng</b></p>
+                            <p>Mai Trang</p>
+                            <p>KTX B, phường Đông Hòa, TP. Dĩ An, Bình Dương</p>
+                            <p>0822331433</p>
+                        </li>
+                        <li>
+                            <p><b>Ghi chú</b></p>
+                            <textarea name="note" id="note" cols="30" rows="2" disabled>Giao hàng nhanh nhanh giúp em nha ad :D</textarea>
+                        </li>
+                    </ul>
+                    <div class="bottom">
+                        <select name="display" id="display" class="btn btn-fourth">
+                            <option value="5">Hiển thị 5</option>
+                            <option value="10">Hiển thị  10</option>
+                        </select>
+                        <p><b>Trang 1/1</b></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Order/ Pending -->
+            <section class="fragment order pending inactive">
+                <h3 class="title">Đơn hàng/Chờ xác nhận</h3>
+                <button class="btn btn-primary">
+                    <span class="iconify" data-icon="akar-icons:circle-check"></span> Xác nhận đơn hàng</button>
+                <div class="panel">
+                    <h3 class="heading-text">Chờ xác nhận</h3>
+                    <!-- Filter and search -->
+                    <div class="task">
+                        <button class="btn btn-fourth"><span class="iconify" data-icon="fe:list-task"></span> Tác vụ</button>
+                        <div class="search"><input type="search" name="search" placeholder="Tìm kiếm"></div>
+                    </div>
+                    <!-- Data table: 2 rows, 8 columns -->
+                    <table>
+                        <tr>
+                            <th>&nbsp</th>
+                            <th>Mã</th>
+                            <th>Ngày tạo</th>
+                            <th>Khách hàng</th>
+                            <th>Thanh toán</th>
+                            <th>Trạng thái</th>
+                            <th>Tổng tiền</th>
+                            <th>Kênh</th>
+                        </tr>
+                        <tr>
+                            <td class="expand"><span class="iconify" data-icon="ant-design:caret-down-outlined"></span></td>
+                            <td><input type="checkbox"> #120113</td>
+                            <td>01/12/2021</td>
+                            <td>Minh Xuân</td>
+                            <td>MOMO</td>
+                            <td>Chờ xác nhận</td>
+                            <td>545000 <u>đ</u></td>
+                            <td>App</td>
+                        </tr>
+                    </table>
+                    <div class="bottom">
+                        <select name="display" id="display" class="btn btn-fourth">
+                            <option value="5">Hiển thị 5</option>
+                            <option value="10">Hiển thị  10</option>
+                        </select>
+                        <p><b>Trang 1/1</b></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Start Product/ All products-->
+            <section class="fragment product all-product inactive">
+                <h3 class="title">Sản phẩm/Tất cả sản phẩm</h3>
+                <button class="btn btn-primary">
+                    <span class="iconify" data-icon="carbon:add-alt"></span> Tạo sản phẩm</button>
+                <div class="panel">
+                    <h3 class="heading-text">Tất cả sản phẩm</h3>
+                    <!-- Filter and search -->
+                    <div class="task">
+                        <button class="btn btn-fourth">
+                            <span class="iconify" data-icon="bi:filter"></span> Thêm điều kiện lọc
+                        </button>
+                        <div class="search"><input type="search" name="search" placeholder="Tìm kiếm"></div>
+                    </div>
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"> Tên sản phẩm</th>
+                            <th>Tồn kho</th>
+                            <th>Loại</th>
+                            <th>Nhà cung cấp</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://www.elmundoeats.com/wp-content/uploads/2021/03/FP-Taking-a-slice-of-healthy-mango-cheesecake.jpg" alt="">
+                                </div>
+                                <p>Mango cheesecake</p>
+                            </td>
+                            <td>10</td>
+                            <td>Birthday cake</td>
+                            <td>Yams</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://www.elephantasticvegan.com/wp-content/uploads/2014/12/coconut-panna-cotta-blueberry-topping.jpg" alt="">
+                                </div>
+                                <p>Coconut pannacotta blueberry pudding</p>
+                            </td>
+                            <td>15</td>
+                            <td>Pudding</td>
+                            <td>Yams</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://i.ytimg.com/vi/9-ukCHGQ_8I/maxresdefault.jpg" alt="">
+                                </div>
+                                <p>Macaron</p>
+                            </td>
+                            <td>150</td>
+                            <td>Macaron</td>
+                            <td>Yams</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://cacloaibanh.com/wp-content/uploads/2019/08/lam-banh-cupcake-bang-noi-com-dien.jpg" alt="">
+                                </div>
+                                <p>Cupcacke vani</p>
+                            </td>
+                            <td>22</td>
+                            <td>Cupcake</td>
+                            <td>Yams</td>
+                        </tr>
+                    </table>
+                    <div class="bottom">
+                        <select name="display" id="display" class="btn btn-fourth">
+                            <option value="5">Hiển thị 5</option>
+                            <option value="10">Hiển thị  10</option>
+                        </select>
+                        <p><b>Trang 1/1</b></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Start Product/ Stock -->
+            <section class="fragment product stock inactive">
+                <h3 class="title">Sản phẩm/Tồn kho</h3>
+                <div class="bottom">
+                    <h3 class="heading-text">Tất cả</h3>
+                    <button class="btn btn-primary">
+                        <span class="iconify" data-icon="bx:bx-export"></span> Xuất dữ liệu
+                    </button>
+                </div>
+                <div class="panel">
+                    <button class="btn btn-fourth">
+                        <span class="iconify" data-icon="bi:filter"></span> Thêm điều kiện lọc
+                    </button>
+                    <table>
+                        <tr>
+                            <th>Sản phẩm/Biến thể</th>
+                            <th>SKU/Barcode</th>
+                            <th>Tồn kho</th>
+                            <th>Cập nhật tồn kho</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="photo">
+                                    <img src="https://www.elmundoeats.com/wp-content/uploads/2021/03/FP-Taking-a-slice-of-healthy-mango-cheesecake.jpg" alt="">
+                                </div>
+                                <p>Mango cheesecake</p>
+                            </td>
+                            <td>
+                                <p>C001</p>
+                                <p>11221</p>
+                            </td>
+                            <td>3</td>
+                            <td>
+                                <button class="minus">-</button>
+                                <span><input type="number" min="1"></span>
+                                <button class="plus">+</button>
+                                <button class="btn btn-primary">Lưu</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="photo">
+                                    <img src="https://www.elephantasticvegan.com/wp-content/uploads/2014/12/coconut-panna-cotta-blueberry-topping.jpg" alt="">
+                                </div>
+                                <p>Coconut pannacotta blueberry pudding</p>
+                            </td>
+                            <td>
+                                <p>C002</p>
+                                <p>11222</p>
+                            </td>
+                            <td>5</td>
+                            <td>
+                                <button class="minus">-</button>
+                                <span><input type="number" min="1"></span>
+                                <button class="plus">+</button>
+                                <button class="btn btn-primary">Lưu</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="photo">
+                                    <img src="https://www.elmundoeats.com/wp-content/uploads/2021/03/FP-Taking-a-slice-of-healthy-mango-cheesecake.jpg" alt="">
+                                </div>
+                                <p>Macaron</p>
+                            </td>
+                            <td>
+                                <p>C003</p>
+                                <p>11223</p>
+                            </td>
+                            <td>16</td>
+                            <td>
+                                <button class="minus">-</button>
+                                <span><input type="number" min="1"></span>
+                                <button class="plus">+</button>
+                                <button class="btn btn-primary">Lưu</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="bottom">
+                        <select name="display" id="display" class="btn btn-fourth">
+                            <option value="5">Hiển thị 5</option>
+                            <option value="10">Hiển thị  10</option>
+                        </select>
+                        <p><b>Trang 1/1</b></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Start Delivery -->
+            <section class="fragment delivery inactive">
+                <h3 class="title">Vận chuyển</h3>
+                <select name="date" id="date" class="btn btn-fourth">
+                    <option value="today">Hôm nay</option>
+                    <option value="thisweek">Tuần này</option>
+                    <option value="thismonth">Tháng này</option>
+                    <option value="thisquarter">Qúy này</option>
+                </select>
+                <h3 class="title">Vận chuyển</h3>
+                <div class="panels">
+                    <div class="panel">
+                        <p>Chưa vận chuyển</p>
+                        <p><b>02 đơn</b></p>
+                    </div>
+                    <div class="panel">
+                        <p>Không giao được</p>
+                        <p><b>00 đơn</b></p>
+                    </div>
+                    <div class="panel">
+                        <p>Chờ chuyển hoàn</p>
+                        <p><b>00 đơn</b></p>
+                    </div>
+                </div>
+                <h3 class="title">Thu hộ</h3>
+                <div class="panels">
+                    <div class="panel">
+                        <p>Đã giao, chưa nhận</p>
+                        <p><b>0<u>đ</u></b></p>
+                    </div>
+                    <div class="panel">
+                        <p>Đã đối soát, chưa nhận</p>
+                        <p><b>0<u>đ</u></b></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Start Customer-->
+            <section class="fragment customer inactive">
+                <h3 class="title">Khách hàng</h3>
+                <button class="btn btn-primary">
+                    <span class="iconify" data-icon="carbon:add-alt"></span> Thêm khách hàng mới</button>
+                <div class="panel">
+                    <h3 class="heading-text">Tất cả khách hàng</h3>
+                    <!-- Filter and search -->
+                    <div class="task">
+                        <button class="btn btn-fourth">
+                            <span class="iconify" data-icon="bi:filter"></span> Thêm điều kiện lọc
+                        </button>
+                        <div class="search"><input type="search" name="search" placeholder="Tìm kiếm"></div>
+                    </div>
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"> Khách hàng</th>
+                            <th>Địa chỉ</th>
+                            <th>Tổng đơn hàng</th>
+                            <th>Đơn hàng gần nhất</th>
+                            <th>Tổng thu</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> Võ Thị Như Quỳnh</td>
+                            <td>Thủ Đức, HCM</td>
+                            <td>5</td>
+                            <td>#120112</td>
+                            <td>885000<u>đ</u></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> Trần Thị Minh Xuân</td>
+                            <td>Thủ Đức, HCM</td>
+                            <td>16</td>
+                            <td>#120509</td>
+                            <td>1925000<u>đ</u></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> Mai Trang</td>
+                            <td>Dĩ An, Bình Dương</td>
+                            <td>8</td>
+                            <td>#121021</td>
+                            <td>1050000<u>đ</u></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> Nguyễn Thành Đạt</td>
+                            <td>Bình Thạnh, HCM</td>
+                            <td>4</td>
+                            <td>#120504</td>
+                            <td>922000<u>đ</u></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> Bùi Uyển Nhi</td>
+                            <td>Quận 2, HCM</td>
+                            <td>11</td>
+                            <td>#120204</td>
+                            <td>1202000<u>đ</u></td>
+                        </tr>
+                    </table>
+                    <div class="bottom">
+                        <select name="display" id="display" class="btn btn-fourth">
+                            <option value="5">Hiển thị 5</option>
+                            <option value="10">Hiển thị  10</option>
+                        </select>
+                        <p><b>Trang 1/1</b></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Start Blog-->
+            <section class="fragment blog inactive">
+                <h3 class="title">Blog</h3>
+                <button class="btn btn-primary">
+                    <span class="iconify" data-icon="carbon:add-alt"></span> Tạo bài viết</button>
+                <div class="panel">
+                    <h3 class="heading-text">Tất cả bài viết</h3>
+                    <!-- Filter and search -->
+                    <div class="task">
+                        <button class="btn btn-fourth">
+                            <span class="iconify" data-icon="bi:filter"></span> Thêm điều kiện lọc
+                        </button>
+                        <div class="search"><input type="search" name="search" placeholder="Tìm kiếm"></div>
+                    </div>
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"> Tiêu đề</th>
+                            <th>Ngày tạo</th>
+                            <th>Danh mục</th>
+                            <th>Nhãn</th>
+                            <th>Người đăng</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Tiramisu_-_Raffaele_Diomede.jpg" alt="">
+                                </div>
+                                <p>Cách làm bánh #Tiramisu ít béo</p>
+                            </td>
+                            <td>01/12/2021</td>
+                            <td>Hướng dẫn làm bánh</td>
+                            <td>
+                                <p>#Tiplambanh</p>
+                                <p>#Tiramisu</p>
+                            </td>
+                            <td>Uyển Nhi</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://cacloaibanh.com/wp-content/uploads/2019/08/lam-banh-cupcake-bang-noi-com-dien.jpg" alt="">
+                                </div>
+                                <p>Câu chuyện tình bên 2 chiếc bánh cupcake</p>
+                            </td>
+                            <td>29/11/2021</td>
+                            <td>Câu chuyện</td>
+                            <td>
+                                <p>#Story</p>
+                                <p>#Cupcake</p>
+                            </td>
+                            <td>Minh Xuân</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox">
+                                <div class="photo">
+                                    <img src="https://vncooking.com/files/cuisine/2019/01/23/banh-su-kem-4eau.jpg" alt="">
+                                </div>
+                                <p>Bánh Su kem mang vẻ đẹp Việt</p>
+                            </td>
+                            <td>26/11/2021</td>
+                            <td>Hướng dẫn làm bánh</td>
+                            <td>
+                                <p>#Tiplambanh</p>
+                                <p>#Sukem</p>
+                            </td>
+                            <td>Như Quỳnh</td>
+                        </tr>
+                    </table>
+                    <div class="bottom">
+                        <select name="display" id="display" class="btn btn-fourth">
+                            <option value="5">Hiển thị 5</option>
+                            <option value="10">Hiển thị  10</option>
+                        </select>
+                        <p><b>Trang 1/1</b></p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
+    <!-- ========== Start scripts ============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Customize your script here -->
+    <script src="./js/admin.js"></script>    
 </body>
 </html>

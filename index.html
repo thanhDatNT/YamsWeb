@@ -62,7 +62,15 @@
                 <!-- Search, account, cart icons -->
                 <div class="group-icons">
                     <!-- Search icon and input -->
-                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                    <datalist id="cakes">
+                        <option value="Macaron">
+                        <option value="Pudding">
+                        <option value="Cupcake">
+                        <option value="Sweet cake">
+                        <option value="Bread">
+                        <option value="Donut">
+                    </datalist>
                     <button id="find-btn">Tìm</button>
                     <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                     <!-- Cart icon and status -->
