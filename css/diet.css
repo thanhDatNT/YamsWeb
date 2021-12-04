@@ -1,0 +1,436 @@
+
+
+body{
+    background-color: var(--background);
+    color:var(--text-color);
+    font-family: 'Nunito', sans-serif;
+    
+  }
+  /*==== banner=== */
+  #banners{
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  #banners .slide-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #banners .slide-wrapper .slider-item{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    transform-origin:center;
+    animation: zoomIn 5s ease-in;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    display: none;
+  }
+  
+  #banners .slide-wrapper .slider-item:first-child{background-image: url(../images/banners/diet.png); display: block;}
+  
+  
+  #banners .banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-shadow: 1px 1px 2px var(--black-4);
+  }
+  
+  #banners .banner-text .main-title{
+    color: white;
+  }
+  
+  #banners .banner-text .description{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 428px){
+    #banners{height: 40vh;}
+    #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
+    #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #banners{height: 50vh;}
+  }
+  
+   /* Tính BMI */
+  
+  .content{
+    width: 84%;
+    height: fit-content;
+    padding: 60px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+    
+     
+  }
+   h4{
+      text-align: center;
+      text-decoration: underline;
+      font-size: 30px;    
+  }
+  
+  .bmi-sex{
+    margin-top: 40px; 
+    font-size: 25px; 
+  }
+  label > input[type="radio"] {
+    display: none;
+  }
+  label > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 25px;
+    height: 25px;
+    margin-right: 0.6rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+  }
+  label > input[type="radio"]:checked + * {
+    color: var(--primary-color);
+  }
+  label > input[type="radio"]:checked + *::before {
+    background: radial-gradient( var(--primary-color) 40%, transparent 50%, transparent);
+    border-color: var(--primary-color);
+  }
+  
+  label > input[type="radio"] + * {
+    display: inline-block;
+    padding: 20px 30px;
+  }
+  
+  
+  .bmi-weight, .bmi-height{
+      font-size: 25px;
+      
+  }
+  
+  .weight-slider, .height-slider {
+      width: 520px;
+      height: 1px;
+      border-radius: 30px;
+      outline: none; 
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background: var(--primary-color);
+    }
+    /* custom slider range */
+  
+    input[type=range] {
+      appearance: none;
+      cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: 2.5px solid var(--primary-color);
+      height: 25px;
+      width: 25px;
+      border-radius: 50px;
+      background: white;
+      margin-top: 0px; 
+    }
+  
+    input[type=number]{
+      height: 50px;
+      width: 100px;
+      outline: 1px solid white;
+      border: 2px dashed var(--primary-color);
+      font-size: 25px;
+      color: var(--text-color);
+      margin-left: 100px;
+      text-align: center;
+  
+    }
+  
+    .calculateBMI {
+      margin-top:20px ;
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      width: 520px;
+      height: 50px ;
+      padding-top: 5px;
+      border: none;
+      background-color: var(--primary-color);
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+    }
+  
+    #indexBMI, #status{
+      height: 60px;
+      width: 250px;
+      border: 2px dashed var(--primary-color);
+      margin-top: 30px;
+      background-color:white;
+      font-size: 25px;
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #status{
+      margin-left: 20px;
+      
+    }
+    .kq{
+      margin-top: 20px;
+      font-size: 25px;
+    }
+    .result{
+      display: flex;
+      color:var(--primary-color);
+      
+    }
+  
+    .suggest-product{
+      margin-top:20px ;
+      margin-bottom: 20px;
+      margin-left: 60px;
+      font-size: 25px;
+      color: white;
+      width: 190px;
+      height: 50px ;
+      padding-top: 6.25px;
+      padding-bottom: 6.25px;
+      border: none;
+      background-color: var(--primary-color);
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+    }
+    .suggest-product:hover, .retype:hover,.calculateBMI:hover{
+      color: var(--primary-color);
+      background-color: white;
+      box-shadow:0px 0px 0px 2px var(--primary-color) inset;
+  }
+     .retype{
+      margin:20px 60px 20px 20px;
+      font-size: 25px;
+      color: white;
+      width: 190px;
+      height: 50px ;
+      padding-top: 6.25px;
+      padding-bottom: 6.25px;
+      border: none;
+      background-color: var(--primary-color);
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+    }
+  /* ======END BMI====== */
+  
+  
+  /* ========CART========= */
+  
+  
+  #cart .products-item
+  {
+      position: relative;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      border-bottom: solid 1px #ECE2DD;
+  }
+  #cart .product-cart{
+    margin-top: 40px;
+  }
+  #cart .products-item .image-item
+  {
+      width: 110px;
+      height: 110px;
+  }
+  #cart .product-infor{
+    margin-left: 20px;
+    
+    
+  }
+  #cart .name{
+    font-size: 2rem;
+  }
+  #cart .quality_price{
+    display: flex;
+    margin-top: 1rem;
+  }
+  #cart .product-cart .quality_price .quality, .price{
+      font-size: 1.8rem;
+  }
+  #cart .products-item .close-icon{
+    position: absolute;
+    margin-left: 10px;
+    height: 15px;
+    width: 15px;
+    align-items: flex-end;
+    right: 1.5rem;
+    top: 1rem;
+  }
+  #cart .products-item .quality_price .mutiply{
+    height: 12px;
+    width: 12px;
+    margin: 0px 5px;
+    
+  }
+  #cart .wrapper .Total-money{
+    /* font-size: 2.5rem; */
+    display: flex;
+    margin-top: 35px;
+    font-weight: bold;
+    
+  }
+  #cart .wrapper .Total-money .total{
+    font-size: 25px;
+  }
+  #cart .wrapper .Total-money .money{
+    position: relative;
+    left: 50%;
+    font-size: 25px;
+  }
+  
+  
+  /*======== END CART========= */
+  
+  
+  
+   /* .floating-buble{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: 0;
+    margin-right: -50px;
+  } */
+  
+    /*===== product diet==== */
+    
+  #diet .wrapper .sort{
+    
+    float: right;
+    border: 2px solid var(--primary-color);
+  }
+  #diet .wrapper .sort select{   
+    height: 35px;
+    width: 250px; 
+    font-size: 15px;
+    outline: 1px solid white;
+    outline-offset: -1px;
+    cursor: pointer;
+    color: var(--primary-color);
+  
+  }
+  #diet .wrapper{
+    height: fit-content;
+    padding: 60px 0;
+    width: 84%;
+    margin: 0 auto;
+    
+  }
+  
+  /* ẩn hiện container */
+  
+  #diet, .thin, .sothin, .normal, .overweight, .obese
+  {
+    display: none;
+  }
+  
+  #diet .wrapper .container{
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #diet .wrapper .container .item{
+    width: 30%;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  #diet .wrapper .container .item:hover{
+    transform: translateY(-3px);
+  }
+  
+  #diet .wrapper .container .item:first-child .product-item, 
+  #diet .wrapper .container .item:last-child .product-item{background-color: var(--item-1);}
+  
+  #diet .wrapper .container .item:nth-child(2) .product-item, 
+  #diet .wrapper .container .item:nth-child(4) .product-item{background-color: var(--item-3);}
+  
+  #diet .wrapper .container .item:nth-child(3) .product-item, 
+  #diet .wrapper .container .item:nth-child(5) .product-item{background-color: var(--item-4);}
+  
+  @media (min-width: 769px) and (max-width: 1200px){
+    #diet .wrapper .container{height: 940px;}
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #diet .wrapper .container .item{
+        width: 45%;height: max-content;}
+    #diet .wrapper .container{height: 1600px;margin: 40px 0;}
+  }
+  
+  @media (max-width: 428px){
+    #diet .wrapper .container{display: block; height: fit-content;position: relative;margin-top: 16p;}
+    #diet .wrapper .container .item{
+        width: 100%;
+        position: relative;}
+  }
+   /*===== End product diet==== */
+   /* =======Page number======== */
+   #pagination .page-numbers {
+      display:flex;
+      padding-left: 0;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    
+   }
+   #pagination .page-numbers .page-item{
+     margin: 1rem;
+     
+   }
+   .page-item{
+     text-align: center;
+     justify-content: center;
+   }
+   #pagination ul li{
+     width: 4rem;
+     line-height: 4rem;
+     border-radius: 50%;
+     justify-content: center;
+   }
+  
+   
+   #pagination .page-item:hover{
+     background: var(--primary-color);
+     
+    
+   }
+   .page-link:hover{
+     color: white;
+   }
+   
