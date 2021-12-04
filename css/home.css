@@ -229,7 +229,6 @@ section{
 
 #bestseller .wrapper .container{
     width: 100%;
-    height: 1100px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -239,6 +238,7 @@ section{
 
 #bestseller .wrapper .container .item{
     width: 30%;
+    margin: 20px 0;
     position: relative;
     transform: translateY(0);
     transition: transform 0.3s ease;
@@ -257,18 +257,13 @@ section{
 #bestseller .wrapper .container .item:nth-child(3) .product-item, 
 #bestseller .wrapper .container .item:nth-child(5) .product-item{background-color: var(--item-4);}
 
-@media (min-width: 769px) and (max-width: 1200px){
-    #bestseller .wrapper .container{height: 940px;}
-}
-
 @media (min-width: 429px) and (max-width: 768px){
-    #bestseller .wrapper .container .item{
-        width: 45%;height: max-content;}
-    #bestseller .wrapper .container{height: 1600px;margin: 40px 0;}
+    #bestseller .wrapper .container .item{width: 45%;}
+    #bestseller .wrapper .container{margin: 40px 0;}
 }
 
 @media (max-width: 428px){
-    #bestseller .wrapper .container{display: block; height: fit-content;position: relative;margin-top: 16px;}
+    #bestseller .wrapper .container{display: block;position: relative;margin-top: 16px;}
     #bestseller .wrapper .container .item{
         width: 100%;
         position: relative;}

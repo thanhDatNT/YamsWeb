@@ -84,7 +84,9 @@ var collapseFragments= function() {
 //  Order and Product/Toggle Child
 expandElements.forEach((element, index) => {
     element.onclick= function(){
-        children[index].classList.toggle('active')
+        if(drawer.classList.contains('active')){
+            children[index].classList.toggle('active')
+        }
     }
 })
 

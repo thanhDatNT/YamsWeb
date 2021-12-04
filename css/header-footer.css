@@ -23,16 +23,7 @@ header nav .logo{
     float: left;
     font-size: 2.8rem;
     line-height: 60px;
-    margin-left: 12px;
-    transform: scale(1);
-    transition: all 0.3s;
     display: none;
-}
-
-#menu-icon:hover{
-    color: var(--primary-color);
-    transform: scale(1.3);
-    cursor: pointer;
 }
 
 header nav .menu{
@@ -49,7 +40,6 @@ header nav .menu li{
     width: fit-content;
     margin: 0 12px;
     position: relative;
-    user-select: all;
 }
 
 header nav .menu li a{
@@ -369,11 +359,15 @@ footer .wrapper .big-logo{
 
 footer .wrapper .big-logo .logo{
     width: 50%;
+    display: block;
     margin: 0 auto;
 }
 
-footer .wrapper .big-logo h3{
+footer .wrapper .big-logo a{
+    font-family: 'Nunito', sans-serif;
     font-size: 2.8rem;
+    font-weight: 700;
+    display: block;
     margin-top: 20px;
     line-height: 2.8rem;
     color: white;
@@ -438,13 +432,17 @@ footer .wrapper .links .follow{
     text-align: center;
 }
 
+footer .wrapper .links .follow .media{display: flex;justify-content: center;}
+
 footer .wrapper .links .follow .media a{
     font-size: 2.8rem;
+    display: block;
+    margin: 0 4px;
 }
 
 footer a{
     color: white;
-    transform-origin: left;
+    transform-origin: center;
     transform:scale(1);
     transition: 0.3s;
 }
