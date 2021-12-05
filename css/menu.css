@@ -7,4 +7,197 @@ header nav .menu li:nth-child(2) a{
     background-color: var(--background);
     font-size: 3rem;
 }
+section{
+    width: 100%;
+    position: relative;
+}
+
+/* Banner */
+#banners{
+    height: 70vh;
+    background-image: url("/images/banners/hero_menu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    overflow: hidden;
+}
+#banners .content-banner{
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-align: center;
+    text-shadow: 1px 1px 2px var(--black-4);
+}
+#banners .content-banner .menu-title{
+    color: var(--background);
+}
+#banners .content-banner .description{
+    color: var(--background);
+    font-size: 4rem;
+    line-height: 6rem;
+}
+
+/* Filter */
+#filter{
+    display: block;
+    background-color: white;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    padding: 10px;
+    margin: 50px 30px 200px auto;
+}
+
+/* best seller */
+.title{
+    margin: 30px;
+}
+#bestseller {
+    width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.product-item {
+    width: 450px;
+    margin: 30px;
+}
+
+.product-item:hover{
+    transform: translateY(-3px);
+}
+
+#bestseller .cs-hidden .item:first-child .product-item, 
+#bestseller .cs-hidden .item:last-child .product-item{background-color: var(--item-1);}
+
+#bestseller .cs-hidden .item:nth-child(2) .product-item, 
+#bestseller .cs-hidden .item:nth-child(4) .product-item{background-color: var(--item-3);}
+
+#bestseller .cs-hidden .item:nth-child(3) .product-item, 
+#bestseller .cs-hidden .item:nth-child(5) .product-item{background-color: var(--item-4);}
+
+/* new flavour */
+#new{
+    margin-top: 200px;
+}
+#new .title{
+    position: relative;
+}
+#new .floating-buble{
+    position: absolute;
+    top: -180px;
+    margin-left: -100px;
+}
+#new .floating-buble img{transform: rotate(30deg);}
+
+#new .content{
+    margin: 80px 0 80px 30px;
+    position: relative;
+}
+#new .content .name{
+    font-size: 4.2rem;
+    margin-bottom: 40px;
+}
+#new .content .description{
+    margin-bottom: 40px;
+    margin-right: 130px;
+    line-height: 40px;
+}
+
+#new .content .flavour-content{
+    position: relative;
+}
+#new .content .flavour-content .new-flavour{
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    text-align: right;
+    line-height: 40px;
+}
+#new .content .flavour-content .new-flavour span{
+    background-color: var(--primary-color);
+    padding: 6px;
+    color: white;
+}
+
+#new .content .flavour-content .new-flavour p:nth-child(2){
+    
+    width: 60%;
+    margin: 20px 0 10px auto;
+}
+
+#new .content .flavour-content .new-flavour p:last-child{
+    color: var(--primary-color);
+    
+}
+
+/* offer */
+#offer{
+    margin-top: 200px;
+}
+
+#offer .floating-buble{
+    position: absolute;
+    top: -180px;
+    right: -80px;
+    margin-right: -80px;
+}
+#offer .floating-buble img{transform: rotate(-20deg);}
+
+#offer .content{
+    margin: 80px 80px 30px 0;
+    position: relative;
+}
+#offer .content .flavour-content{
+    position: relative;
+}
+#offer .content .flavour-content .offer-flavour{
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    text-align: left;
+    line-height: 40px;
+}
+#offer .content .flavour-content .offer-flavour span{
+    background-color: var(--primary-color);
+    padding: 6px;
+    color: white;
+}
+
+#offer .content .flavour-content .offer-flavour p:nth-child(2){
+    
+    width: 60%;
+    margin: 20px auto 10px 0;
+}
+
+#offer .content .flavour-content .offer-flavour p:last-child{
+    color: var(--primary-color);
+    
+}
+#offer .content .text{
+    vertical-align: top;
+}
+#offer .content .text .name{
+    font-size: 4.2rem;
+    margin-bottom: 40px;
+    margin-left: 80px;
+}
+#offer .content .text .title{
+    margin-bottom: 40px;
+    margin-left: 80px;
+}
+#offer .content .text .description{
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 120px;
+    line-height: 40px;
+}
+#offer .content .text input{
+    margin-bottom: 40px;
+    margin-left: 80px;
+    
+}
+
 
