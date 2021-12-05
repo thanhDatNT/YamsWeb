@@ -4,9 +4,625 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diet</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/diet.css">
 </head>
 <body>
-    <h4>Diet page</h4>
+     
+    <!-- header -->
+    <header>
+        <nav >
+                
+            <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+            <!-- Logo Yams -->
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+            </div>
+            <!-- Menu -->
+            <ul class="menu">
+                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                <li><a href="index.html" class="item">Home</a></li>
+                <li id="menu"><a href="menu.html" class="item">Menu</a>
+                    <div class="child-1">
+                        <ul>
+                            <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                            <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                            <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                            <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                            <li><a href="#" class="sub-item-1">Phân loại</a>
+                                <div class="child-2">
+                                    <ul>
+                                        <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                        <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                        <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                        <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                <li><a href="blog.html" class="item">Yams Blog</a></li>
+                <li><a href="aboutus.html" class="item">About us</a></li>
+                
+            </ul>
+            <!-- Search, account, cart icons -->
+            <div class="group-icons">
+                <!-- Search icon and input -->
+                <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                <button id="find-btn">Tìm</button>
+                <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                <!-- Cart icon and status -->
+                <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <div class="cart-box">
+                        <div class="empty-cart">
+                            <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                        </div>
+                        <div class="non-empty"></div>
+                    </div>
+                </a>
+                
+                <!-- Account icon -->
+                <a href="#" id="account-icon">
+                    <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                </a>
+            </div>
+        </nav>
+    </header>
+<div id="container-diet">
+     <section id="banners">
+        <div class="slide-wrapper">
+            <div class="slider-item"></div>
+        </div>
+        <div class="banner-text">
+            <h1 class="font-xxl main-title">Diet With Yams</h1>
+            <h3 class="description">Thưởng thức bánh ngon không màng cân nặng</p>
+        </div>
+    </section>
+
+    <section class="content">
+      
+        <form name="bmiForm">
+            <div class="bmi-calculator">
+                <h4>Tính chỉ số BMI</h4>
+                <div class="bmi-sex">
+                    Giới tính 
+                    <label>
+                        <input type="radio" name="radio-button" value="man" checked />
+                        <span >Nam</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="radio-button" value="female" />
+                        <span >Nữ</span>
+                      </label>
+                    
+                </div>
+                <div class="bmi-weight">
+                    <input class="weight-slider" name="realweight" id="myWeight" type="range" min="25" max="160" value="60"/>
+                    <p> Cân nặng
+                        <input name="weight" id="inputWeight" type="number" value="60" min="25" max="160" oninput="showValWeight(this.value)" />
+                        <span id="weight"></span> kg   
+                    </p> 
+                        
+                </div>
+                <div class="bmi-height">
+                    <input class="height-slider" name="realheight" id="myHeight" type="range" min="100" max="220" value="160"/>
+                    <p>
+                        Chiều cao
+                        <input name="height" id="inputHeight" type="number" value="160" min="100" max="220" oninput="showValHeight(this.value)" />
+                        <span id="height"></span> cm
+                    </p> 
+                </div>
+                <input class="calculateBMI" type="button" value="Tính BMI" onclick="calculateBmi()"/>
+                <p class="kq">Kết quả:</p>
+                <div class="result">
+                    <!-- <input type="text" id="indexbmi" name="bmi"> -->
+                    <div id="indexBMI"></div>
+                    <div id="status"></div>
+                </div>
+                
+                  <!-- <p>
+                    <span id="evaluationMessage"></span>
+                  </p> -->
+                  <div class="suggest">
+                      <p >
+                        
+                        <input class="suggest-product" type="button" value="Đề xuất" onclick = "suggestdiet()"/>
+                        <input class="retype" type="button" value="Nhập lại" onclick="retype()"/>
+                      </p>
+                    
+                  </div>
+            </div>           
+        </form> 
+        <!-- ======cart======= -->
+        <section id="cart">
+            <div class="wrapper">
+                <h4> Giỏ hàng</h4>
+                <div class="product-cart">
+                    <ul class="list-items">
+                        <li class="products-item">
+                            <img class="image-item" src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" alt="">     
+                            <div class="product-infor">
+                                <h5 class="name">America  Banana Cake</h5>
+                                <div  class="quality_price">
+                                    <p class="quality">2</p>
+                                    <img class="mutiply" src="https://img.icons8.com/material-two-tone/24/000000/multiply.png"/>
+                                    <p class="price">65 000đ</p>
+                                </div>
+                               
+                            </div>
+                                <img class="close-icon" src="https://img.icons8.com/material-outlined/24/000000/delete-sign.png" alt=""/>   
+                        </li>
+                        <li class="products-item">
+                            <img class="image-item" src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" alt="">     
+                            <div class="product-infor">
+                                <h5 class="name">Summer Pudding</h5>
+                                <div  class="quality_price">
+                                    <p class="quality">1</p>
+                                    <img class="mutiply" src="https://img.icons8.com/material-two-tone/24/000000/multiply.png"/>
+                                    <p class="price">50 000đ</p>
+                                </div>
+                               
+                            </div>
+                                <img class="close-icon" src="https://img.icons8.com/material-outlined/24/000000/delete-sign.png" alt=""/>   
+                        </li>
+                        <li class="products-item">
+                            <img class="image-item" src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" alt="">     
+                            <div class="product-infor">
+                                <h5 class="name">Delish Snowfalte Cookies</h5>
+                                <div  class="quality_price">
+                                    <p class="quality">2</p>
+                                    <img class="mutiply" src="https://img.icons8.com/material-two-tone/24/000000/multiply.png"/>
+                                    <p class="price">20 000đ</p>
+                                </div>
+                               
+                            </div>
+                                <img class="close-icon" src="https://img.icons8.com/material-outlined/24/000000/delete-sign.png" alt=""/>   
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="Total-money">
+                    <p class="total">Tổng tiền</p>
+                    <p class="money">220 000đ</p>
+                </div>
+                <div class="suggest">
+                    <p >
+                      <input class="suggest-product" type="button" value="Xem giỏ hàng" onclick="suggest"/>
+                      <input class="retype" type="button" value="Thanh toán" onclick="retypeBmi"/>
+                    </p>
+                  
+                </div>
+            </div>
+           
+        </section> 
+
+        <!--====== end cart ==== -->
+    </section>
+    <!-- ======products====== -->
+    <section id="diet">
+        <div class="wrapper">
+            <h2 class="title font-xl">Đề Xuất</h2>
+            <div class="sort">
+                <form>
+                    <select name="sort">
+                    <option value="sort">Lọc</option>
+                    <option value="low-to-high">Giá: Thấp đến cao</option>
+                    <option value="high-to-low">Giá: Cao đến thấp</option>
+                    <option value="lastest">Sản phẩm: Mới nhất</option>
+                    <option value="best-sale">Sản phẩm: Bán nhiều nhất</option>
+                    </select>
+                 </form>
+            </div>
+            <div class="diet__proposal sothin">
+                <div class="container ">
+                    <!-- 1 Product item -->
+                    <div class="item">
+                       <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">America  Banana Cake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>65.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Summer Pudding</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>50.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                         <div class="thumb"><img src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" alt=""></div>
+                         <div class="detail">
+                             <h3 class="name">Delish Snowfalte Cookies</h3>
+                             <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>20.000 <u>đ</u></p>
+                             <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/xhwDpCd/Cinnamon-scrolls.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Cinnamon-scrolls</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>100.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                            <div class="thumb"><img src="https://i.ibb.co/y0BF54r/Vegan-Raspberrry-Creme.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Vegan Raspberrry Creme</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/zPwYSxw/Flourless-Orange-Cake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Flourless Orange Cake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="diet__proposal thin">
+                <div class="container">
+                    <div class="item">
+                        <div class="product-item">
+                            
+                         <div class="thumb"><img src="https://i.ibb.co/7GJWyzd/Mango-Tiramisu.jpg" alt=""></div>
+                         <div class="detail">
+                             <h3 class="name">Mango Tiramisu</h3>
+                             <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>140.000 <u>đ</u></p>
+                             <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/xhwDpCd/Cinnamon-scrolls.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Cinnamon-scrolls</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>100.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                            <div class="thumb"><img src="https://i.ibb.co/y0BF54r/Vegan-Raspberrry-Creme.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Vegan Raspberrry Creme</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Matcha Tiramisu</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="diet__proposal normal">
+                <div class="container">
+                    <!-- 1 Product item -->
+                    <div class="item">
+                       <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/Mp8fST7/Berry-caramel-pudding.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Berry Caramel udding</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>65.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/hZp9s31/White-chocolate-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">White Chocolate Cheesecake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>70.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                         <div class="thumb"><img src="https://i.ibb.co/S6jFbjN/Mango-Cup-Cake.jpg" alt=""></div>
+                         <div class="detail">
+                             <h3 class="name">Mango Cup Cake</h3>
+                             <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>20.000 <u>đ</u></p>
+                             <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/xhwDpCd/Cinnamon-scrolls.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Cinnamon-scrolls</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>100.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                            <div class="thumb"><img src="https://i.ibb.co/y0BF54r/Vegan-Raspberrry-Creme.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Vegan Raspberrry Creme</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/zPwYSxw/Flourless-Orange-Cake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Flourless Orange Cake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="diet__proposal overweight">
+                <div class="container">
+                    <!-- 1 Product item -->
+                    <!-- <div class="item">
+                       <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">America  Banana Cake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>65.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                       </div>
+                    </div> -->
+                    <!-- 1 Product item -->
+                    <!-- <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Summer Pudding</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>50.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                         <div class="thumb"><img src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" alt=""></div>
+                         <div class="detail">
+                             <h3 class="name">America Banana Cake</h3>
+                             <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>20.000 <u>đ</u></p>
+                             <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/xhwDpCd/Cinnamon-scrolls.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Cinnamon-scrolls</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>100.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                            <div class="thumb"><img src="https://i.ibb.co/y0BF54r/Vegan-Raspberrry-Creme.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Vegan Raspberrry Creme</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/zPwYSxw/Flourless-Orange-Cake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Flourless Orange Cake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="diet__proposal obese">
+                <div class="container">
+                    <!-- 1 Product item -->
+                    <div class="item">
+                       <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/3ryWQmc/Pudding-mango.png" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding Mango</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>65.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/gTM730w/Berry-panacotta-pudding.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Berry Panacotta Pudding</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>50.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                         <div class="thumb"><img src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" alt=""></div>
+                         <div class="detail">
+                             <h3 class="name">Delish Snowfalte Cookies</h3>
+                             <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>20.000 <u>đ</u></p>
+                             <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                         </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/xhwDpCd/Cinnamon-scrolls.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Cinnamon-scrolls</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>100.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            
+                            <div class="thumb"><img src="https://i.ibb.co/y0BF54r/Vegan-Raspberrry-Creme.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Vegan Raspberrry Creme</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 Product item -->
+                    <div class="item">
+                        <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/zPwYSxw/Flourless-Orange-Cake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Flourless Orange Cake</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
+                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="floating-buble">
+            <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
+        </div> -->
+        <div id="pagination">
+            <ul class="page-numbers">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">
+                <i class="fas fa-arrow-right nextpage"></i>
+            </a>
+            </li>
+        </ul>
+    </div> 
+    </section>
+  
+</div>
+    <footer>
+        <div class="wrapper">
+            <div class="big-logo">
+                <div class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></div>
+                <h3>Yams Bakery</h3>
+            </div>
+            <div class="links">
+                <div class="aboutus">
+                    <h3>Về chúng tôi</h3>
+                    <a href="#" class="item">Về chúng tôi</a>
+                    <a href="#" class="item">Chính sách</a>
+                </div>
+                <div class="contact">
+                    <h3>Liên Hệ</h3>
+                    <ul>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                            <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                            <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                            <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                    </ul>
+                </div>
+                <div class="follow">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="media">
+                        <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/header-footer.js"></script>
+    <script src="./js/diet.js"></script>
 </body>
 </html>
