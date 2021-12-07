@@ -4,9 +4,322 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yams</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/blog.css">
 </head>
 <body>
-    <h4>Blog page</h4>
+    <div class="app">
+        <!-- ==========Start Header=========== -->
+        <header>
+            <nav >
+                
+                <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+                <!-- Logo Yams -->
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+                </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                    <li><a href="index.html" class="item">Home</a></li>
+                    <li id="menu"><a href="menu.html" class="item">Menu</a>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                    <li><a href="blog.html" class="item">Yams Blog</a></li>
+                    <li><a href="aboutus.html" class="item">About us</a></li>
+                    
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <button id="find-btn">Tìm</button>
+                    <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                    <!-- Cart icon and status -->
+                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <div class="non-empty"></div>
+                        </div>
+                    </a>
+                    
+                    <!-- Account icon -->
+                    <a href="#" id="account-icon">
+                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    </a>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- ==========Start layout container============= -->
+        <div id="container">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Yams blog</h1>
+                    <h3 class="description">Joy Full of Sweet Moments</p>
+                </div>
+            </section>
+            <!-- content -->
+            <div class="blog-content-holder">
+                <section class="blog-content">
+                    <article class="post-item">
+                        <div class="port">
+                            <div class="article-content-holder">
+                                <div class="article-media">
+                                    <div class="media-box">
+                                        <a href="/sample-post.html">
+                                            <img src="https://i.ibb.co/9yJYx5Z/strawberrycake.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="article-headline">
+                                    <header>
+                                        <h3>
+                                            <a href="#" class="author">YAMS RECIPES</a>
+                                            <span><del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del></span>
+                                            <a href="#" class="time">2/11/2021</a>
+                                            <div class="headline-content">
+                                                <a href="/sample-post.html" target="_self" title="Vào bếp thực hiện món Bánh Mousse dâu tây chocolate ngọt ngào mát lạnh ">Vào bếp thực hiện món Bánh Mousse dâu tây chocolate ngọt ngào mát lạnh </a>
+                                            </div>
+                                        </h3>
+                                    </header>
+                                </div>
+                                <div class="article-content">
+                                    <p>
+                                        Có thể nói rằng, bánh Mousse là dòng bánh thuộc nhóm các công thức bánh dễ làm nhất. Ngoài ra, còn rất phù hợp với những bạn chưa có điều kiện sắm lò nướng cho gia đình. Hôm nay, hãy cùng Yams vào bếp thực hiện món Bánh Mousse dâu tây ngọt ngào mát lạnh vào dịp cuối tuần này nhé!
+                                    </p>
+                                </div>
+                                <div class="read-more">
+                                    <a href="/sample-post.html"target="_self" class="read-more-link" title="Xem thêm">Xem thêm <span class="iconify" data-icon="carbon:next-outline"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post-item">
+                        <div class="port">
+                            <div class="article-content-holder">
+                                <div class="article-media">
+                                    <div class="media-box">
+                                        <a href="#">
+                                            <img src="https://i.ibb.co/6y6cjnL/Lime-cake.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="article-headline">
+                                    <header>
+                                        <h3>
+                                            <a href="#" class="author">YAMS RECIPES</a>
+                                            <span><del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del></span>
+                                            <a href="#" class="time">2/11/2021</a>
+                                            <div class="headline-content">
+                                                <a href="/sample-post.html" target="_self" title="Bánh tart chanh thanh mát ">Bánh tart chanh thanh mát </a>
+                                            </div>
+                                        </h3>
+                                    </header>
+                                </div>
+                                <div class="article-content">
+                                    <p>
+                                        Bánh tart thuộc dòng bánh cơ bản của món tráng miệng nói chung và dòng bánh pastry nói riêng, và là món bánh không thể thiếu của các bữa tiệc của người phương Tây. Hôm nay, Yams xin giới thiệu với bạn cách làm món bánh thanh mát này, hãy cùng bắt tay vào làm nhé!
+                                    </p>
+                                </div>
+                                <div class="read-more">
+                                    <a href="/sample-post.html"target="_self" class="read-more-link" title="Xem thêm">Xem thêm <span class="iconify" data-icon="carbon:next-outline"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post-item">
+                        <div class="port">
+                            <div class="article-content-holder">
+                                <div class="article-media">
+                                    <div class="media-box">
+                                        <a href="/sample-post.html">
+                                            <img src="https://i.ibb.co/KqFc2kN/chorus.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="article-headline">
+                                    <header>
+                                        <h3>
+                                            <a href="/sample-post.html" class="author">YAMS RECIPES</a>
+                                            <span><del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del></span>
+                                            <a href="#" class="time">2/11/2021</a>
+                                            <div class="headline-content">
+                                                <a href="/sample-post.html" target="_self" title="Công thức bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha">Công thức bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha</a>
+                                            </div>
+                                        </h3>
+                                    </header>
+                                </div>
+
+                                <div class="article-content">
+                                    <p>
+                                        Cùng có kết cấu giòn rụm, hương vị ngọt ngào thơm ngon nóng hổi vừa thổi vừa ăn nhưng bánh quẩy Churros có hình dáng "thon thả" hơn so với bánh quẩy Việt Nam và thường được phục vụ kèm với sốt. Còn chần chừ gì mà không bắt tay thực hiện món ăn mới lạ này ngay thôi nhỉ!
+                                    </p>
+                                </div>
+                                <div class="read-more">
+                                    <a href="/sample-post.html" target="_self" class="read-more-link" title="Xem thêm">Xem thêm <span class="iconify" data-icon="carbon:next-outline"></span></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </article>
+                    <div class="read-more-post">
+                        <a href="#" class="read-more-link" title="Xem bài viết cũ hơn">Xem bài viết cũ hơn <span class="iconify" data-icon="carbon:next-outline"></span></a>
+                    </div>
+                </section>
+                <!-- end post item -->
+                <!-- blog sidebar -->
+                <div class="blog-sidebar">
+                    <section class="popular-wraper">
+                        <h3 class="popular-heading">Phổ biến</h3>
+                        <ul class="list-items">
+                            <li class="popular-item">
+                                <div class="popular-info">
+                                    <a href="#" class="popular-title" title="Cách làm bánh tart trứng">Cách làm bánh tart trứng
+                                        <div class="popular-time">                                                
+                                            <p class="time">Nov 15, 2021</p>
+                                        </div>
+                                    </a>
+                                </div>                                    
+                                <div class="more-icon">
+                                    <a href="#" title="Cách làm bánh tart trứng"><span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </li>
+                            <li class="popular-item">
+                                <div class="popular-info">
+                                    <a href="#" class="popular-title" title="Công thức tự làm kẹo Nougat tại nhà">Công thức tự làm kẹo Nougat tại nhà
+                                        <div class="popular-time">                                                
+                                            <p class="time">Oct 11, 2021</p>
+                                        </div>
+                                    </a>
+                                </div>                                    
+                                <div class="more-icon">
+                                    <a href="#" title="Công thức tự làm kẹo Nougat tại nhà"><span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </li>
+                            <li class="popular-item">
+                                <div class="popular-info">
+                                    <a href="#" class="popular-title" title="Công thức bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha">Công thức bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha
+                                        <div class="popular-time">                                                
+                                            <p class="time">Sep 10, 2021</p>
+                                        </div>
+                                    </a>
+                                </div>                                    
+                                <div class="more-icon">
+                                    <a href="#" title="Công thức bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha"><span class="iconify" data-icon="bi:arrow-right-short"></span></a>
+                                </div>
+                            </li>
+                        </ul> 
+                    </section>
+                    <section id="highlight">
+                        <!-- Highlight box -->
+                        <div class="hl-box">
+                            <div class="wrapper">
+                                <div class="image-box">
+                                    <img src="https://i.ibb.co/BKxs9Pw/blog-ad.jpg" alt="">
+                                </div>
+                                <div class="content-box">
+                                    <div class="logo">
+                                        <div class="image"><img src="./images/logo/Logo_NoBg_Pink.png" alt="logo"></div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="description">Yams tự hào là công ty start-up về bánh ngọt lớn nhất khu vực Đông Nam Bộ với hơn 10 chi nhánh tại các quận, huyện thuộc TP. Hồ Chí Minh.
+                                            <br><br>
+                                            Đến với Yams, bạn sẽ được trải nghiệm cảm giác như đang lạc vào vương quốc của những loại bánh mang nhiều hương vị khác nhau.</p>
+                                        <a href="aboutus.html" class="more"><b>Xem thêm</b><span class="iconify" data-icon="akar-icons:chevron-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </section>
+                  </div>
+                <!-- end post sidebar -->
+                <div class="clear"></div>
+            </div>
+        <!-- ===========Start Footer============ -->
+        <footer>
+            <div class="wrapper">
+                <div class="big-logo">
+                    <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                    <a href="index.html">Yams Bakery</a>
+                </div>
+                <div class="links">
+                    <div class="aboutus">
+                        <h3>Về chúng tôi</h3>
+                        <a href="aboutus.html" class="item">Về chúng tôi</a>
+                        <a href="#" class="item">Chính sách</a>
+                    </div>
+                    <div class="contact">
+                        <h3>Liên Hệ</h3>
+                        <ul>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                                <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                                <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                                <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="media">
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </footer>
+        <!-- ========== Start scripts ============-->
+        <!-- Compulsory -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        <script src="./js/index.js"></script>
+    </div>
 </body>
 </html>
