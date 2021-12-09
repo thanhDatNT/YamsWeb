@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams | Account</title>
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/account.css">
+</head>
+<body>
+    <!-- ==========Start Header=========== -->
+    <header>
+        <nav >
+            <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+            <!-- Logo Yams -->
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+            </div>
+            <!-- Menu -->
+            <ul class="menu">
+                <li><a href="index.html" class="item">Home</a></li>
+                <li id="menu"><a href="menu.html" class="item">Menu</a>
+                    <div class="child-1">
+                        <ul>
+                            <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                            <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                            <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                            <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                            <li><a href="#" class="sub-item-1">Phân loại</a>
+                                <div class="child-2">
+                                    <ul>
+                                        <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                        <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                        <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                        <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                <li><a href="blog.html" class="item">Yams Blog</a></li>
+                <li><a href="aboutus.html" class="item">About us</a></li>
+                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+            </ul>
+            <!-- Search, account, cart icons -->
+            <div class="group-icons">
+                <!-- Search icon and input -->
+                <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                <datalist id="cakes">
+                    <option value="Macaron">
+                    <option value="Pudding">
+                    <option value="Cupcake">
+                    <option value="Sweet cake">
+                    <option value="Bread">
+                    <option value="Donut">
+                </datalist>
+                <button id="find-btn">Tìm</button>
+                <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                <!-- Cart icon and status -->
+                <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <div class="cart-box">
+                        <div class="empty-cart">
+                            <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                        </div>
+                        <div class="non-empty"></div>
+                    </div>
+                </a>
+                <!-- Account icon -->
+                <a href="login" id="account-icon">
+                    <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+    <!-- ========Start container=========== -->
+    <div class="container">
+        <div class="nav-panel">
+            <div class="user-photo">
+                <div class="photo">
+                    <img src="http://images6.fanpop.com/image/photos/38900000/-Bella-kristen-stewart-as-bella-swan-cullen-38914411-1728-2047.jpg" alt="">
+                </div>
+                <div class="update-photo">
+                    <label for="myfile"><span class="iconify" data-icon="ant-design:camera-outlined"></span></label>
+                    <input type="file" id="myfile" name="myfile" accept="image/png, image/jpeg">
+                </div>
+            </div>
+            <h3 class="user-name">Trần Thị Minh Xuân</h3>
+            <!-- Menu navigation -->
+            <ul class="menu">
+                <li class="item active"><span class="iconify" data-icon="ic:outline-account-circle"></span>
+                    <a href="#">Thông tin tài khoản</a></li>
+                <li class="item"><span class="iconify" data-icon="la:file-invoice-dollar"></span>
+                    <a href="#">Quản lí đơn hàng</a></li>
+                <li class="item"><span class="iconify" data-icon="ant-design:setting-outlined"></span>
+                    <a href="#">Thiết lập tài khoản</a></li>
+                <li class="item"><span class="iconify" data-icon="bx:bx-log-out-circle"></span>
+                    <a href="#">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <div class="fragments">
+            <!-- USER INFORMATION FRAGMENT -->
+            <div class="fragment infor active">
+                <h3 class="title">Thông tin tài khoản</h3>
+                <div class="wrapper">
+                    <p>Tên khách hàng</p>
+                    <div class="name">
+                        <input type="text" class="first-name" value="Trần Thị Minh">
+                        <input type="text" class="last-name" value="Xuân">
+                    </div>
+                    <p>Số điện thoại</p>
+                    <input type="text" class="phone-num" value="099 999 999">
+                    <p>Địa chỉ</p>
+                    <input type="text" class="address" value="Đường Phạm Văn Đồng, TP. Thủ Đức, TP. HCM">
+                </div>
+            </div>
+            <!-- ORDER MANAGEMENT FRAGMENT -->
+            <div class="fragment order inactive">
+                <h3 class="title">Quản lí đơn hàng</h3>
+                <table>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Sản phẩm</th>
+                        <th>Ngày đặt</th>
+                        <th>Thành tiền</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <tr>
+                        <td>#121003</td>
+                        <td>
+                            <div class="photo">
+                                <img src="https://i.ibb.co/ZBRMGB3/Birthday-chanh-d-y.jpg" alt="">
+                            </div>
+                            <div class="product">
+                                <h3 class="name">Mango Cheese cake</h3>
+                                <p class="quantity">x1</p>
+                            </div>
+                        </td>
+                        <td>10/12/2021</td>
+                        <td>185000 đ</td>
+                        <td>Đang giao</td>
+                    </tr>
+                    <tr>
+                        <td>#121003</td>
+                        <td>
+                            <div class="photo">
+                                <img src="https://i.ibb.co/R9g4MdW/pudding-isccream.png" alt="">
+                            </div>
+                            <div class="product">
+                                <h3 class="name">Pudding ice cream</h3>
+                                <p class="quantity">x4</p>
+                            </div>
+                        </td>
+                        <td>05/12/2021</td>
+                        <td>340000 đ</td>
+                        <td>Đã giao</td>
+                    </tr>
+                    <tr>
+                        <td>#121003</td>
+                        <td>
+                            <div class="photo">
+                                <img src="https://i.ibb.co/R9g4MdW/pudding-isccream.png" alt="">
+                            </div>
+                            <div class="product">
+                                <h3 class="name">Pudding ice cream</h3>
+                                <p class="quantity">x2</p>
+                            </div>
+                        </td>
+                        <td>03/12/2021</td>
+                        <td>170000 đ</td>
+                        <td>Đã giao</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- ACCOUNT CONFIGURATION FRAGMENT -->
+            <div class="fragment config inactive">
+                <h3 class="title">Thiết lập tài khoản</h3>
+                <div class="wrapper">
+                    <p>Số điện thoại</p>
+                    <input type="text" class="phone-num" value="099 999 999">
+                    <p>Địa chỉ</p>
+                    <input type="text" class="address" value="Đường Phạm Văn Đồng, TP. Thủ Đức, TP. HCM">
+                    <p>Email</p>
+                    <input type="email" class="email" value="xuanttm19411@gmail.com">
+                    <p>Mật khẩu</p>
+                    <input type="password" class="password" value="12345678">
+                </div>
+                <a href="#" class="change-pw">Đổi mật khẩu</a>
+                <input type="submit" value="Lưu thay đổi" class="btn btn-primary">
+                <div class="pw-dialog inactive">
+                    <header>
+                        <span><b>Thay đổi mật khẩu</b></span>
+                        <span class="iconify close-dialog" data-icon="carbon:close"></span>
+                    </header>
+                    <form action="" class="wrapper">
+                        <p>Mật khẩu hiện tại</p>
+                        <input type="password" required>
+                        <p>Mật khẩu mới</p>
+                        <input type="password" required>
+                        <p>Nhập lại mật khẩu mới</p>
+                        <input type="password" required>
+                        <div class="btns">
+                            <input type="reset" value="Hủy" class="btn btn-third">
+                            <input type="submit" value="Lưu" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- LOG OUT FRAGMENT -->
+            <div class="fragment log-out inactive">
+                <h3 class="title">Bạn có muốn đăng xuất không?</h3>
+                <button class="btn btn-third">Hủy</button>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/originals/71/c7/60/71c76025a232b42e8a458ac1656cab65.gif" alt="">
+                </div>
+                <button class="btn btn-primary">Đăng xuất</button>
+            </div>
+            <div class="overlay inactive"></div>
+        </div>
+    </div>
+    <!-- ===========Start Footer=========== -->
+    <footer>
+        <div class="wrapper">
+            <div class="big-logo">
+                <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                <a href="index.html">Yams Bakery</a>
+            </div>
+            <div class="links">
+                <div class="aboutus">
+                    <h3>Về chúng tôi</h3>
+                    <a href="aboutus.html" class="item">Về chúng tôi</a>
+                    <a href="policy.html" class="item">Chính sách</a>
+                </div>
+                <div class="contact">
+                    <h3>Liên Hệ</h3>
+                    <ul>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                            <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                            <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                            <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                    </ul>
+                </div>
+                <div class="follow">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="media">
+                        <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <!-- ========= Start scripts ==========-->
+    <script src="./js/header-footer.js"></script>
+    <script src="./js/account.js"></script>
+</body>
+</html>

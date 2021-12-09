@@ -1,5 +1,5 @@
 // JavaScript Document
-$(document).ready(function() {
+document.onready= function() {
     $('#autoWidth').lightSlider({
         autoWidth:true,
         loop:true,
@@ -7,4 +7,4 @@ $(document).ready(function() {
             $('#autoWidth').removeClass('cs-hidden');
         } 
     });  
-});
+};
