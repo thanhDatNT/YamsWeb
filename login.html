@@ -35,18 +35,18 @@
             <!-- Right side: Login Form -->
             <div class="form-login">
                 <h1 class="font-xl">Đăng nhập</h1>
-                <form action="customer-account.html">
-                    <p>Email</p>
-                    <input type="email" id="email" placeholder="yams@gmail.com">
+                <div class="form">
+                    <p>Tên đăng nhập</p>
+                    <input type="username" id="username" placeholder="Tên đăng nhập">
                     <p>Mật khẩu</p>
-                    <input type="password" id="password" >
+                    <input type="password" id="password" placeholder="Mật khẩu">
                     <div class="pw-tasks">
                         <input type="checkbox" id="save" name="Save" value="save">
                         <span>Lưu mật khẩu</span>
                         <a href="#" class="forget">Quên mật khẩu?</a>
                     </div>
                     <input type="submit" id="submit" class="btn btn-primary">
-                </form>
+                </div>
                 <p>Chưa có tài khoản? <a href="#" ><u><b>Đăng ký</b></u></a></p>
             </div>
         </div>
@@ -93,5 +93,7 @@
         </div>
     </footer>
     <!-- ========== Start scripts ============-->
+    
+    <script src="./js/login.js"></script>
 </body>
 </html>
