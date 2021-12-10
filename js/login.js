@@ -35,7 +35,7 @@ function getData(xml){
 $('#submit').onclick= function() {
     var username= $('#username').value
     var password= $('#password').value
-    data.forEach((user) => {
+    data.forEach((user, i) => {
         if(user[1] === username && user[2] === password){
             if(user[1] == 'ad'){
                 window.location.href= 'admin.html'
@@ -43,6 +43,9 @@ $('#submit').onclick= function() {
             else{
                 window.location.href= 'customer-account.html'
             }
+        }
+        if(i == data.length && user[1] != username){
+            alert('Tên đăng nhập hoặc mật khẩu không tồn tại!')
         }
     })
 }
