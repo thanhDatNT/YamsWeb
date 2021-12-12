@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- link icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <header>
+        <nav >
+            
+            <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+            <!-- Logo Yams -->
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+            </div>
+            <!-- Menu -->
+            <ul class="menu">
+                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                <li><a href="index.html" class="item">Home</a></li>
+                <li id="menu"><a href="menu.html" class="item">Menu</a>
+                    <div class="child-1">
+                        <ul>
+                            <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                            <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                            <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                            <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                            <li><a href="#" class="sub-item-1">Phân loại</a>
+                                <div class="child-2">
+                                    <ul>
+                                        <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                        <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                        <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                        <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                <li><a href="blog.html" class="item">Yams Blog</a></li>
+                <li><a href="aboutus.html" class="item">About us</a></li>
+                
+            </ul>
+            <!-- Search, account, cart icons -->
+            <div class="group-icons">
+                <!-- Search icon and input -->
+                <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                <datalist id="cakes">
+                    <option value="Macaron">
+                    <option value="Pudding">
+                    <option value="Cupcake">
+                    <option value="Sweet cake">
+                    <option value="Bread">
+                    <option value="Donut">
+                </datalist>
+                <button id="find-btn">Tìm</button>
+                <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                <!-- Cart icon and status -->
+                <!-- <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <div class="cart-box">
+                        <div class="empty-cart">
+                            <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                        </div>
+                        <div class="non-empty"></div>
+                    </div>
+                </a> -->
+                
+                <!-- Account icon -->
+                <a href="#" id="account-icon">
+                    <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container_cart">
+        <section id="banners">
+            <div class="slide-wrapper">
+                <div class="slider-item"></div>
+            </div>
+            <div class="banner-text">
+                <h1 class="font-xxl main-title">Giỏ hàng</h1>
+                <h3 class="description">Ways to your heart - Sweet, tasty & delicious</p>
+            </div>
+        </section>
+        <section class="content">
+            <form name="form_cart">
+                <table class="cart">
+                        <thead>
+                            <tr>
+                                <th class="product-remove">&nbsp;</th>
+                                <th class="product-thumbnail">&nbsp;</th>
+                                <th class="product-name">Sản phẩm</th>
+                                <th class="product-price">Giá</th>
+                                <th class="product-quantity">Số lượng</th>
+                                <th class="product-subtotal">Tổng cộng</th>
+                            </tr>
+                        </thead>
+                        <tr class="cart-item">
+
+                            <td class="product-remove">
+                                <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
+    
+                            <td class="product-image">
+                                <a href="#"><img class="image-item"src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" ></a></td>
+    
+                            <td class="product-name" data-title="Product">
+                                <a class="name" href="#">America-Banana-Cake</a>	</td>
+    
+                            <td class="product-price" data-title="Price">
+                                        <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
+                                        60 000 <input type="hidden" name="price1" value="60000">VND
+                                 
+                             </td>
+    
+                            <td class="product-quantity">
+                             <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
+                             <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
+                            <td class="product-subtotal">
+                                <span>
+                                    <input type="text" name="total1" value="60 000" > VND
+                                </span>
+                                    
+                            </td>
+                        </tr>
+                        <tr class="cart-item">
+
+                            <td class="product-remove">
+                                <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
+    
+                            <td class="product-image">
+                                <a href="#"><img class="image-item"src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" ></a></td>
+    
+                            <td class="product-name" data-title="Product">
+                                <a class="name" href="#">America-Banana-Cake</a>	</td>
+    
+                            <td class="product-price" data-title="Price">
+                                        <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
+                                        50 000 <input type="hidden" name="price1" value="50000">VND
+                                 
+                             </td>
+    
+                            <td class="product-quantity">
+                             <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
+                             <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
+                            <td class="product-subtotal">
+                                <span>
+                                    <input type="text" name="total1" value="50 000" > VND
+                                </span>
+                                    
+                            </td>
+                        </tr>
+                        <tr class="cart-item">
+
+                            <td class="product-remove">
+                                <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
+    
+                            <td class="product-image">
+                                <a href="#"><img class="image-item"src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" ></a></td>
+    
+                            <td class="product-name" data-title="Product">
+                                <a class="name" href="#">Delish-Christmas-Brownie</a>	</td>
+    
+                            <td class="product-price" data-title="Price">
+                                        <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
+                                        20 000 <input type="hidden" name="price1" value="20000">VND
+                                 
+                             </td>
+    
+                            <td class="product-quantity">
+                             <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
+                             <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
+                            <td class="product-subtotal">
+                                <span>
+                                    <input type="text" name="total1" value="20 000" > VND
+                                </span>
+                                    
+                            </td>
+                        </tr>
+                        <tr >
+                            <td class="btn-update" colspan="6">
+                                <input class="btn btn-primary" type="button" value="Cập nhật giỏ hàng">
+                            </td>
+                        </tr>
+                        <tr class="sum">
+                            <td colspan="5">
+                                <div class="Title-total">Tổng cộng</div>
+                            </td>
+                            <td class="main-sum">
+                                <span>
+                                    <input class="sum-money" type="text" name="main_total" value="130 000" > VND
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="btn-payment" colspan="6">
+                               <a href="payment.html"><input class="btn btn-primary" type="button" value="THANH TOÁN"  ></a> 
+                            </td>
+                        </tr>
+                </table>
+
+            </form>
+        </section>
+    
+    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="big-logo">
+                <div class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></div>
+                <h3>Yams Bakery</h3>
+            </div>
+            <div class="links">
+                <div class="aboutus">
+                    <h3>Về chúng tôi</h3>
+                    <a href="#" class="item">Về chúng tôi</a>
+                    <a href="#" class="item">Chính sách</a>
+                </div>
+                <div class="contact">
+                    <h3>Liên Hệ</h3>
+                    <ul>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                            <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                            <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                            <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                    </ul>
+                </div>
+                <div class="follow">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="media">
+                        <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        <script src="./js/cart.js"></script>
+</body>
+</html>

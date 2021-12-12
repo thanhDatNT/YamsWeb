@@ -1,0 +1,287 @@
+body{
+    background-color: var(--background);
+    color:var(--text-color);
+    font-family: 'Mulish', sans-serif;
+    
+  }
+  .content-payment{
+    width: 84%;
+    height: fit-content;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  .content{
+    display: flex;
+    margin-top: 20px;
+   
+   
+    justify-content: space-between;
+  }
+  .content-left  {
+    width: 50%;
+}
+/* .content-right{
+    width: 50%;
+} */
+#logo_payment {
+    
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#logo_payment .big-logo .logo{
+    width: 130px;
+    height: 130px;
+}
+#logo_payment .big-logo{
+    display:flex;
+    align-items: center;
+    
+}
+#subheading .sub ul{
+    margin-top: 1rem;
+}
+#subheading .sub ul.breadcrumb li{
+    display: inline;
+    font-size: 1.6rem;
+}
+#subheading .sub .breadcrumb .breadcrumb-item:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    vertical-align: middle;
+    margin: 0 0.5em;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiBvcGFjaXR5PSIuNCIgZmlsbD0iIzAwMCI+PHBhdGggZD0iTS41MjYgMS40MDhsNCA0LjY0NS4wMTQtLjgzLTQgNC4zNTQuOTIuODQ2IDQtNC4zNTYuMzc2LS40MS0uMzYyLS40Mi00LTQuNjQ1LS45NDguODE2eiIvPjwvc3ZnPg==),none;
+}
+#subheading .sub .breadcrumb .breadcrumb-item:last-child::after
+{
+    display: none;
+}
+
+
+ /*==== Thông tin vật chuyển===== */
+#delivery-infor{
+    font-size: 20px;
+    
+}
+#delivery-infor h3{
+    font-size: 30px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    
+}
+#delivery-infor .title{
+    margin: 0px 0px 20px 0;
+}
+#delivery-infor label{
+    display: block;
+    padding: 1.4rem 0;
+}
+#delivery-infor .field-input{
+    height: 50px ;
+     padding-top: 1.5em;
+     padding-bottom: 0.38em;
+     border-radius: 4px;
+     border: 2px solid var(--primary-color);
+     background: white;
+     /* box-shadow: 0 0 0 1px #d9d9d9; */
+     padding: 0.94em 2.8em 0.94em 0.8em;
+}
+#delivery-infor #txtname{
+    width: 100%;
+    
+}
+
+#delivery-infor .email-phone{
+    display: flex;
+    justify-content: space-between;
+}
+#delivery-infor #txtphone{
+    width: 200px;
+}
+#delivery-infor #txtemail{
+    width: 300px;
+}
+#delivery-infor .phone-number{
+margin-left: 80px;
+}
+#delivery-infor .address{
+    /* margin: 1em 0em; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;       
+}
+#delivery-infor .address .address-item select{
+    width: 200px ;
+}
+#delivery-infor .note .field-note{
+    width: 390px;
+    height:100px ;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color);   
+}
+
+#delivery-infor .footer-content-infor{
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+#delivery-infor .footer-content-infor .question{
+    /* width: 50%; */
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 7px;
+}
+#delivery-infor .footer-content-infor .question{
+    color:var( --inactive);
+}
+#delivery-infor .footer-content-infor .question a:hover{
+    color: var(--primary-color);
+}
+ /* end content - left */
+
+
+
+  /* ======cart - right===== */
+
+  #cart_payment h3{
+    font-size: 30px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+  }
+  #cart_payment .products-item
+  {
+      position: relative;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      border-bottom: solid 1px #ebded7;
+  }
+  #cart_payment .product-cart{
+    margin-top: 40px;
+  }
+  #cart_payment .products-item .image-item
+  {
+      width: 110px;
+      height: 110px;
+  }
+  #cart_payment .product-infor{
+    margin-left: 20px;
+    
+    
+  }
+  #cart_payment .name{
+    font-size: 2rem;
+  }
+  #cart_payment .quality_price{
+    display: flex;
+    margin-top: 1rem;
+  }
+  #cart_payment .product-cart .quality_price .quality, .price{
+      font-size: 1.8rem;
+  }
+  #cart_payment .products-item .close-icon{
+    position: absolute;
+    margin-left: 10px;
+    height: 15px;
+    width: 15px;
+    align-items: flex-end;
+    right: 1.5rem;
+    top: 1rem;
+  }
+  #cart_payment .products-item .quality_price .mutiply{
+    height: 12px;
+    width: 12px;
+    margin: 0px 5px;
+    
+  }
+  #cart_payment .wrapper .bottom-cart{
+    border-bottom: solid 1px #ebded7;
+    padding: 20px  0;
+  }
+  #cart_payment .wrapper .bottom-cart .total-sub, .fee-delivery{
+    /* font-size: 2.5rem; */
+    display: flex;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    justify-content: space-between;
+    
+  }
+  #cart_payment .wrapper .bottom-cart .total-sub{
+      margin-bottom: 20px;
+  }
+  #cart_payment .wrapper .sum{
+    display: flex;
+    padding: 20px 0;
+    font-size: 20px;
+    justify-content: space-between;
+  }
+  /*==== end cart ====*/
+
+
+  /* ====Phương thức thanh toán=== */
+  #method-payment{
+    font-size: 20px;
+}
+#method-payment h3{
+    font-size: 25px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    
+}
+#method-payment .title-delivery{
+    margin: 40px 0px 20px 0px;
+}
+#method-payment .title-payment{
+    margin: 60px 0px 20px 0px;
+}
+
+ /* =====radio button===== */
+label > input[type="radio"] {
+    display: none;
+  }
+   input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 20px;
+    height: 20px;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+    
+  }
+   input[type="radio"]:checked + * {
+    color: var(--primary-color);
+  }
+  input[type="radio"]:checked + *::before {
+    background: radial-gradient( var(--primary-color) 40%, transparent 50%, transparent);
+    border-color: var(--primary-color);
+  }
+  
+   input[type="radio"] + * {
+    display: inline-block;
+    padding: 15px 0px;
+  }
+ 
+  /* =====end radio button===== */
+
+
+#method-payment .price{
+    margin-left: 150px;
+    
+}
+#method-payment .ship-direct, .transfer-money{
+    border: 2px solid var(--primary-color);
+    width: 500px;
+    height: fit-content;
+    border-radius: 6px;
+    padding: 0 1.8rem ;
+}
+ .complete{
+    margin: 30px 0 0 335px;
+    
+}

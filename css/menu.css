@@ -14,29 +14,98 @@ section{
 
 /* Banner */
 #banners{
-    height: 70vh;
-    background-image: url("/images/banners/hero_menu.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 60vh;
     margin: auto;
     overflow: hidden;
 }
-#banners .content-banner{
-    width: 80%;
+  
+#banners .slide-wrapper{
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 30%;
-    left: 10%;
-    text-align: center;
+    top: 0;
+    left: 0;
+}
+  
+#banners .slide-wrapper .slider-item{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    transform-origin:center;
+    display: none;
+}
+  
+#banners .slide-wrapper .slider-item:first-child{background-image: url(../images/banners/hero_menu.jpg); display: block;}
+  
+  
+#banners .banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-shadow: 1px 1px 2px var(--black-4);
+    text-align: center;
 }
-#banners .content-banner .menu-title{
+#banners .banner-text .main-title{
     color: var(--background);
+    animation-name: moveInleft;
+    animation-duration: 3s;
 }
-#banners .content-banner .description{
-    color: var(--background);
-    font-size: 4rem;
-    line-height: 6rem;
+  
+#banners .banner-text .description{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    animation-name: moveInRight;
+    animation-duration: 3s;
 }
+@keyframes moveInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+  
+  @media (max-width: 428px){
+    #banners{height: 40vh;}
+    #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
+    #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #banners{height: 50vh;}
+  }
 
 /* Filter */
 #filter{
@@ -51,35 +120,76 @@ section{
 }
 
 /* best seller */
-.title{
-    margin: 30px;
-}
 #bestseller {
-    width:100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    padding: 40px 0;
 }
-.product-item {
+
+#bestseller .wrapper{
+    width: 100%; 
+    text-align: left;
+}
+
+#bestseller .wrapper .title{
+    margin-left: 30px;
+    float: left;
+}
+#bestseller .wrapper .indicator{
+    float: right;
+    position: relative;
+    width: 100px; 
+}
+
+#bestseller .indicator button{
+    font-size: 2rem;
+    color: var(--black-4);
+    margin-right: 12px;
+    font-weight: 700;
+    margin-top: -8px;
+    background: none;
+}
+
+#bestseller .indicator button:hover{
+    color: var(--primary-color); 
+    cursor: pointer;}
+
+
+#bestseller .wrapper .slider-wrapper{
+    width: 100%;
+    height: 100%;
+    margin: 40px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#bestseller .slider-wrapper .slider-product{
+    width: 200%;
+    z-index: 1;
+    padding: 20px 0;
+    display: flex;
+}
+
+#bestseller .slider-wrapper .slider-product .item .product-item {
     width: 450px;
     margin: 30px;
 }
 
-.product-item:hover{
+#bestseller .slider-wrapper .slider-product .item .product-item:hover{
     transform: translateY(-3px);
 }
 
-#bestseller .cs-hidden .item:first-child .product-item, 
-#bestseller .cs-hidden .item:last-child .product-item{background-color: var(--item-1);}
+#bestseller .slider-wrapper .slider-product .item:first-child .product-item, 
+#bestseller .slider-wrapper .slider-product .item:last-child .product-item{background-color: var(--item-1);}
 
-#bestseller .cs-hidden .item:nth-child(2) .product-item, 
-#bestseller .cs-hidden .item:nth-child(4) .product-item{background-color: var(--item-3);}
+#bestseller .slider-wrapper .slider-product .item:nth-child(2) .product-item, 
+#bestseller .slider-wrapper .slider-product .item:nth-child(4) .product-item{background-color: var(--item-3);}
 
-#bestseller .cs-hidden .item:nth-child(3) .product-item, 
-#bestseller .cs-hidden .item:nth-child(5) .product-item{background-color: var(--item-4);}
+#bestseller .slider-wrapper .slider-product .item:nth-child(3) .product-item, 
+#bestseller .slider-wrapper .slider-product .item:nth-child(5) .product-item{background-color: var(--item-4);}
+
 
 /* new flavour */
 #new{
+    width: 100%;
     margin-top: 200px;
 }
 #new .title{
@@ -87,14 +197,15 @@ section{
 }
 #new .floating-buble{
     position: absolute;
-    top: -180px;
-    margin-left: -100px;
+    top: -400px;
+    left: -100px;
 }
 #new .floating-buble img{transform: rotate(30deg);}
 
 #new .content{
-    margin: 80px 0 80px 30px;
+    margin: 80px 0px 80px 30px;
     position: relative;
+    
 }
 #new .content .name{
     font-size: 4.2rem;
@@ -102,12 +213,18 @@ section{
 }
 #new .content .description{
     margin-bottom: 40px;
-    margin-right: 130px;
+    padding-right: 80px;
     line-height: 40px;
+    box-sizing: border-box;
 }
 
 #new .content .flavour-content{
     position: relative;
+    right: 0;
+    top: 0;
+}
+#new .content .flavour-content .flavour-image{
+    margin: 0;
 }
 #new .content .flavour-content .new-flavour{
     position: absolute;
@@ -136,18 +253,18 @@ section{
 /* offer */
 #offer{
     margin-top: 200px;
+    width: 100%;
 }
-
+/*
 #offer .floating-buble{
     position: absolute;
     top: -180px;
     right: -80px;
-    margin-right: -80px;
+    margin-right: 0px;
 }
 #offer .floating-buble img{transform: rotate(-20deg);}
-
+*/
 #offer .content{
-    margin: 80px 80px 30px 0;
     position: relative;
 }
 #offer .content .flavour-content{
@@ -178,25 +295,30 @@ section{
 }
 #offer .content .text{
     vertical-align: top;
+    padding-left: 80px;
 }
 #offer .content .text .name{
     font-size: 4.2rem;
     margin-bottom: 40px;
-    margin-left: 80px;
 }
 #offer .content .text .title{
-    margin-bottom: 40px;
-    margin-left: 80px;
+    margin-bottom: 80px;
+    margin-left: 0px;
+    margin-top: -80px;
 }
 #offer .content .text .description{
     margin-bottom: 40px;
-    margin-left: 80px;
     margin-right: 120px;
     line-height: 40px;
 }
+#offer .content .text img{
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 20px;
+}
 #offer .content .text input{
     margin-bottom: 40px;
-    margin-left: 80px;
     
 }
 

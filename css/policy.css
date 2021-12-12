@@ -1,5 +1,33 @@
 #container{
     width: 100%;
     background-color: var(--background);
+    padding: 80px ;
+}
+.sub-title{
+    display: flex;
+    font-size: 25px;
+    padding-top: 5vh;
+}
+h1{
+    font-size: 30PX;
+    font-family: 'Nunito', sans-serif;
+
+}
+ hr{
+    width:35%; opacity: 1;
+    border: 0.5px solid var(--primary-color);
+    margin-top:  2vh;
+}
+.content{
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin: 25px 0;
+    text-align: justify;
+
+}
+
+ul.item > li:before{
+    content: "- ";
+    text-indent: -5px;
 }
 

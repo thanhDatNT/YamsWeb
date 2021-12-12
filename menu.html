@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="./css/header-footer.css">
     <!-- Custom file -->
     <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/lightslider.css">
     
 </head>
 <body>
@@ -30,8 +29,6 @@
                 </div>
                 <!-- Menu -->
                 <ul class="menu">
-                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
-                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                     <li><a href="index.html" class="item">Home</a></li>
                     <li id="menu"><a href="menu.html" class="item">Menu</a>
                         <div class="child-1">
@@ -56,16 +53,25 @@
                     <li><a href="diet.html" class="item">Diet with Yams</a></li>
                     <li><a href="blog.html" class="item">Yams Blog</a></li>
                     <li><a href="aboutus.html" class="item">About us</a></li>
-                    
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                 </ul>
                 <!-- Search, account, cart icons -->
                 <div class="group-icons">
                     <!-- Search icon and input -->
-                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                    <datalist id="cakes">
+                        <option value="Macaron">
+                        <option value="Pudding">
+                        <option value="Cupcake">
+                        <option value="Sweet cake">
+                        <option value="Bread">
+                        <option value="Donut">
+                    </datalist>
                     <button id="find-btn">Tìm</button>
                     <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                     <!-- Cart icon and status -->
-                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <a href="cart.html" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
                         <div class="cart-box">
                             <div class="empty-cart">
                                 <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
@@ -73,9 +79,8 @@
                             <div class="non-empty"></div>
                         </div>
                     </a>
-                    
                     <!-- Account icon -->
-                    <a href="#" id="account-icon">
+                    <a href="admin.html" id="account-icon">
                         <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
                     </a>
                 </div>
@@ -86,9 +91,12 @@
         <div id="container">
             <!-- Banner -->
             <section id="banners">
-                <div class="content-banner">
-                    <h1 class="font-xxl menu-title">Menu</h1>
-                    <h3 class="description">Hơn 8 loại bánh cùng nhiều hương vị khác nhau</h3>
+                <div class="slide-wrapper">
+                    <div class="slider-item"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Menu</h1>
+                    <h3 class="description">Hơn 8 loại bánh với nhiều hương vị khác nhau</p>
                 </div>
             </section>
             <!-- Filter -->
@@ -101,84 +109,92 @@
             </select>
             <!-- Start Best Sellers -->
             <section id="bestseller">
-                <h2 class="title font-xl">Best Sellers</h2>
-                <ul id="autoWidth" class="cs-hidden">
-                    <!-- 1 Product item -->
-                   <li class="item">
-                       <div class="product-item">
-                            <div class="tag">Top</div>
-                            <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
-                            <div class="detail">
-                                <h3 class="name">Cupcake with strawberry cream</h3>
-                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
-                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                <div class="wrapper">
+                    <h2 class="title font-xl">Best Sellers</h2>
+                    <div class="indicator">
+                        <button class="prev"><span class="iconify" data-icon="akar-icons:chevron-left"></span></button>
+                        <button class="next"><span class="iconify" data-icon="akar-icons:chevron-right"></span></button>
+                    </div>
+                    <div class="slider-wrapper">                    
+                        <div class="slider-product">
+                            <!-- 1 item -->
+                            <div id="firstClone" class="item">
+                                <div class="product-item">
+                                    <div class="tag">Top</div>
+                                    <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <h3 class="name">Cupcake with strawberry cream</h3>
+                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                    </div>
+                                </div>
                             </div>
-                       </div>
-                   </li> 
-                   <!-- 1 Product item -->
-                   <li class="item">
-                       <div class="product-item">
-                           <div class="tag">Top</div>
-                           <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
-                           <div class="detail">
-                               <h3 class="name">Macaron</h3>
-                               <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
-                               <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                           </div>
-                       </div>
-                   </li>
-                   <!-- 1 Product item -->
-                   <li class="item">
-                       <div class="product-item">
-                           <div class="tag">Top</div>
-                        <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
-                        <div class="detail">
-                            <h3 class="name">Pudding with strawberry and coffee</h3>
-                            <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
-                            <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                        </div>
-                       </div>
-                   </li>
-                   <!-- 1 Product item -->
-                   <li class="item">
-                       <div class="product-item">
-                           <div class="tag">Top</div>
-                           <div class="thumb"><img src="https://cf.shopee.vn/file/22ce3acfd6d8928d32534c5a7e7cf8e4" alt=""></div>
-                           <div class="detail">
-                               <h3 class="name">Donut vani</h3>
-                               <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>105.000 <u>đ</u></p>
-                               <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                           </div>
-                       </div>
-                   </li>
-                   <!-- 1 Product item -->
-                   <li class="item">
-                       <div class="product-item">
-                           <div class="tag">Top</div>
-                           <div class="thumb"><img src="https://file.hstatic.net/200000079049/file/lam-banh-donut_f0fd523d1a074c94b7ba3c85bbb028e8.jpg" alt=""></div>
-                           <div class="detail">
-                               <h3 class="name">Donut with chocolate cover</h3>
-                               <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>89.000 <u>đ</u></p>
-                               <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                           </div>
-                       </div>
-                   </li>
-                   <!-- 1 Product item -->
-                   <li class="item">
-                       <div class="product-item">
-                           <div class="tag">Top</div>
-                           <div class="thumb"><img src="http://image.optcdn.me/94f91c16162870d2bbdacf3e2952dc49-best-cheesecake-recipe-2-1-of-1-4.jpg" alt=""></div>
-                           <div class="detail">
-                               <h3 class="name">Cheesecake</h3>
-                               <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
-                               <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                           </div>
-                       </div>
-                   </li>
-                </ul>
-                <div class="floating-buble">
-                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
+                            <!-- 1 item -->
+                            <div class="item">
+                                <div class="product-item">
+                                    <div class="tag">Top</div>
+                                    <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <h3 class="name">Macaron</h3>
+                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item -->
+                            <div class="item">
+                                <div class="product-item">
+                                    <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Pudding with strawberry and coffee</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- 1 item -->
+                            <div class="item">
+                                <div class="product-item">
+                                    <div class="tag">Top</div>
+                                    <div class="thumb"><img src="https://cf.shopee.vn/file/22ce3acfd6d8928d32534c5a7e7cf8e4" alt=""></div>
+                                    <div class="detail">
+                                        <h3 class="name">Donut vani</h3>
+                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>105.000 <u>đ</u></p>
+                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item -->
+                            <div class="item">
+                                <div class="product-item">
+                                    <div class="tag">Top</div>
+                                    <div class="thumb"><img src="https://file.hstatic.net/200000079049/file/lam-banh-donut_f0fd523d1a074c94b7ba3c85bbb028e8.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <h3 class="name">Donut with chocolate cover</h3>
+                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>89.000 <u>đ</u></p>
+                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item -->
+                            <div id="lastClone" class="item">
+                                <div class="product-item">
+                                    <div class="tag">Top</div>
+                                    <div class="thumb"><img src="https://i.ibb.co/ftF0mLs/banner-2-01.png" alt=""></div>
+                                    <div class="detail">
+                                        <h3 class="name">Cheesecake</h3>
+                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
+                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
                 </div>
+                <!-- <div class="floating-buble">
+                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
+                </div> -->
             </section>
             <!-- Start new flavour -->
             <section id="new">
@@ -186,33 +202,36 @@
                     <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_01.svg" alt="">
                 </div>
                 <h2 class="title font-xl">Hương vị mới</h2> 
-                <table class="content" >
-                    <tr>
-                        <td>
-                            <h3 class="name">Dark chocolate with Berries</h3>
-                            <p class="description">Chúng tôi mang đến bạn chiếc bánh nướng với hương vị mới trong bao bì có thể tái chế</p>
-                            <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
-                        </td>
-                        <td>
-                            <div class="flavour-content">
-                                <img class="flavour-image" src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/hero_image_02.png" alt="">
-                                <div class="new-flavour">
-                                    <p><span>NEW FLAVOUR</span></p>
-                                    <p>Dark chocolate with Berries</p>
-                                    <p><b>40.000 <u>đ</u></b></p>
+                <div class="content">
+                    <table with="100">
+                        <tr>
+                            <td>
+                                <h3 class="name">Dark chocolate with Berries</h3>
+                                <p class="description">Chúng tôi mang đến bạn chiếc bánh nướng với hương vị mới trong bao bì có thể tái chế</p>
+                                <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
+                            </td>
+                            <td>
+                                <div class="flavour-content">
+                                    <img class="flavour-image" src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/hero_image_02.png" alt="">
+                                    <div class="new-flavour">
+                                        <p><span>NEW FLAVOUR</span></p>
+                                        <p>Dark chocolate with Berries</p>
+                                        <p><b>40.000 <u>đ</u></b></p>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                        </td>
-                    </tr>
-                </table>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
             </section>
             <!-- Start offer -->
             <section id="offer">
-                <div class="floating-buble">
+                <!--<div class="floating-buble">
                     <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
                 </div>
-                
+                -->
                 <table class="content" >
                     <tr>
                         <td>
@@ -227,8 +246,9 @@
                         </td>
                         <td class="text">
                             <h2 class="title font-xl">Đề xuất</h2> 
-                            <h3 class="name">Dark chocolate with Berries</h3>
-                            <p class="description">Gluten Free là xu hướng nói không với Gluten – hỗn hợp của hai loại protein là glutenin và gliadin</p>
+                            <h3 class="name">Tropical Fruits Pack</h3>
+                            <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/image_logo_01.png" alt="">
+                            <p class="description">Gluten Free là xu hướng nói không với Gluten – hỗn hợp của hai loại protein là glutenin và gliadin.</p>
                             <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
                         </td>
                     </tr>
@@ -240,13 +260,13 @@
         <footer>
             <div class="wrapper">
                 <div class="big-logo">
-                    <div class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></div>
-                    <h3>Yams Bakery</h3>
+                    <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                    <a href="index.html">Yams Bakery</a>
                 </div>
                 <div class="links">
                     <div class="aboutus">
                         <h3>Về chúng tôi</h3>
-                        <a href="#" class="item">Về chúng tôi</a>
+                        <a href="aboutus.html" class="item">Về chúng tôi</a>
                         <a href="#" class="item">Chính sách</a>
                     </div>
                     <div class="contact">
@@ -283,8 +303,6 @@
         <script src="/js/header-footer.js"></script>
         <!-- Customize your script here -->
         <script src="/js/menu.js"></script>
-        <script src="/js/j-query.js"></script>
-        <script src="/js/lightslider.js"></script>
     </div>
 </body>
 </html>

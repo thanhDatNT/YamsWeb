@@ -70,7 +70,7 @@
                 <button id="find-btn">Tìm</button>
                 <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                 <!-- Cart icon and status -->
-                <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                <a href="cart.html" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
                     <div class="cart-box">
                         <div class="empty-cart">
                             <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="bmi-weight">
                     <input class="weight-slider" name="realweight" id="myWeight" type="range" min="25" max="160" value="60"/>
-                    <p> Cân nặng
+                    <p class="txtweight"> Cân nặng
                         <input name="weight" id="inputWeight" type="number" value="60" min="25" max="160" oninput="showValWeight(this.value)" />
                         <span id="weight"></span> kg   
                     </p> 
@@ -124,7 +124,7 @@
                 </div>
                 <div class="bmi-height">
                     <input class="height-slider" name="realheight" id="myHeight" type="range" min="100" max="220" value="160"/>
-                    <p>
+                    <p class="txtheight">
                         Chiều cao
                         <input name="height" id="inputHeight" type="number" value="160" min="100" max="220" oninput="showValHeight(this.value)" />
                         <span id="height"></span> cm
@@ -141,7 +141,7 @@
                   <!-- <p>
                     <span id="evaluationMessage"></span>
                   </p> -->
-                  <div class="suggest">
+                  <div class="btn-group">
                       <p >
                         
                         <input class="suggest-product" type="button" value="Đề xuất" onclick = "suggestdiet()"/>
@@ -152,7 +152,7 @@
             </div>           
         </form> 
         <!-- ======cart======= -->
-        <section id="cart">
+        <section id="cart_diet">
             <div class="wrapper">
                 <h4> Giỏ hàng</h4>
                 <div class="product-cart">
@@ -203,7 +203,7 @@
                     <p class="total">Tổng tiền</p>
                     <p class="money">220 000đ</p>
                 </div>
-                <div class="suggest">
+                <div class="btn-group">
                     <p >
                       <input class="suggest-product" type="button" value="Xem giỏ hàng" onclick="suggest"/>
                       <input class="retype" type="button" value="Thanh toán" onclick="retypeBmi"/>
