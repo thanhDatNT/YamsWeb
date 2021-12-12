@@ -93,6 +93,9 @@ table{width: 100%;}
 
 .iconify{vertical-align: middle;}
 
+input[type='checkbox'], input[type='radio']{
+    filter: hue-rotate(130deg);
+}
 /* COMMON ELEMENTS */
 .clear{clear: both;}
 /* clear: Handle float for a group of child elements when using float*/

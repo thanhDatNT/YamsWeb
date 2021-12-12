@@ -459,6 +459,7 @@ footer hr{
 }
 
 footer .copyright{
+    font-size: 1.4rem;
     width: 100%;
     text-align: center;
     color: white;
