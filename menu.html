@@ -30,7 +30,7 @@
                 <!-- Menu -->
                 <ul class="menu">
                     <li><a href="index.html" class="item">Home</a></li>
-                    <li id="menu"><a href="menu.html" class="item">Menu</a>
+                    <li id="menu"><a id="menu-id" href="menu.html" class="item">Menu</a>
                         <div class="child-1">
                             <ul>
                                 <li><a href="#" class="sub-item-1">Phổ biến</a></li>
@@ -110,105 +110,62 @@
             <!-- Start Best Sellers -->
             <section id="bestseller">
                 <div class="wrapper">
-                    <h2 class="title font-xl">Best Sellers</h2>
-                    <div class="indicator">
-                        <button class="prev"><span class="iconify" data-icon="akar-icons:chevron-left"></span></button>
-                        <button class="next"><span class="iconify" data-icon="akar-icons:chevron-right"></span></button>
-                    </div>
-                    <div class="slider-wrapper">                    
-                        <div class="slider-product">
-                            <!-- 1 item -->
-                            <div id="firstClone" class="item">
-                                <div class="product-item">
-                                    <div class="tag">Top</div>
-                                    <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
-                                    <div class="detail">
-                                        <h3 class="name">Cupcake with strawberry cream</h3>
-                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
-                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 1 item -->
-                            <div class="item">
-                                <div class="product-item">
-                                    <div class="tag">Top</div>
-                                    <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
-                                    <div class="detail">
-                                        <h3 class="name">Macaron</h3>
-                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
-                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 1 item -->
-                            <div class="item">
-                                <div class="product-item">
-                                    <div class="tag">Top</div>
-                                <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                    <h2 class="title font-xl">Best sellers</h2>
+                    <button id="view-all"><a>Xem tất cả</a><span class="iconify" data-icon="carbon:next-outline" style="color: #fa4e88;" data-width="34"></span></span></span></button>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
                                 <div class="detail">
-                                    <h3 class="name">Pudding with strawberry and coffee</h3>
-                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
                                     <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
                                 </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
                                 </div>
                             </div>
-                            <!-- 1 item -->
-                            <div class="item">
-                                <div class="product-item">
-                                    <div class="tag">Top</div>
-                                    <div class="thumb"><img src="https://cf.shopee.vn/file/22ce3acfd6d8928d32534c5a7e7cf8e4" alt=""></div>
-                                    <div class="detail">
-                                        <h3 class="name">Donut vani</h3>
-                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>105.000 <u>đ</u></p>
-                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
-                                    </div>
-                                </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Top</div>
+                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Pudding with strawberry and coffee</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                 <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                             </div>
                             </div>
-                            <!-- 1 item -->
-                            <div class="item">
-                                <div class="product-item">
-                                    <div class="tag">Top</div>
-                                    <div class="thumb"><img src="https://file.hstatic.net/200000079049/file/lam-banh-donut_f0fd523d1a074c94b7ba3c85bbb028e8.jpg" alt=""></div>
-                                    <div class="detail">
-                                        <h3 class="name">Donut with chocolate cover</h3>
-                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>89.000 <u>đ</u></p>
-                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 1 item -->
-                            <div id="lastClone" class="item">
-                                <div class="product-item">
-                                    <div class="tag">Top</div>
-                                    <div class="thumb"><img src="https://i.ibb.co/ftF0mLs/banner-2-01.png" alt=""></div>
-                                    <div class="detail">
-                                        <h3 class="name">Cheesecake</h3>
-                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
-                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                   
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="floating-buble">
-                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
-                </div> -->
             </section>
             <!-- Start new flavour -->
             <section id="new">
-                <div class="floating-buble">
-                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_01.svg" alt="">
-                </div>
+                
                 <h2 class="title font-xl">Hương vị mới</h2> 
                 <div class="content">
                     <table with="100">
                         <tr>
                             <td>
-                                <h3 class="name">Dark chocolate with Berries</h3>
-                                <p class="description">Chúng tôi mang đến bạn chiếc bánh nướng với hương vị mới trong bao bì có thể tái chế</p>
-                                <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
+                                <div class="text">
+                                    <h3 class="name">Dark chocolate with Berries</h3>
+                                    <p class="description">Chúng tôi mang đến bạn chiếc bánh nướng với hương vị mới trong bao bì có thể tái chế</p>
+                                    <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
+                                </div>
+                                
                             </td>
                             <td>
                                 <div class="flavour-content">
@@ -226,12 +183,54 @@
                 </div>
                 
             </section>
+            <!-- Start Sale -->
+            <section id="sale">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Khuyến mãi</h2>
+                    <button id="view-all"><a>Xem tất cả</a><span class="iconify" data-icon="carbon:next-outline" style="color: #fa4e88;" data-width="34"></span></span></span></button>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="tag">Pro</div>
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Pro</div>
+                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="tag">Pro</div>
+                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Pudding with strawberry and coffee</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                 <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Start offer -->
             <section id="offer">
-                <!--<div class="floating-buble">
-                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_03.svg" alt="">
-                </div>
-                -->
+                
                 <table class="content" >
                     <tr>
                         <td>
@@ -247,12 +246,182 @@
                         <td class="text">
                             <h2 class="title font-xl">Đề xuất</h2> 
                             <h3 class="name">Tropical Fruits Pack</h3>
-                            <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/image_logo_01.png" alt="">
-                            <p class="description">Gluten Free là xu hướng nói không với Gluten – hỗn hợp của hai loại protein là glutenin và gliadin.</p>
+                            <div>
+                                <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/image_logo_01.png" alt="">
+                                <p class="description">Gluten Free là xu hướng nói không với Gluten – hỗn hợp của hai loại protein là glutenin và gliadin.</p>
+                            </div>
                             <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
                         </td>
                     </tr>
                 </table>
+            </section>
+            <!-- Start Macaron -->
+            <section id="macaron">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Macaron</h2>
+                    <button id="view-all"><a>Xem tất cả</a><span class="iconify" data-icon="carbon:next-outline" style="color: #fa4e88;" data-width="34"></span></span></span></button>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Pudding with strawberry and coffee</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                 <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Start Cheese cake -->
+            <section id="cheesecake">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Cheese cake</h2>
+                    <button id="view-all"><a>Xem tất cả</a><span class="iconify" data-icon="carbon:next-outline" style="color: #fa4e88;" data-width="34"></span></span></span></button>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Pudding with strawberry and coffee</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                 <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Start pudding -->
+            <section id="pudding">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Pudding</h2>
+                    <button id="view-all"><a>Xem tất cả</a><span class="iconify" data-icon="carbon:next-outline" style="color: #fa4e88;" data-width="34"></span></span></span></button>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Pudding with strawberry and coffee</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                 <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Start tiramisu -->
+            <section id="tiramisu">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Tiramisu</h2>
+                    <button id="view-all"><a>Xem tất cả</a><span class="iconify" data-icon="carbon:next-outline" style="color: #fa4e88;" data-width="34"></span></span></span></button>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item">
+                           <div class="product-item">
+                                <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item">
+                            <div class="product-item">
+                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="detail">
+                                 <h3 class="name">Pudding with strawberry and coffee</h3>
+                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                 <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         
