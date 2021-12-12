@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/sample-post.css">
+</head>
+<body>
+    <div class="app">
+        <!-- ==========Start Header=========== -->
+        <header>
+            <nav >
+                
+                <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+                <!-- Logo Yams -->
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+                </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                    <li><a href="index.html" class="item">Home</a></li>
+                    <li id="menu"><a href="menu.html" class="item">Menu</a>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                    <li><a href="blog.html" class="item">Yams Blog</a></li>
+                    <li><a href="aboutus.html" class="item">About us</a></li>
+                    
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <button id="find-btn">Tìm</button>
+                    <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                    <!-- Cart icon and status -->
+                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <div class="non-empty"></div>
+                        </div>
+                    </a>
+                    
+                    <!-- Account icon -->
+                    <a href="#" id="account-icon">
+                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    </a>
+                </div>
+            </nav>
+
+        </header>
+
+  
+        <!-- ==========Start layout container============= -->
+        <div id="sample-post">
+            <section class="post-section">
+                <h3 class="post-heading">Cách làm Tiramisu CheeseCake</h3>
+                <img class="post-image" src="https://i.ibb.co/MD1MryN/tiramisu.jpg" alt="" >
+                <hr class="line">
+                <div class="post-content">
+                    <div>
+                        <img class="post-logo" src="/images/logo/Logo_WhiteBg-01.png" alt="">                
+                    </div>
+                    <div >
+                        <h3>Yams store</h3>
+                        <span>Nov 25, 2021</span>
+                    </div>
+                    <div  class="share-to">            
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>                        </div>
+                    </div> 
+                    <p class="post-text">Không có nhiều loại bánh và nhiều thứ hương vị khiến cho người ta chỉ mới nghĩ tới đã thấy ngất ngây như Tiramisu. Sự kết hợp của hương cà phê ấm áp, rượu nồng nàn, kem ngậy béo với mềm xốp của bánh là một kiểu mùi vị tròn đầy và hoàn hảo tới mức không gì có thể hơn được và cũng không gì có thể phá vỡ nổi. Hôm nay, hãy cùng Yams vào bếp làm thử nhé!</p>
+                    <div class="sub-title"><h3>Nguyên liệu</h3></div>
+                    <ol class="ingredients">
+                        <li>Phần bạt bánh ga-tô</li>
+                            <ul class="item" >
+                                <li>4 lòng đỏ trứng gà (18 – 20 gram/ lòng đỏ)</li>
+                                <li>20 gram đường hạt mịn</li>
+                                <li>40 ml sữa tươi không đường</li>
+                                <li>30 ml dầu thực vật</li>
+                                <li>1/2 thìa cafe vani chiết xuất</li>
+                                <li>50 gram bột mì đa dụng</li>
+                                <li>50 gram bột ngô</li>
+                                <li>4 lòng trắng trứng (30 – 35g/ lòng trắng) nhiệt độ phòng</li>
+                                <li>một nhúm muối nhỏ</li>
+                                <li>1/4 thìa cafe cream of tartar</li>
+                                <li>70 gram đường – rây mịn</li>
+                            </ul>
+                        <li>Phần rượu cà phê quét bánh</li>
+                            <ul class="item" >
+                                <li>40 ml (3 Tbsp bớt đi 1 tsp) cà phê đặc</li>
+                                <li>20 ml (1-1/2 Tbsp) rượu Rum</li>
+                                <li>3 ml (1/2 tsp) va-ni chiết xuất</li>
+                                <li>5 gram (1 tsp) đường</li>
+                            </ul>
+                        <li>Phần kem Tiramisu</li>
+                        <ul class="item" >
+                            <li>40 ml (3 Tbsp bớt đi 1 tsp) cà phê đặc</li>
+                            <li>20 ml (1-1/2 Tbsp) rượu Rum</li>
+                            <li>3 ml (1/2 tsp) va-ni chiết xuất</li>
+                            <li>5 gram (1 tsp) đường</li>
+                        </ul>
+                    </ol>
+                    <div class="sub-title"><h3>Cách làm</h3></div>
+                    <ol class="steps">
+                        <li>Chuẩn bị bạt bánh ga-tô Hồng Kông hoặc chọn một loại bạt bánh ga-tô tuỳ thích. Dùng khuôn tròn đường kính 20 – 22 cm. Để bánh nguội hoàn toàn.</li>
+                        <li>Trong khi đợi bánh nguội, hoặc ngay từ khi đang nước bánh, có thể chuẩn bị phần kem Tiramisu:</li>
+                            <ul class="item">
+                                <li>Cho kem Mascarpone và đường vào âu, đánh ở tốc độ chậm trong 1 – 2 phút tới khi kem mềm mịn nhuyễn. Mascarpone cần được để hết lạnh hoàn toàn nếu không sẽ khó mịn nhuyễn được.</li>
+                                <li>Cho kem tươi, va-ni và rượu vào đánh cùng với kem Mascarpone. Đánh ở tốc độ cao tới khi kem đặc lại, xuất hiện vân trên mặt âu kem khi chạy máy thì hạ tốc độ xuống nhỏ nhất.</li>
+                                <li>Đánh từ từ và theo dõi, khi kem vừa đủ cứng, nhấc que đánh lên thấy chóp nhọn thẳng đứng, nghiêng âu hầu như kem không xê dịch thì dừng lại ngay. Không đánh quá lâu kem sẽ bị tách nước và lổn nhổn.</li>
+                                <li>Để cả âu kem vào ngăn mát tủ lạnh trong tối thiểu 30 phút để kem đặc hơn, khi trét bánh sẽ mượt và dễ hơn.</li>
+                            </ul>
+                        <li>Cắt bánh đã nguội thành 3 bạt tròn.</li>
+                        <li>Ráp bánh:</li>
+                            <ul class="item">
+                                <li>Đặt bạt bánh thứ nhất lên đế bánh, chuẩn bị một vài mảnh giấy nhỏ lót ở dưới đế bánh, giấy chườm ra ngoài và che đế bánh. Giấy giúp cho kem không bị dính vào và làm bẩn đế bánh.</li>
+                                <li>Pha các nguyên liệu trong phần B. Dùng chổi quét phần rượu cà phê lên mặt bánh. Lấy 1/4 lượng kem trét lên bánh. Lặp lại các bước này với bạt bánh thứ 2.</li>
+                                <li>Với bạt bánh cuối cùng, sau khi làm ẩm bằng rượu cà phê, ta lấy một lượng kem nhỏ trét lên toàn bộ bên ngoài bánh. Sau đó để bánh vào tủ lạnh trong tối thiểu 30 phút để kem đông lại. Việc này giúp tạo ra một lớp nền để khi tiếp tục phủ kem lên, lớp kem mới sẽ đẹp hơn và không bị dính vụn bánh.</li>
+                                <li>Phủ nốt phần kem còn lại lên bánh. Rắc bột cacao lên mặt bánh, trang trí tuỳ thích.</li>
+                                <li>Bảo quản bánh trong tủ lạnh, dùng trong 1 – 2 ngày. Bột cacao chỉ nên rắc lên mặt bánh ngay trước khi ăn, tránh cho bột cacao bị ẩm và ướt.</li>
+                            </ul>
+                    </ol>
+                    <img class="post-image" src="https://i.ibb.co/XxRHtHM/choco-tiramisu.jpg" alt="" >
+                    <div class="ending"><h4>Chúc các bạn thành công với công thức này nhé!</h4></div>
+                    <hr class="line">
+            </section>
+            <section class="trending">
+                <div class="trending-section">
+                    <h3 class="trending-heading">Trending</h3>
+                        <div class="trending-list">
+                            <div class="trending-item">
+                                <a href="#" target="_blank" title="Cơn sốt làm bánh bao hình trái cam"><img src="https://i.ibb.co/2YZZHHZ/orange.jpg" alt="" class="trending-img"></a>
+                                <div class="trending-content">
+                                    <a href="#" class="trending-title"><h3>Cơn sốt làm bánh bao hình trái cam</h3></a>
+                                    <p class="trending-desc">Bánh bao tạo hình trái cam, trái quýt đang là hot trend trong mùa dịch.....</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <a href="#" target="_blank" title="Công thức bất bại với bánh mousse dâu tây"><img src="https://i.ibb.co/pXFsqmD/straw-berry-jam-cake.jpg" alt="" class="trending-img"></a>
+                                <div class="trending-content">
+                                    <a href="#" class="trending-title"><h3>Công thức bất bại với bánh mousse dâu tây</h3></a>
+                                    <p class="trending-desc">Mousse dâu tây là một loại bánh có lớp kem mát lạnh mềm mịn, tan trong miệng.....</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <a href="#" target="_blank" title="Bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha"><img src="https://i.ibb.co/KqFc2kN/chorus.jpg" alt="" class="trending-img"></a>
+                                <div class="trending-content">
+                                    <a href="#" class="trending-title"><h3>Bánh quẩy Churros - món quà vặt từ xứ sở Tây Ban Nha</h3></a>
+                                    <p class="trending-desc">Thử xem bánh quẩy nước bạn có gì khác với chúng ta nhé!</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+         </div>
+        
+
+        <!-- ===========Start Footer============ -->
+        <footer>
+            <div class="wrapper">
+                <div class="big-logo">
+                    <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                    <a href="index.html">Yams Bakery</a>
+                </div>
+                <div class="links">
+                    <div class="aboutus">
+                        <h3>Về chúng tôi</h3>
+                        <a href="aboutus.html" class="item">Về chúng tôi</a>
+                        <a href="#" class="item">Chính sách</a>
+                    </div>
+                    <div class="contact">
+                        <h3>Liên Hệ</h3>
+                        <ul>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                                <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                                <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                                <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="media">
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </footer>
+        <!-- ========== Start scripts ============-->
+        <!-- Compulsory -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        <script src="./js/index.js"></script>
+    </div>
+</body>
+</html>

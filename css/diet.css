@@ -8,7 +8,7 @@ body{
   }
   /*==== banner=== */
   #banners{
-    height: 100vh;
+    height: 60vh;
     margin: auto;
     overflow: hidden;
   }
@@ -58,6 +58,7 @@ body{
     line-height: 2.6rem;
     letter-spacing: 0.5px;
     font-weight: 400;
+    margin-top: 2rem;
   }
   
   @media (max-width: 428px){
@@ -75,11 +76,10 @@ body{
   .content{
     width: 84%;
     height: fit-content;
-    padding: 60px 0;
+    padding: 350px 0 40px 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    
     
      
   }
@@ -93,10 +93,11 @@ body{
     margin-top: 40px; 
     font-size: 25px; 
   }
+  /* ====phần radio button==== */
   label > input[type="radio"] {
     display: none;
   }
-  label > input[type="radio"] + *::before {
+  label > input[type="radio"]  {
     content: "";
     display: inline-block;
     vertical-align: bottom;
@@ -121,8 +122,8 @@ body{
     padding: 20px 30px;
   }
   
-  
-  .bmi-weight, .bmi-height{
+  /* ==== end phần radio button==== */
+  .bmi-weight, .bmi-height, .txtweight, .txtheight{
       font-size: 25px;
       
   }
@@ -177,6 +178,7 @@ body{
       text-transform: uppercase;
       cursor: pointer;
       font-family: 'Nunito', sans-serif;
+      border-radius: 5px;
     }
   
     #indexBMI, #status{
@@ -205,7 +207,8 @@ body{
       
     }
   
-    .suggest-product{
+    .suggest-product, .retype{
+        
       margin-top:20px ;
       margin-bottom: 20px;
       margin-left: 60px;
@@ -219,24 +222,15 @@ body{
       background-color: var(--primary-color);
       cursor: pointer;
       font-family: 'Nunito', sans-serif;
+      border-radius: 5px;
     }
     .suggest-product:hover, .retype:hover,.calculateBMI:hover{
       color: var(--primary-color);
       background-color: white;
       box-shadow:0px 0px 0px 2px var(--primary-color) inset;
-  }
+    }
      .retype{
-      margin:20px 60px 20px 20px;
-      font-size: 25px;
-      color: white;
-      width: 190px;
-      height: 50px ;
-      padding-top: 6.25px;
-      padding-bottom: 6.25px;
-      border: none;
-      background-color: var(--primary-color);
-      cursor: pointer;
-      font-family: 'Nunito', sans-serif;
+      margin:20px 60px 20px 20px;   
     }
   /* ======END BMI====== */
   
@@ -244,7 +238,7 @@ body{
   /* ========CART========= */
   
   
-  #cart .products-item
+  #cart_diet .products-item
   {
       position: relative;
       display: flex;
@@ -252,30 +246,30 @@ body{
       align-items: center;
       border-bottom: solid 1px #ECE2DD;
   }
-  #cart .product-cart{
+  #cart_diet .product-cart{
     margin-top: 40px;
   }
-  #cart .products-item .image-item
+  #cart_diet .products-item .image-item
   {
       width: 110px;
       height: 110px;
   }
-  #cart .product-infor{
+  #cart_diet .product-infor{
     margin-left: 20px;
     
     
   }
-  #cart .name{
+  #cart_diet .name{
     font-size: 2rem;
   }
-  #cart .quality_price{
+  #cart_diet .quality_price{
     display: flex;
     margin-top: 1rem;
   }
-  #cart .product-cart .quality_price .quality, .price{
+  #cart_diet .product-cart .quality_price .quality, .price{
       font-size: 1.8rem;
   }
-  #cart .products-item .close-icon{
+  #cart_diet .products-item .close-icon{
     position: absolute;
     margin-left: 10px;
     height: 15px;
@@ -284,23 +278,23 @@ body{
     right: 1.5rem;
     top: 1rem;
   }
-  #cart .products-item .quality_price .mutiply{
+  #cart_diet .products-item .quality_price .mutiply{
     height: 12px;
     width: 12px;
     margin: 0px 5px;
     
   }
-  #cart .wrapper .Total-money{
+  #cart_diet .wrapper .Total-money{
     /* font-size: 2.5rem; */
     display: flex;
     margin-top: 35px;
     font-weight: bold;
     
   }
-  #cart .wrapper .Total-money .total{
+  #cart_diet .wrapper .Total-money .total{
     font-size: 25px;
   }
-  #cart .wrapper .Total-money .money{
+  #cart_diet .wrapper .Total-money .money{
     position: relative;
     left: 50%;
     font-size: 25px;

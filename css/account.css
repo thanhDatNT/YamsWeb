@@ -1,0 +1,274 @@
+.container{
+    width: 100%;
+    min-width: 1200px;
+    height: calc(100vh - 60px);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container .nav-panel{
+    width: 20%;
+    height: calc(100vh - 60px);
+    text-align: center;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .nav-panel .user-photo .photo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    overflow: hidden;
+    margin: 14px auto;
+}
+
+.container .nav-panel .user-photo .update-photo label{
+    font-size: 2.4rem;
+    padding: 0 10px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 30%);
+    cursor: pointer;
+}
+
+.container .nav-panel .user-photo .update-photo #myfile{opacity: 0;}
+
+.container .nav-panel .user-name{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.container .nav-panel .menu{
+    width: 100%;
+}
+
+.container .nav-panel .menu .item{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.container .nav-panel .menu .item .iconify{
+    font-size: 2.2rem;
+    color: var(--text-color);
+}
+
+.container .nav-panel .menu .item a{
+    display: block;
+    padding: 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.container .nav-panel .menu .item:hover,
+.container .nav-panel .menu .item:hover a,
+.container .nav-panel .menu .item.active,
+.container .nav-panel .menu .item.active .iconify{
+    background-color: var(--item-2);
+    color: var(--primary-color);
+}
+
+.container .nav-panel .menu .item:hover .iconify{
+    color: var(--primary-color);
+}
+
+/* ========= FRAGMENTS ==========*/
+
+.container .fragments{
+    width: 80%;
+    text-align: center;
+}
+
+.container .fragments .fragment.active{display: block;}
+
+.container .fragments .overlay{
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgb(0 0 0 / 30%);
+    transform-origin: bottom;
+    animation: reveal 0.3s ease-in;
+}
+
+.container .fragments .overlay.active{display: block;}
+
+.container .fragments .title{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+/* ACCOUNT INFORMATION,  ACCOUNT CONFIGURATION FRAGMENT */
+
+.container .fragments .infor,
+.container .fragments .config,
+.container .fragments .log-out{
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container .fragments .infor .wrapper,
+.container .fragments .config .wrapper{
+    text-align: left;
+}
+
+.container .fragments .infor .wrapper p,
+.container .fragments .config .wrapper p{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 14px 0;
+}
+
+.container .fragments .infor .wrapper input,
+.container .fragments .config .wrapper input{
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+}
+
+.container .fragments .infor .wrapper .name input{
+    width: 49%;
+    display: inline-block;
+}
+
+/* ORDER MANAGEMENT FRAGMENT */
+
+.container .fragments .order{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container .fragments .order table{
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.container .fragments .order table th{
+    color: var(--primary-color);
+    padding: 10px 0;
+}
+
+.container .fragments .order table tr{
+    border-bottom: 1px solid var(--inactive);
+    font-size: 1.6rem;
+}
+
+.container .fragments .order table tr td:first-child{
+    font-weight: 700;
+}
+
+.container .fragments .order table tr td:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+.container .fragments .order table .photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 8px;
+    overflow: hidden;
+}
+
+/* ACCOUNT PASSWORD CONFIGURATION DIALOG */
+
+.container .fragments .config .change-pw{
+    position: absolute;
+    display: block;
+    width: 100px;
+    bottom: 60px;
+    right: -100px;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.container .fragments .config .pw-dialog{
+    z-index: 10;
+    width: 360px;
+    height: 344px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.container .fragments .config .pw-dialog.active{
+    display: block;
+    opacity: 1;
+}
+
+.container .fragments .config .pw-dialog header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    height: 38px;
+    padding: 8px;
+    font-size: 1.8rem;
+    color: white
+}
+
+.container .fragments .config .pw-dialog header .iconify{
+    font-size: 2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transform: 0.3s;
+}
+
+.container .fragments .config .pw-dialog header .iconify:hover{
+    transform: scale(1.2);
+}
+
+.container .fragments .config .pw-dialog .wrapper{
+    padding: 10px;
+    position: relative;
+}
+
+.container .fragments .config .pw-dialog .wrapper .btns{
+    display: flex;
+}
+
+.container .fragments .config .pw-dialog .wrapper input{
+    border: 1px solid var(--primary-color);
+}
+
+.container .fragments .config .pw-dialog .wrapper .btns input{
+    border: none;
+}
+
+/* LOG OUT DIALOG */
+
+.container .fragments .log-out{
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    animation: display 0.3s ease-in;
+}
+
+.container .fragments .log-out .title{
+    margin-bottom: 20px; 
+    font-size: 1.8rem;
+}
+
+.container .fragments .log-out .icon{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 24px;
+    right: 10px;
+}

@@ -1,0 +1,150 @@
+header nav .menu li:nth-last-child(2) a{
+    color: var(--primary-color);
+}
+
+#sample-post{
+    width: 100%;
+    background-color: var(--background);
+}
+
+.post-section{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+.post-heading{
+    text-align: center;
+    font-size: xx-large;
+    padding: 16px 0px 0px;
+}
+.post-text{
+    text-align: justify;
+    padding: 10px 0px;
+    font-size: 14px;
+}
+#sample-post .post-section .post-image{
+    width: 600px;
+    height: 400px;
+    display: block; margin-left: auto; margin-right: auto;
+    margin-top: 16px;
+}
+#sample-post .post-section .line{
+    border: 1.4px solid var(--text-color);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.post-content{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    padding-left: 5px; 
+}
+.post-logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 5px;
+}
+#sample-post .post-section .post-content .share-to{
+    text-align: right;
+    flex: 50%;
+    padding: 0px 30px;
+    
+}
+#sample-post .post-section .post-content .share-to a{
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+.sub-title{
+    display: flex;
+    font-size: 18px;
+}
+#sample-post .post-section .ingredients{
+    list-style-type: upper-alpha;
+    font-size: 1.6rem;
+    margin-left:  2rem;
+}
+#sample-post .post-section .steps{
+    list-style-type: decimal;
+    font-size: 1.4rem;
+    margin-left:  1.6rem;
+}
+#sample-post .post-section .ingredients .item{
+    padding: 5px 0px;
+    font-size: 1.4rem;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul.item{
+    list-style-type: none;
+}
+ul.item > li{
+    text-indent: -5px;
+}
+ul.item > li:before{
+    content: "- ";
+    text-indent: -5px;
+}
+
+.ingredients >li{
+    font-weight: bold;
+}
+.ending{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4rem;
+}
+.clear{
+    clear: both;
+}
+.trending{
+    padding-bottom: 16px;
+}
+.trending-section{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: white;
+    padding: 16px;
+}
+.trending-heading{
+    padding: 8px;
+    font-size: 1.6rem; 
+}
+.trending-list{
+    background-color: white;
+}
+.trending-item{
+    display: flex;
+    width: 33.333%;
+    float: left;
+    padding: 0px 8px;
+    align-items: center;  
+}
+.trending-img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    margin-top: 8px;  
+} 
+.trending-content{
+    justify-content: space-between;
+}
+.trending-title{
+   font-size: 1.4rem;
+}
+.trending-desc{
+    font-size: 1.2rem;
+    color: var(--inactive);
+}

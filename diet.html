@@ -21,7 +21,6 @@
     <!-- header -->
     <header>
         <nav >
-                
             <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
             <!-- Logo Yams -->
             <div class="logo">
@@ -29,8 +28,6 @@
             </div>
             <!-- Menu -->
             <ul class="menu">
-                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
-                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                 <li><a href="index.html" class="item">Home</a></li>
                 <li id="menu"><a href="menu.html" class="item">Menu</a>
                     <div class="child-1">
@@ -55,16 +52,25 @@
                 <li><a href="diet.html" class="item">Diet with Yams</a></li>
                 <li><a href="blog.html" class="item">Yams Blog</a></li>
                 <li><a href="aboutus.html" class="item">About us</a></li>
-                
+                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
             </ul>
             <!-- Search, account, cart icons -->
             <div class="group-icons">
                 <!-- Search icon and input -->
-                <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                <datalist id="cakes">
+                    <option value="Macaron">
+                    <option value="Pudding">
+                    <option value="Cupcake">
+                    <option value="Sweet cake">
+                    <option value="Bread">
+                    <option value="Donut">
+                </datalist>
                 <button id="find-btn">Tìm</button>
                 <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                 <!-- Cart icon and status -->
-                <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                <a href="cart.html" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
                     <div class="cart-box">
                         <div class="empty-cart">
                             <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
@@ -72,13 +78,13 @@
                         <div class="non-empty"></div>
                     </div>
                 </a>
-                
                 <!-- Account icon -->
-                <a href="#" id="account-icon">
+                <a href="admin.html" id="account-icon">
                     <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
                 </a>
             </div>
         </nav>
+
     </header>
 <div id="container-diet">
      <section id="banners">
@@ -110,7 +116,7 @@
                 </div>
                 <div class="bmi-weight">
                     <input class="weight-slider" name="realweight" id="myWeight" type="range" min="25" max="160" value="60"/>
-                    <p> Cân nặng
+                    <p class="txtweight"> Cân nặng
                         <input name="weight" id="inputWeight" type="number" value="60" min="25" max="160" oninput="showValWeight(this.value)" />
                         <span id="weight"></span> kg   
                     </p> 
@@ -118,7 +124,7 @@
                 </div>
                 <div class="bmi-height">
                     <input class="height-slider" name="realheight" id="myHeight" type="range" min="100" max="220" value="160"/>
-                    <p>
+                    <p class="txtheight">
                         Chiều cao
                         <input name="height" id="inputHeight" type="number" value="160" min="100" max="220" oninput="showValHeight(this.value)" />
                         <span id="height"></span> cm
@@ -135,7 +141,7 @@
                   <!-- <p>
                     <span id="evaluationMessage"></span>
                   </p> -->
-                  <div class="suggest">
+                  <div class="btn-group">
                       <p >
                         
                         <input class="suggest-product" type="button" value="Đề xuất" onclick = "suggestdiet()"/>
@@ -146,7 +152,7 @@
             </div>           
         </form> 
         <!-- ======cart======= -->
-        <section id="cart">
+        <section id="cart_diet">
             <div class="wrapper">
                 <h4> Giỏ hàng</h4>
                 <div class="product-cart">
@@ -197,7 +203,7 @@
                     <p class="total">Tổng tiền</p>
                     <p class="money">220 000đ</p>
                 </div>
-                <div class="suggest">
+                <div class="btn-group">
                     <p >
                       <input class="suggest-product" type="button" value="Xem giỏ hàng" onclick="suggest"/>
                       <input class="retype" type="button" value="Thanh toán" onclick="retypeBmi"/>
@@ -584,13 +590,13 @@
     <footer>
         <div class="wrapper">
             <div class="big-logo">
-                <div class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></div>
-                <h3>Yams Bakery</h3>
+                <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                <a href="index.html">Yams Bakery</a>
             </div>
             <div class="links">
                 <div class="aboutus">
                     <h3>Về chúng tôi</h3>
-                    <a href="#" class="item">Về chúng tôi</a>
+                    <a href="aboutus.html" class="item">Về chúng tôi</a>
                     <a href="#" class="item">Chính sách</a>
                 </div>
                 <div class="contact">

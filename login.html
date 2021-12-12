@@ -4,9 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yams | Login</title>
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    Login Page
+    <div class="container">
+        <!-- Heading bar session -->
+        <div class="heading">
+            <a href="index.html">
+                <img src="./images/logo/Logo_NoBg_Pink.png" alt=""></a>
+            <h3>Đăng nhập</h3>
+        </div>
+        <!-- Body session -->
+        <div class="body">
+            
+            <!-- Left side: image -->
+            <div class="big-image">
+                <div class="image">
+                    <img src="https://eatsy.bold-themes.com/burger/wp-content/uploads/sites/2/2021/03/donut_gallery_05.jpg" alt="">
+                </div>
+            </div>
+            <!-- Right side: Login Form -->
+            <div class="form-login">
+                <h1 class="font-xl">Đăng nhập</h1>
+                <form action="/php/sendmail.php">
+                    <p>Tên đăng nhập</p>
+                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập">
+                    <p>Email</p>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <p>Mật khẩu</p>
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <div class="pw-tasks">
+                        <input type="checkbox" id="save" name="Save" value="save">
+                        <span>Lưu mật khẩu</span>
+                        <a href="#" class="forget">Quên mật khẩu?</a>
+                    </div>
+                    <input type="submit" id="submit" class="btn btn-primary">
+                </form>
+                <p>Chưa có tài khoản? <a href="#" ><u><b>Đăng ký</b></u></a></p>
+            </div>
+        </div>
+    </div>
+    <!-- ===========Start Footer============ -->
+    <footer>
+        <div class="wrapper">
+            <div class="big-logo">
+                <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                <a href="index.html">Yams Bakery</a>
+            </div>
+            <div class="links">
+                <div class="aboutus">
+                    <h3>Về chúng tôi</h3>
+                    <a href="aboutus.html" class="item">Về chúng tôi</a>
+                    <a href="policy.html" class="item">Chính sách</a>
+                </div>
+                <div class="contact">
+                    <h3>Liên Hệ</h3>
+                    <ul>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                            <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                            <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                            <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                    </ul>
+                </div>
+                <div class="follow">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="media">
+                        <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <!-- ========== Start scripts ============-->
+    
+    <script src="./js/login.js"></script>
 </body>
 </html>

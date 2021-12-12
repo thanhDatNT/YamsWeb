@@ -84,7 +84,7 @@ header nav .menu #menu:hover > a{
 
 header nav .menu #menu .child-1{
     position: absolute;
-    top: 40px;
+    top: 38px;
     left:0;
     border-radius: 4px;
     width: 200px;
@@ -93,6 +93,7 @@ header nav .menu #menu .child-1{
     transform-origin: top;
     transform: scaleY(0);
     transition: transform 0.3s ease-in;
+    box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 30%);
 }
 
 header nav .menu #menu .child-1 ul li{
@@ -119,6 +120,7 @@ header nav .menu #menu .child-1 ul li:last-child .child-2{
     transform: scaleX(0);
     transition: transform 0.3s ease-in;
     overflow: hidden;
+    box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 30%);
 }
 
 header nav .menu #menu .child-1 ul li:last-child:hover .child-2{transform: scaleX(1);pointer-events: all;}

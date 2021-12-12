@@ -1,0 +1,183 @@
+body{
+  background-color: var(--background);
+  color:var(--text-color);
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+#banners{
+    height: 60vh;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  #banners .slide-wrapper{
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #banners .slide-wrapper .slider-item{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    transform-origin:center;
+    animation: zoomIn 5s ease-in;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    display: none;
+  }
+  
+  #banners .slide-wrapper .slider-item:first-child{background-image: url(../images/banners/cart.png); display: block;}
+  
+  
+  #banners .banner-text{
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-shadow: 1px 1px 2px var(--black-4);
+  }
+  
+  #banners .banner-text .main-title{
+    color: white;
+    /* text-align: center; */
+  }
+  
+  #banners .banner-text .description{
+    
+    color: white;
+    font-size: 3rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    /* margin-top: 2rem; */
+  }
+  
+  @media (max-width: 428px){
+    #banners{height: 40vh;}
+    #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
+    #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #banners{height: 50vh;}
+  }
+  /* ======cart===== */
+  .cart{
+    width: 84%;
+    height: fit-content;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+  table {
+    display: table;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing : 0px;
+    margin-bottom: 40px;
+    
+    
+  }
+  thead{
+    display: table-header-group;
+    vertical-align: middle;
+    line-height: 1.5rem;
+  }
+  tr{
+    display: table-row;
+  }
+  table.cart thead th {
+    background-color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    padding: 1.4rem;
+    line-height: 1.8em;
+  }
+ .cart-item td{
+  border-bottom: solid 1px #ECE2DD;
+  padding: 0.6em;
+ }
+   .cart-item, .product-remove, .remove, .close{
+    height: 2rem;
+    width: 2rem;
+    text-align: left;
+  }
+  .close:hover{
+    color: var(--primary-color);
+  }
+  .cart-item, .product-image, .image-item{
+    width: 110px;
+    height: 110px;
+  }
+   .product-name, .name{
+    padding-left: 10px;
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 650;
+    
+  }
+   .product-name, .name:hover{
+    color: var(--primary-color);
+  }
+  .cart-item, .product-price, .money{
+    text-align: right;
+  }
+  .cart-item, .product-quantity{
+    text-align: center;
+  }
+  input[type=number]{
+    height: 40px;
+    width: 80px;
+    outline: 1px solid white;
+    border: 2px dashed var(--primary-color);
+    font-size: 20px;
+    color: var(--text-color);
+   
+    text-align: center;
+
+  }
+  input[type=text]{
+    
+    font-size: 20px;
+    text-align: center;
+    padding: 0px;
+    width: 80px;
+    background: none;
+  color: var(--text-color);
+  }
+  .btn-update{
+    padding-top: 20px;
+  }
+  .btn{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .sum, .Title-total, .main-sum{
+   
+    text-transform: uppercase;
+    font-weight:bold;
+    padding-top: 20px;
+    padding-left: 10px;
+
+  }
+  .cart-item, .main-sum{
+    text-align: center;
+
+  }
+  .sum-money{
+    font-weight: bold;
+  }
+  .btn-payment{
+    text-align: center;
+    padding-top: 30px;
+  }
+ 
