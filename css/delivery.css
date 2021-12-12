@@ -1,0 +1,109 @@
+body{
+    background-color: var(--background);
+    color:var(--text-color);
+    font-family: 'Mulish', sans-serif;
+    
+  }
+  .content{
+    width: 84%;
+    height: fit-content;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+/* ====phần logo===== */
+#logo_payment .big-logo .logo{
+    width: 130px;
+    height: 130px;
+}
+#logo_payment .big-logo{
+    display:flex;
+    align-items: center;
+    
+}
+/* ====phần subheading===*/
+#subheading .sub ul{
+    margin-top: 2rem;
+}
+#subheading .sub ul.breadcrumb li{
+    display: inline;
+    font-size: 1.6rem;
+}
+#subheading .sub .breadcrumb .breadcrumb-item:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    vertical-align: middle;
+    margin: 0 0.5em;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiBvcGFjaXR5PSIuNCIgZmlsbD0iIzAwMCI+PHBhdGggZD0iTS41MjYgMS40MDhsNCA0LjY0NS4wMTQtLjgzLTQgNC4zNTQuOTIuODQ2IDQtNC4zNTYuMzc2LS40MS0uMzYyLS40Mi00LTQuNjQ1LS45NDguODE2eiIvPjwvc3ZnPg==),none;
+}
+#subheading .sub .breadcrumb .breadcrumb-item:last-child::after
+{
+    display: none;
+}
+/* ==== end phần subheading===*/
+
+/* ==== Phương thức vận chuyển===*/
+#method-payment{
+    font-size: 20px;
+}
+#method-payment h3{
+    font-size: 25px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    
+}
+#method-payment .title-delivery{
+    margin: 40px 0px 20px 0px;
+}
+#method-payment .title-payment{
+    margin: 60px 0px 20px 0px;
+}
+ /* =====radio button===== */
+label > input[type="radio"] {
+    display: none;
+  }
+   input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 20px;
+    height: 20px;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+    
+  }
+   input[type="radio"]:checked + * {
+    color: var(--primary-color);
+  }
+  input[type="radio"]:checked + *::before {
+    background: radial-gradient( var(--primary-color) 40%, transparent 50%, transparent);
+    border-color: var(--primary-color);
+  }
+  
+   input[type="radio"] + * {
+    display: inline-block;
+    padding: 15px 0px;
+  }
+ 
+
+  /* =====end radio button===== */
+
+#method-payment .price{
+    margin-left: 150px;
+    
+}
+#method-payment .ship-direct, .transfer-money{
+    border: 2px solid var(--primary-color);
+    width: 500px;
+    height: fit-content;
+    border-radius: 6px;
+    padding: 0 1.8rem ;
+}
+.btn{
+    margin: 30px 0 0 335px;
+    
+}

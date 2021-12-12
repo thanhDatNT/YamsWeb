@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/delivery.css">
+</head>
+<body>
+    <div class="content">
+        <section id="logo_payment">
+            <div class="big-logo">
+                <div class="logo">
+                    <a href="index.html" class="home">
+                        <img src="./images/logo/Logo_NoBg_Pink.png" alt="logo">
+                    </a>
+                    
+                </div>
+                <h1 class="font-xl">Yams </h1>
+            </div>
+        </section>
+        <section id="subheading">
+            <div class="sub">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="cart.html">Giỏ hàng</a>
+                    </li>
+                    
+                        <li class="breadcrumb-item breadcrumb-item-current"> 
+                            
+                                    Thông tin giao hàng
+                        </li>
+                        <li class="breadcrumb-item ">
+                                    Phương thức thanh toán
+                        </li>
+                    
+                </ul>
+            </div>
+
+        </section>
+        <section id="content-method-payment">
+            <div id="method-payment">
+                <div class="title-delivery">
+                    <h3 class="delivery-title">Thông tin giao hàng</h3>
+                </div>
+                <div class="ship-direct">
+                    <div class="ship">
+                        <label>
+                            <input type="radio" name="delivery" value="ship"  />
+                            <span class="sub-title" >Giao hàng tận nơi</span>
+                            <span class="price" >30 000</span>đ
+                        </label>     
+                    </div>
+                    <div class="direct">
+                        <label>
+                            <input type="radio" name="delivery" value="direct" />
+                            <span class="sub-title" >Đến lấy tại cửa hàng</span>
+                            <span class="price" >0</span>đ
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="method-payment">
+                <div class="title-payment">
+                    <h3 class="payment-title">Phương thức thanh toán</h3>
+                </div>
+                <div class="transfer-money">
+                    <div class="cod">
+                        <label >
+                            <input class="rad" type="radio" name="radio-button" value=""  />
+                            <span class="sub-title" >Thanh toán khi nhận hàng (COD)</span>
+                        </label>     
+                    </div>
+                    <div class="momo">
+                        <label >
+                            <input class="rad" type="radio" name="radio-button" value=""  />
+                            <span class="sub-title" >Momo</span>
+                        </label>
+                    </div>
+                    <div class="bank">
+                        <label >
+                            <input class="rad" type="radio" name="radio-button" value=""  />
+                            <span class="sub-title" >Chuyển khoản ngân hàng</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+           <div >
+            <input class="btn btn-primary" type="button" value="Hoàn tất đơn hàng">
+           </div>
+          
+        </section>
+    </div>
+</body>
+</html>
