@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<userlist>
+    <user>
+        <name>Admin</name>
+        <username>ad</username>
+        <password>admin</password>
+        <photo>./images/logo/Logo_NoBg_Pink.png</photo>
+        <phone>909</phone>
+        <email>admin@yams.com</email>
+        <address>Thu Duc city, HCMC</address>
+    </user>
+    <user>
+        <name>Long An</name>
+        <username>la</username>
+        <password>123</password>
+        <photo>./images/logo/Logo_NoBg_White.png</photo>
+        <phone>0911001123</phone>
+        <email>an@gmail.com</email>
+        <address>Thu Duc City, HCMC</address>
+    </user>
+</userlist>

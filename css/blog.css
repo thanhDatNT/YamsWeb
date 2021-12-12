@@ -1,0 +1,231 @@
+header nav .menu li:nth-last-child(2) a{
+    color: var(--primary-color);
+}
+
+#container{
+    width: 100%;
+    background-color: var(--background);
+}
+/* Banner */
+#banners{
+    height: 50vh;
+    margin: auto;
+    overflow: hidden;
+    
+  }
+  
+  #banners .slide-wrapper{
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #banners .slide-wrapper .slider-item{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    transform-origin:center;
+    animation: zoomIn 5s ease-in;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    display: none;
+  }
+  
+  #banners .slide-wrapper .slider-item:first-child{background-image: url(https://i.ibb.co/FDjHdSY/blogbanner.jpg); display: block;}
+  
+  
+  #banners .banner-text{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px var(--black-4);
+  }
+  
+  #banners .banner-text .main-title{
+    color: white;
+  }
+  
+  #banners .banner-text .description{
+    text-align: center;
+    color: white;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 428px){
+    #banners{height: 40vh;}
+    #banners .banner-text .main-title{font-size: 36px; line-height: 24px;}
+    #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #banners{height: 50vh;}
+  }
+
+  /* content */
+  .blog-content-holder{
+    width: 80%;
+    max-width: 1260px;
+    margin: auto;
+    padding: 4rem 4rem;
+    }
+  .blog-content{
+    /* display: flex; */
+    float: left;
+    width: 70%;
+    max-height: fit-content;
+    }
+  .clear{
+    clear: both;
+  }
+  .post-item{
+    border-bottom: none !important;
+    margin-bottom: 20px;
+    }
+  .port{
+    /* width: 100%; */
+    max-width: none;
+    margin: auto;
+    box-sizing: border-box;
+    background-repeat: no-repeat ;
+    }
+  .article-content-holder{
+    color:var(text-color);
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 2.5em;
+    }
+    .article-media{
+    margin-left: -2.5em;
+    margin-right: -2.5em;
+    margin-top: -2.5em;
+    margin-bottom: 2em;
+    clear: both;
+    }
+  .media-box{
+    position: relative;
+    overflow: hidden;
+    }
+  .media-box img{
+    display: block;
+    width: 100%;
+    height: 50vh;
+   
+    position: center;
+  }
+  .article-headline{
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    clear: both;
+    }
+
+  .author{
+    color: var(--primary-color);
+    }
+  .time{
+    color: var(--inactive);
+    font-family: 'Mulish', sans-serif;
+    font-weight: normal;
+    }
+  .headline-content{
+    margin-top: 1em;
+    clear: both;
+    font-size: 2rem;
+    }
+  .article-content{
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+    clear: both;
+    }
+  .read-more{
+    width: 100%;
+    padding: 8px 0px;
+    text-align: right;
+    font-size: 1.2rem; 
+  }
+  .read-more-post{
+    width: 100%;
+    padding: 8px 0px;
+    text-align: center;
+    font-size: 1.4rem; 
+    font-weight: bold;
+  }
+  
+  .blog-sidebar{
+    padding-left: 20px;
+    align-items: center;
+    width: 30%;
+    float: right;
+    }
+  .popular-wraper{
+    background-color: white;
+  }
+  .popular-item{
+      position: relative;
+      display: flex;
+      padding: 20px 10px;
+      align-items: center;
+      border-bottom: solid 1px #ECE2DD;
+  }
+  .popular-info{
+    float: left;
+    width: 90%;
+    font-size: 1.4rem;
+  }
+  .popular-info .popular-tilte { 
+    font-weight: bold;
+  }
+  .popular-time{
+    display: flex;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+  }
+  .popular-item .more-icon a{
+    float: right;
+    position: absolute;
+    margin-left: 10px;
+    right: 1rem;
+    top: 2rem;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .popular-heading{
+    font-size: 2rem;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  .image-box{
+    padding: 20px 0px;
+  }
+  .content-box{
+    padding: 20px 0px;
+  }
+  #highlight .hl-box .wrapper .content-box .logo .image{
+    width: 30%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .description{
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+  .more{
+    float: right;
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+  }
+
+  
+  
