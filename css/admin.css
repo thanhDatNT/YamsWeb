@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+a, p{
+    font-size: 1.4rem;
+}
+
 /* =========Top right fixed admin panel========== */
 
 #container .admin{
