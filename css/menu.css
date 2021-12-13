@@ -12,6 +12,18 @@ section{
     position: relative;
 }
 
+@media (min-width: 429px) and (max-width: 768px){
+    .title{
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 428px){
+    .title{
+        font-size: 3rem;
+    }
+}
+
 /* Banner */
 #banners{
     height: 60vh;
@@ -87,6 +99,13 @@ section{
     padding: 10px;
     margin: 50px 30px 120px auto;
 }
+@media (min-width: 429px) and (max-width: 768px){
+    #filter{font-size: 1.7rem;}
+}
+
+@media (max-width: 428px){
+    #filter{font-size: 1.2rem;}
+}
 
 /* best seller */
 #bestseller {
@@ -97,6 +116,8 @@ section{
     height: fit-content;
     padding: 60px 0;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 #bestseller .wrapper .title{
@@ -146,6 +167,15 @@ section{
 
 #bestseller .wrapper .container .item:nth-child(2) .product-item{background-color: var(--item-3);}
 
+#bestseller .floating-buble{
+    position: absolute;
+    top: 200px;
+    margin-left: -60px;
+}
+
+#bestseller .floating-buble img{transform: rotate(10deg);}
+
+
 @media (min-width: 429px) and (max-width: 768px){
     #bestseller .wrapper .container .item{width: 45%;}
     #bestseller .wrapper .container{margin: 40px 0;}
@@ -161,22 +191,16 @@ section{
 
 /* new flavour */
 #new{
-    margin-top: 120px;
+    margin-top: 10%;
     height: fit-content;
+    overflow: hidden;
 }
 #new .title{
     position: relative;
     width: 84%;
-    padding: 20px 0;
+    padding: 4% 0;
     margin: 0 auto;
-    
 }
-#new .floating-buble{
-    position: absolute;
-    top: -400px;
-    left: -100px;
-}
-#new .floating-buble img{transform: rotate(30deg);}
 
 #new .content{
     width: 84%;
@@ -226,19 +250,63 @@ section{
 
 #new .content .flavour-content .new-flavour p:last-child{
     color: var(--primary-color);
-    
 }
 
+@media (min-width: 429px) and (max-width: 768px){
+    #new .content .name{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+    }
+    #new .content  .text p{
+        padding-right: 20px;
+        line-height: 2.8rem;
+        font-size: 1.7rem;
+    }
+    #new .content .flavour-content p{
+        padding: 2px;
+        line-height: 1.7rem;
+        font-size: 1.7rem;
+    }
+}
 
-/* best seller */
+@media (max-width: 428px){
+    
+    #new .content .name{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 10px;
+    }
+    #new .content  .text p{
+        padding-right: 0px;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    #new .content input{
+        font-size: 0.8rem;
+    }
+    #new .content .flavour-content p{
+        padding: 1px;
+        line-height: 1rem;
+        font-size: 1rem;
+    }
+    #new .content .flavour-content .new-flavour p:last-child{
+        color: var(--background);
+    }
+}
+
+/* sale */
 #sale{
-    margin-top: 120px;
+    margin-top: 10%;
+    overflow: hidden;
 }
 #sale .wrapper{
     width: 84%;
     height: fit-content;
     padding: 60px 0;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 #sale .wrapper .title{
@@ -289,6 +357,15 @@ section{
 
 #sale .wrapper .container .item:nth-child(2) .product-item{background-color: var(--item-2);}
 
+#sale .floating-buble{
+    position: absolute;
+    top: 0px;
+    right: -80px;
+    margin-right: -100px;
+}
+
+#sale .floating-buble img{transform: rotate(120deg);}
+
 @media (min-width: 429px) and (max-width: 768px){
     #sale .wrapper .container .item{width: 45%;}
     #sale .wrapper .container{margin: 40px 0;}
@@ -303,21 +380,9 @@ section{
 
 /* offer */
 #offer{
-    margin-top: 160px;
+    margin-top: 15%;
     height: fit-content;
 }
-/*
-#offer .floating-buble{
-    position: absolute;
-    top: -180px;
-    right: -80px;
-    overflow: hidden;
-}
-
-#offer .floating-buble img{
-    transform: rotate(-20deg);
-}
-*/
 
 #offer .content{
     position: relative;
@@ -354,42 +419,83 @@ section{
 }
 
 #offer .content .flavour-content .offer-flavour p:last-child{
-    color: var(--primary-color);
-    
+    color: var(--primary-color);  
 }
 #offer .content .text{
     vertical-align: top;
-    padding-left: 5%;
+    padding-left: 3%;
 }
 
 #offer .content .text .title{
-    margin-bottom: 80px;
+    margin-bottom: 15%;
     margin-left: 0px;
-    margin-top: -80px;
+    margin-top: -15%;
 }
 
 #offer .content .text .name{
     font-size: 4.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 10%;
 }
 
 #offer .content .text img{
     width: 85px;
     float: left;
-    margin-right: 40px;
+    margin-right: 5%;
 }
 #offer .content .text .description{
-    margin-bottom: 40px;
+    margin-bottom: 10%;
     line-height: 40px;
 }
 
 #offer .content .text input{
-    margin-bottom: 40px;
+    margin-bottom: 10%;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #offer .content .text .name{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+    }
+    #offer .content  .flavour-content p{
+        line-height: 2rem;
+        font-size: 1.7rem;
+    }
+    #offer .content .text .description{
+        line-height: 2.2rem;
+        font-size: 1.7rem;
+        margin-right: -5%;
+    }
+    #offer .content .text img{
+        width: 60px;
+    }
+}
+
+@media (max-width: 428px){
+    
+    #offer .content .text .name{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    #offer .content  .flavour-content p{
+        line-height: 1.2rem;
+        font-size: 1rem;
+    }
+    #offer .content .text .description{
+        line-height: 1.2rem;
+        font-size: 1rem;
+        margin-right: -5%;
+    }
+    #offer .content .text img{
+        width: 40px;
+    }
+    #offer .content .text input{
+        font-size: 0.8rem;
+    }
 }
 
 /* Macaron */
 #macaron{
-    margin-top: 120px;
+    margin-top: 10%;
 }
 #macaron .wrapper{
     width: 84%;
@@ -449,24 +555,29 @@ section{
 @media (min-width: 429px) and (max-width: 768px){
     #macaron .wrapper .container .item{width: 45%;}
     #macaron .wrapper .container{margin: 40px 0;}
+    #macaron .wrapper .title{margin-left: 0;}
 }
 
 @media (max-width: 428px){
     #macaron .wrapper .container{display: block;position: relative;margin-top: 16px;}
     #macaron .wrapper .container .item{
         width: 100%;
-        position: relative;}
+        position: relative;
+    }
+    #macaron .wrapper .title{margin-left: 0;}
 }
 
 /* cheese cake */
 #cheesecake{
-    margin-top: 120px;
+    margin-top: 10%;
 }
 #cheesecake .wrapper{
     width: 84%;
     height: fit-content;
     padding: 60px 0;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 #cheesecake .wrapper .title{
@@ -517,21 +628,33 @@ section{
 
 #cheesecake .wrapper .container .item:nth-child(2) .product-item{background-color: var(--item-2);}
 
+#cheesecake .floating-buble{
+    position: absolute;
+    top: -150px;
+    margin-left: -60px;
+}
+
+#cheesecake .floating-buble img{transform: rotate(10deg);}
+
+
 @media (min-width: 429px) and (max-width: 768px){
     #cheesecake .wrapper .container .item{width: 45%;}
     #cheesecake .wrapper .container{margin: 40px 0;}
+    #cheesecake .wrapper .title{margin-left: 0;}
 }
 
 @media (max-width: 428px){
     #cheesecake .wrapper .container{display: block;position: relative;margin-top: 16px;}
     #cheesecake .wrapper .container .item{
         width: 100%;
-        position: relative;}
+        position: relative;
+    }
+    #cheesecake .wrapper .title{margin-left: 0;}
 }
 
 /* pudding */
 #pudding{
-    margin-top: 120px;
+    margin-top: 10%;
 }
 #pudding .wrapper{
     width: 84%;
@@ -591,18 +714,21 @@ section{
 @media (min-width: 429px) and (max-width: 768px){
     #pudding .wrapper .container .item{width: 45%;}
     #pudding .wrapper .container{margin: 40px 0;}
+    #pudding .wrapper .title{margin-left: 0;}
 }
 
 @media (max-width: 428px){
     #pudding .wrapper .container{display: block;position: relative;margin-top: 16px;}
     #pudding .wrapper .container .item{
         width: 100%;
-        position: relative;}
+        position: relative;
+    }
+    #pudding .wrapper .title{margin-left: 0;}
 }
 
 /* tiramisu */
 #tiramisu{
-    margin-top: 120px;
+    margin-top: 10%;
     padding-bottom: 100px;
 }
 #tiramisu .wrapper{
@@ -610,6 +736,8 @@ section{
     height: fit-content;
     padding: 60px 0;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 #tiramisu .wrapper .title{
@@ -660,16 +788,28 @@ section{
 
 #tiramisu .wrapper .container .item:nth-child(2) .product-item{background-color: var(--item-1);}
 
+#tiramisu .floating-buble{
+    position: absolute;
+    top: -200px;
+    margin-left: -80px;
+}
+
+#tiramisu .floating-buble img{transform: rotate(120deg);}
+
+
 @media (min-width: 429px) and (max-width: 768px){
     #tiramisu .wrapper .container .item{width: 45%;}
     #tiramisu .wrapper .container{margin: 40px 0;}
+    #tiramisu .wrapper .title{margin-left: 0;}
 }
 
 @media (max-width: 428px){
     #tiramisu .wrapper .container{display: block;position: relative;margin-top: 16px;}
     #tiramisu .wrapper .container .item{
         width: 100%;
-        position: relative;}
+        position: relative;
+    }
+    #tiramisu .wrapper .title{margin-left: 0;}
 }
 
 
