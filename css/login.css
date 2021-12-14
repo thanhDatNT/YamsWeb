@@ -86,8 +86,13 @@
 
 .container .body .form-login form .pw-tasks .forget{
     font-style: italic;
+    font-size: 1.4rem;
     color: var(--primary-color);
     float: right;
+}
+
+.container .body .form-login .sign-up{
+    font-size: 1.4rem;
 }
 
 /*css for alert messages*/

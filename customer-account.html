@@ -69,17 +69,44 @@
                 <button id="find-btn">Tìm</button>
                 <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                 <!-- Cart icon and status -->
-                <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                <div id="cart">
+                    <a class="cart-icon" href="cart.html">
+                        <span class="iconify" data-icon="mdi:cart-outline"></span>
+                    </a>
                     <div class="cart-box">
                         <div class="empty-cart">
                             <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
                         </div>
-                        <div class="non-empty"></div>
+                        <!-- Cart has items -->
+                        <div class="non-empty">
+                            <header>Sản phẩm mới thêm</header>
+                            <div class="wrapper">
+                                <div class="item">
+                                    <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <h6 class="name">Matcha-Tiramisu</h6>
+                                        <p class="quantity">x2</p>
+                                    </div>
+                                    <h6 class="price">65000 <u>đ</u></h6>
+                                </div>
+                                <div class="item">
+                                    <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <h6 class="name">Matcha-Tiramisu Vani</h6>
+                                        <p class="quantity">x2</p>
+                                    </div>
+                                    <h6 class="price">65000 <u>đ</u></h6>
+                                </div>
+                            </div>
+                            <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                        </div>
                     </div>
-                </a>
+                </div>
                 <!-- Account icon -->
                 <a href="login.html" id="account-icon">
-                    <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    <div class="acc-photo">
+                        <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                        <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
                 </a>
             </div>
         </nav>
@@ -90,7 +117,7 @@
         <div class="nav-panel">
             <div class="user-photo">
                 <div class="photo">
-                    <img src="http://images6.fanpop.com/image/photos/38900000/-Bella-kristen-stewart-as-bella-swan-cullen-38914411-1728-2047.jpg" alt="">
+                    <img src="https://i.ibb.co/bNdym7d/MX.png" alt="">
                 </div>
                 <div class="update-photo">
                     <label for="myfile"><span class="iconify" data-icon="ant-design:camera-outlined"></span></label>
