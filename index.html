@@ -72,17 +72,44 @@
                     <button id="find-btn">Tìm</button>
                     <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                     <!-- Cart icon and status -->
-                    <a href="cart.html" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <div id="cart">
+                        <a class="cart-icon" href="cart.html">
+                            <span class="iconify" data-icon="mdi:cart-outline"></span>
+                        </a>
                         <div class="cart-box">
                             <div class="empty-cart">
                                 <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
                             </div>
-                            <div class="non-empty"></div>
+                            <!-- Cart has items -->
+                            <div class="non-empty">
+                                <header>Sản phẩm mới thêm</header>
+                                <div class="wrapper">
+                                    <div class="item">
+                                        <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                                        <div class="detail">
+                                            <h6 class="name">Matcha-Tiramisu</h6>
+                                            <p class="quantity">x2</p>
+                                        </div>
+                                        <h6 class="price">65000 <u>đ</u></h6>
+                                    </div>
+                                    <div class="item">
+                                        <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                                        <div class="detail">
+                                            <h6 class="name">Matcha-Tiramisu Vani</h6>
+                                            <p class="quantity">x2</p>
+                                        </div>
+                                        <h6 class="price">65000 <u>đ</u></h6>
+                                    </div>
+                                </div>
+                                <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                     <!-- Account icon -->
                     <a href="login.html" id="account-icon">
-                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                        <div class="acc-photo">
+                            <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                            <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
                     </a>
                 </div>
             </nav>
@@ -168,7 +195,7 @@
                         <div class="item">
                             <div class="product-item">
                                 <div class="tag">Top</div>
-                                <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
+                                <div class="thumb"><img src="https://i.ibb.co/phYHvsW/christmast-cookie.jpg" alt=""></div>
                                 <div class="detail">
                                     <h3 class="name">Macaron</h3>
                                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
@@ -180,7 +207,7 @@
                         <div class="item">
                             <div class="product-item">
                                 <div class="tag">Top</div>
-                             <div class="thumb"><img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt=""></div>
+                             <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
                              <div class="detail">
                                  <h3 class="name">Pudding with strawberry and coffee</h3>
                                  <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
@@ -192,7 +219,7 @@
                         <div class="item">
                             <div class="product-item">
                                 <div class="tag">Top</div>
-                                <div class="thumb"><img src="https://cf.shopee.vn/file/22ce3acfd6d8928d32534c5a7e7cf8e4" alt=""></div>
+                                <div class="thumb"><img src="https://i.ibb.co/phYHvsW/christmast-cookie.jpg" alt=""></div>
                                 <div class="detail">
                                     <h3 class="name">Donut vani</h3>
                                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>105.000 <u>đ</u></p>
@@ -204,7 +231,7 @@
                         <div class="item">
                             <div class="product-item">
                                 <div class="tag">Top</div>
-                                <div class="thumb"><img src="https://file.hstatic.net/200000079049/file/lam-banh-donut_f0fd523d1a074c94b7ba3c85bbb028e8.jpg" alt=""></div>
+                                <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
                                 <div class="detail">
                                     <h3 class="name">Donut with chocolate cover</h3>
                                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>89.000 <u>đ</u></p>
@@ -216,7 +243,7 @@
                         <div class="item">
                             <div class="product-item">
                                 <div class="tag">Top</div>
-                                <div class="thumb"><img src="https://i.ibb.co/ftF0mLs/banner-2-01.png" alt=""></div>
+                                <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
                                 <div class="detail">
                                     <h3 class="name">Cheesecake</h3>
                                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>145.000 <u>đ</u></p>
@@ -279,9 +306,9 @@
                                     
                                 </div>
                                 <div class="author">
-                                    <div class="photo"><img src="https://revelogue.com/wp-content/uploads/2021/01/Ed-Sheeran-tieu-de-2-e1609745910591.jpg" alt=""></div>
+                                    <div class="photo"><img src="https://i.ibb.co/2vyNrMs/NQ.png" alt=""></div>
                                     <div class="name-star">
-                                        <h5 class="name">Ed Sheeran</h5>
+                                        <h5 class="name">Quynh Quynh</h5>
                                         <div class="star">
                                             <span class="iconify" data-icon="bi:star-fill"></span>
                                             <span class="iconify" data-icon="bi:star-fill"></span>
@@ -304,9 +331,9 @@
                                     
                                 </div>
                                 <div class="author">
-                                    <div class="photo"><img src="https://image.phunuonline.com.vn/news/2017/20171107/fckimage/115656_rapper-den-linh-cao-den02-7620700.jpg" alt=""></div>
+                                    <div class="photo"><img src="https://i.ibb.co/K96NQxq/UN.png" alt=""></div>
                                     <div class="name-star">
-                                        <h5 class="name">Đen Vâu</h5>
+                                        <h5 class="name">Nhi</h5>
                                         <div class="star">
                                             <span class="iconify" data-icon="bi:star-fill"></span>
                                             <span class="iconify" data-icon="bi:star-fill"></span>
@@ -329,9 +356,9 @@
                                     
                                 </div>
                                 <div class="author">
-                                    <div class="photo"><img src="https://fb-images.saostar.vn/wp700/pc/1635671397435/saostar-j0zelxaij7r3ucbw.png" alt=""></div>
+                                    <div class="photo"><img src="https://i.ibb.co/SVsFWdt/MT.png" alt=""></div>
                                     <div class="name-star">
-                                        <h5 class="name">Phương Hằng</h5>
+                                        <h5 class="name">Trang</h5>
                                         <div class="star">
                                             <span class="iconify" data-icon="bi:star-fill"></span>
                                             <span class="iconify" data-icon="bi:star-fill"></span>
@@ -353,9 +380,9 @@
                                     
                                 </div>
                                 <div class="author">
-                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2017/12/6/580043/Dwayne.jpg?w=414&h=276&crop=auto&scale=both" alt=""></div>
+                                    <div class="photo"><img src="https://i.ibb.co/bNdym7d/MX.png" alt=""></div>
                                     <div class="name-star">
-                                        <h5 class="name">The Rock</h5>
+                                        <h5 class="name">Minh Xuan</h5>
                                         <div class="star">
                                             <span class="iconify" data-icon="bi:star-fill"></span>
                                             <span class="iconify" data-icon="bi:star-fill"></span>
@@ -428,9 +455,9 @@
                                     
                                 </div>
                                 <div class="author">
-                                    <div class="photo"><img src="https://media-cdn.laodong.vn/storage/newsportal/2017/12/6/580043/Dwayne.jpg?w=414&h=276&crop=auto&scale=both" alt=""></div>
+                                    <div class="photo"><img src="https://i.ibb.co/XxMb74k/jennie.jpg" alt=""></div>
                                     <div class="name-star">
-                                        <h5 class="name">The Rock</h5>
+                                        <h5 class="name">Jenny</h5>
                                         <div class="star">
                                             <span class="iconify" data-icon="bi:star-fill"></span>
                                             <span class="iconify" data-icon="bi:star-fill"></span>
