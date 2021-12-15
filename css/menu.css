@@ -88,28 +88,10 @@ section{
     #banners{height: 50vh;}
   }
 
-/* Filter */
-#filter{
-    display: block;
-    background-color: white;
-    border: 1.5px solid var(--primary-color);
-    border-radius: 4px;
-    font-size: 2rem;
-    color: var(--primary-color);
-    padding: 10px;
-    margin: 50px 30px 120px auto;
-}
-@media (min-width: 429px) and (max-width: 768px){
-    #filter{font-size: 1.7rem;}
-}
-
-@media (max-width: 428px){
-    #filter{font-size: 1.2rem;}
-}
 
 /* best seller */
 #bestseller {
-    margin-top: 120px;
+    margin-top: 6%;
 }
 #bestseller .wrapper{
     width: 84%;
