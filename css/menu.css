@@ -76,6 +76,7 @@ section{
     font-weight: 400;
     animation-name: moveInRight;
     animation-duration: 3s;
+    margin-top: 2%;
 }
   
   @media (max-width: 428px){
