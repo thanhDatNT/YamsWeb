@@ -55,6 +55,18 @@
 #banners .slide-wrapper .offer{
     background-image: url(https://i.ibb.co/2Myf0WF/offer.png);
 }
+#banners .slide-wrapper .macaron{
+    background-image: url(https://i.ibb.co/1d0hT3j/macaron.png);
+}
+#banners .slide-wrapper .cheesecake{
+    background-image: url(https://i.ibb.co/hZp9s31/White-chocolate-cheesecake.jpg);
+}
+#banners .slide-wrapper .pudding{
+    background-image: url(https://i.ibb.co/2Fh3Mvf/pudidng.png);
+}
+#banners .slide-wrapper .tiramisu{
+    background-image: url(https://i.ibb.co/BZZrHGB/Fruit-tiramisu.jpg);
+}
   
 #banners .banner-text{
     position: absolute;
@@ -307,7 +319,6 @@
 
 #all-product .sale2 img{transform: rotate(120deg);}
 
-/*offer*/
 /* offer */
 #offer{
     margin-top: 15%;
@@ -503,4 +514,151 @@
 
 @media (min-width:429px) and (max-width:768px){
     #combo .wrapper .item{padding: 0 10px;}
+}
+
+/* macaron box */
+#box{
+    height: fit-content;
+}
+
+#box .content{
+    position: relative;
+    width: 84%;
+    padding-top: 7%;
+    margin: 0 auto;
+}
+#box .content .image{
+    position: relative;
+    width: 60%;
+}
+
+#box .content .text{
+    vertical-align: top;
+    padding-left: 3%;
+    width: 40%;
+}
+
+#box .content .text .title{
+    margin-bottom: 7%;
+    margin-left: 0px;
+    line-height: 60px;
+}
+
+#box .content .text .description{
+    margin-bottom: 10%;
+    line-height: 40px;
+}
+#box .content .text .price{
+    margin-bottom: 10%;
+    line-height: 40px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #box .content .image{
+        width: 55%;
+    }
+    #box .content .text{
+        width: 45%;
+    }
+    #box .content .text .title{
+        line-height: 3.5rem;
+        font-size: 3.5rem;
+    }
+    #box .content .text .description{
+        line-height: 2.2rem;
+        font-size: 1.7rem;
+    }
+    #box .content .text .price{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 428px){
+    #box .content .text .title{
+        line-height: 2.2rem;
+        font-size: 2.2rem;
+    }
+    #box .content .text .price{
+        font-size: 1.5rem;
+    }
+    #box .content .text .description{
+        display: none;
+    }
+
+    #box .content .text a{
+        font-size: 0.8rem;
+    }
+}
+
+/* macaron infor */
+#infor{
+    height: fit-content;
+}
+
+#infor .content{
+    position: relative;
+    width: 84%;
+    padding-top: 7%;
+    margin: 0 auto;
+}
+#infor .content .image{
+    position: relative;
+    width: 60%;
+}
+
+#infor .content .text{
+    vertical-align: top;
+    padding-right: 3%;
+    width: 40%;
+}
+
+#infor .content .text .title{
+    margin-bottom: 7%;
+    margin-left: 0px;
+    line-height: 60px;
+}
+
+#infor .content .text .description{
+    margin-bottom: 10%;
+    line-height: 40px;
+    text-align: justify;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #infor .content .text{
+        width: 50%;
+    }
+    #infor .content .image{
+        width: 50%;
+    }
+    #infor .content .text .description{
+        line-height: 2.6rem;
+        font-size: 2.2rem;
+    }
+    #infor .content .text .description .des{
+        display: none;
+    }
+}
+
+@media (max-width: 428px){
+    #infor .content .text{
+        width: 50%;
+    }
+    #infor .content .image{
+        width: 50%;
+    }
+    #infor .content .text .title{
+        line-height: 2.2rem;
+        font-size: 2.2rem;
+    }
+    #infor .content .text .description{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    #infor .content .text .description .des{
+        display: none;
+    }
+
 }
