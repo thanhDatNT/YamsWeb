@@ -25,15 +25,18 @@ section{
     
   }
   
+  
   #banners .slide-wrapper{
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
   
-  #banners .slide-wrapper .slider-item{
+  
+  
+#banners .slide-wrapper .slider-item{
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -41,11 +44,9 @@ section{
     background-repeat: no-repeat;
     /* background-position: center; */
     transform-origin:center;
-    animation: zoomIn 5s ease-in;
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
     display: none;
-  }
+}
+  
   
   #banners .slide-wrapper .slider-item:first-child{background-image: url(https://i.ibb.co/wd0Ykfw/hero-about-us.jpg); display: block;}
   
@@ -53,28 +54,33 @@ section{
   #banners .banner-text{
     position: absolute;
     text-align: center;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 1px 1px 2px var(--black-4);
   }
   
   #banners .banner-text .main-title{
-    color: white;
-  }
+    color: var(--background);
+    animation-name: moveInleft;
+    animation-duration: 3s;
+}
   
-  #banners .banner-text .description{
+  
+#banners .banner-text .description{
     text-align: center;
     color: white;
-    font-size: 2.6rem;
+    font-size: 3rem;
     line-height: 2.6rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-  }
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+}
   
   @media (max-width: 428px){
     #banners{height: 40vh;}
-    #banners .banner-text .main-title{font-size: 36px; line-height: 24px;}
+    #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
     #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
   }
   
@@ -84,53 +90,22 @@ section{
 /* ========END BANNER SESSION========= */
 /* ========START HIGHTLIGHT=========== */
 
-#hightlight{height: 680px;}
-
-#hightlight .summary{
-    width: 80%;
-    height: 88px;
-    position: absolute;
-    top: -44px;
-    left: 10%;
-    background-color: var(--item-2);
-    border-radius: 10px;
-    border-color: var(--primary-color);
-    border-width: 1.5px;
-    border-style: dashed;
-    border-spacing: 1px;
+#hightlight{
+    height: fit-content;
+    overflow: hidden;
 }
-
-#hightlight .summary .wrapper{
-    width: 100%;
-    height: 88px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-#hightlight .summary .wrapper .item{width: 23%;}
-#hightlight .summary .wrapper .item .iconify{
-    height: 100%;
-    float: left;
-    font-size: 2.8rem;
-    margin-right: 8px;
-    color: var(--primary-color);
-}
-
-#hightlight .summary .wrapper .item .description{font-size: 1.4rem;}
 
 /* Hightlight box */
 #hightlight .hl-box{
     width: 100%;
-    height: fit-content;
+
     position: absolute;
     top: 80px;
 }
 
 #hightlight .hl-box .wrapper{
     width: 88%;
-    margin: 40px auto;
+    margin: 10px auto;
     position: relative;
     z-index: 1;
 }
@@ -212,12 +187,12 @@ section{
 /* ========START STORY=========== */
 
 
-#story {height: fit-content; }
-#story .h1-box{  
-    width: 100%;
-    position: absolute;
-}
-#story .hl-box .wrapper{
+#story {
+    height: fit-content;
+    overflow: hidden;
+ }
+
+#story .wrapper{
     width: 88%;
     margin: 10% auto;
     position: relative;
@@ -225,7 +200,7 @@ section{
 }
 
 
-#story .hl-box .wrapper h2{
+#story .wrapper h2{
     padding-bottom: 50px;
     color: var(--primary-color);
 
@@ -237,15 +212,18 @@ section{
 } */
 
 
-#story .hl-box .wrapper .content-box{width: 60%; float: right; padding-left: 80px;}
-#story .hl-box .wrapper .content-box .content h3{
+#story .wrapper .content-box{
+    width: 60%; float: right; padding-left: 80px;
+}
+
+#story .wrapper .content-box .content h3{
     font-size: 3.4rem;
     line-height: 3.8rem;
     margin-bottom: 18px;
     color: rgb(51, 51, 51);
 }
 
-#story .hl-box .wrapper .content-box .content .description{
+#story .wrapper .content-box .content .description{
     font-size: 1.8rem;
     line-height: 2.8rem;
     margin: 20px 0;
@@ -253,12 +231,13 @@ section{
 }
 
 
-#story .hl-box .wrapper .image-box{
+#story .wrapper .image-box{
     width: 40%;
+    float: left;
  
 }
 
-#story .hl-box .wrapper .image-box img{border-radius: 10px; float: left;}
+#story .wrapper .image-box img{border-radius: 10px;}
 #story .floating-buble{
     position: absolute;
     top: 400px;
@@ -273,10 +252,10 @@ section{
     #story{height: 900px;}
 
         #story .floating-buble{width: 300px;}
-        #story .hl-box .wrapper .content-box{width: 100%;}
-        #story .hl-box .wrapper .content-box .content{margin: 0;padding: 32px 0;}
-        #story .hl-box .wrapper .content-box .content h3{font-size: 2.8rem;line-height: 3rem;}
-        #story .hl-box .wrapper .image-box{padding: 0;
+        #story .wrapper .content-box{width: 100%;}
+        #story  .wrapper .content-box .content{margin: 0;padding: 32px 0;}
+        #story .wrapper .content-box .content h3{font-size: 2.8rem;line-height: 3rem;}
+        #story  .wrapper .image-box{padding: 0;
         float: none;
         width: 60%;
         margin: 0 auto;}
@@ -284,75 +263,80 @@ section{
 
 @media (min-width: 429px) and (max-width: 768px){
     #story{height: 680px;}
-    #story .hl-box .wrapper .content-box .content{margin: 0;}
-    #story .hl-box .wrapper .image-box{padding: 0;}
+    #story .wrapper .content-box .content{margin: 0;}
+    #story .wrapper .image-box{padding: 0;}
 } 
 
 /* ========material========== */
 
 
-#material {height: fit-content; }
-#material .h1-box{  
-    width: 100%;
-    position: absolute;
-}
+#material {
+    margin-top: 15vh;
+    height: fit-content;
+     overflow: hidden;
+ }
 
-#material .hl-box .wrapper{
+#material .wrapper{
     width: 88%;
     margin: 10% auto;
     position: relative;
     z-index: 1;
 }
 
-#material .hl-box .wrapper h2{
+#material .wrapper h2{
     padding-bottom: 50px;
     color: var(--primary-color);
     float: right;
 
 }
 
-#material .hl-box .wrapper .content-box{width: 60%; float: left; padding-right: 80px;}
-#material .hl-box .wrapper .content-box .content h3{
+#material .wrapper .content-box{
+    width: 60%; padding-right: 80px;
+}
+
+#material  .wrapper .content-box .content h3{
     font-size: 3.4rem;
     line-height: 3.8rem;
     margin-bottom: 18px;
     color: rgb(51, 51, 51);
 }
 
-#material .hl-box .wrapper .content-box .content .description{
+#material.wrapper .content-box .content .description{
     font-size: 1.8rem;
     line-height: 2.8rem;
+    margin: 20px 0;
     text-align: justify;
+    line-height: 40px;
 }
 /* icon */
 
 
-#material .hl-box .wrapper .content-box .icon .item{
+#material  .wrapper .content-box .icon .item{
 width: 16%; 
 float: left;
 margin-top: 5vh;
 }
 
-#material .hl-box .wrapper .icon hr{
+#material .wrapper .icon hr{
     width:60%;
     border: 0.5px solid var(--primary-color);
-    margin-left: 3.5vh; margin-top: 60px;
+    margin-left: 2.5vh; margin-top: 50px;
 }
 
 
-#material .hl-box .wrapper .content-box .icon .item .description{
+#material .wrapper .content-box .icon .item .description{
     font-size: 1.8rem;
     line-height: 2.8rem;
     text-align: center;
 }
 
 /* icon */
-#material .hl-box .wrapper .image-box{
+#material .wrapper .image-box{
     width: 40%;
     float: right;
 }
 
-#material .hl-box .wrapper .image-box img{border-radius: 10px;}
+#material .wrapper .image-box img{border-radius: 10px;}
 #material .floating-buble{
     position: absolute;
     top: 440px;
@@ -367,10 +351,10 @@ margin-top: 5vh;
     #v{height: 900px;}
 
         #material .floating-buble{width: 300px;}
-        #material .hl-box .wrapper .content-box{width: 100%;}
-        #material .hl-box .wrapper .content-box .content{margin: 0;padding: 32px 0;}
-        #stmaterialory .hl-box .wrapper .content-box .content h3{font-size: 2.8rem;line-height: 3rem;}
-        #material .hl-box .wrapper .image-box{padding: 0;
+        #material  .wrapper .content-box{width: 100%;}
+        #material  .wrapper .content-box .content{margin: 0;padding: 32px 0;}
+        #stmaterialory .wrapper .content-box .content h3{font-size: 2.8rem;line-height: 3rem;}
+        #material .wrapper .image-box{padding: 0;
         float: none;
         width: 60%;
         margin: 0 auto;}
@@ -378,8 +362,8 @@ margin-top: 5vh;
 
 @media (min-width: 429px) and (max-width: 768px){
     #material{height: 680px;}
-    #material .hl-box .wrapper .content-box .content{margin: 0;}
-    #material .hl-box .wrapper .image-box{padding: 0;}
+    #material .wrapper .content-box .content{margin: 0;}
+    #material .wrapper .image-box{padding: 0;}
 } 
 
 /* ========END material=========== */
