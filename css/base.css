@@ -234,6 +234,12 @@ input[type='checkbox'], input[type='radio']{
 
 .product-item .detail .price{color: var(--primary-color); font-size: 2rem;}
 
+.product-item .detail .price a{
+    text-decoration: line-through;
+    font-size: 1.7rem;
+    color: var(--inactive);
+}
+
 .product-item .detail .price .iconify{margin-right: 6px; font-size: 1.7rem; vertical-align: baseline;}
 
 .product-item .detail .add{

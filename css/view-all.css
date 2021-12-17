@@ -1,0 +1,664 @@
+
+#container{
+    width: 100%;
+    background-color: var(--background);
+    font-size: 3rem;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    .title{
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 428px){
+    .title{
+        font-size: 3rem;
+    }
+}
+
+/* Banner */
+#banners{
+    width: 100%;
+    position: relative;
+    height: 60vh;
+    margin: auto;
+    overflow: hidden;
+}
+  
+#banners .slide-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+#banners .slide-wrapper .slider-item{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transform-origin:center;
+    display: block;
+}
+#banners .slide-wrapper .best-seller{
+    background-image: url(https://i.ibb.co/ctJVjrf/bestseller.jpg);
+}
+#banners .slide-wrapper .new{
+    background-image: url(https://i.ibb.co/BsK7yjH/new.png);
+}
+#banners .slide-wrapper .sale{
+    background-image: url(https://i.ibb.co/G5Wwywh/sale.jpg);
+}
+#banners .slide-wrapper .offer{
+    background-image: url(https://i.ibb.co/2Myf0WF/offer.png);
+}
+#banners .slide-wrapper .macaron{
+    background-image: url(https://i.ibb.co/1d0hT3j/macaron.png);
+}
+#banners .slide-wrapper .cheesecake{
+    background-image: url(https://i.ibb.co/hZp9s31/White-chocolate-cheesecake.jpg);
+}
+#banners .slide-wrapper .pudding{
+    background-image: url(https://i.ibb.co/2Fh3Mvf/pudidng.png);
+}
+#banners .slide-wrapper .tiramisu{
+    background-image: url(https://i.ibb.co/BZZrHGB/Fruit-tiramisu.jpg);
+}
+  
+#banners .banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px var(--black-4);
+    text-align: center;
+}
+#banners .banner-text .main-title{
+    color: var(--background);
+    animation-name: moveInleft;
+    animation-duration: 3s;
+}
+  
+#banners .banner-text .description{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    margin-top: 2%;
+}
+  
+  @media (max-width: 428px){
+    #banners{height: 40vh;}
+    #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
+    #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #banners{height: 50vh;}
+  }
+
+/* Filter */
+#filter{
+    display: block;
+    background-color: white;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    padding: 10px;
+    margin: 5% 5% 5% auto;
+}
+@media (min-width: 429px) and (max-width: 768px){
+    #filter{font-size: 1.7rem;}
+}
+
+@media (max-width: 428px){
+    #filter{font-size: 1.2rem;}
+}
+
+/* products */
+#all-product {
+    width: 100%;
+    position: relative;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+#all-product .wrapper{
+    width: 84%;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+#all-product .wrapper .title{
+    float: left;
+    margin-bottom: 40px;
+    margin-top: 15%;
+}
+
+#all-product .wrapper .container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#all-product .wrapper .container .item{
+    width: 30%;
+    margin: 20px 0;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+#all-product .wrapper .container .item:hover{
+    transform: translateY(-3px);
+}
+
+#all-product .wrapper .container .item:first-child .product-item,
+#all-product .wrapper .container .item:nth-child(6) .product-item,
+#all-product .wrapper .container .item:nth-child(8) .product-item,
+#all-product .wrapper .container .item:nth-child(13) .product-item{background-color: var(--item-1);}
+
+#all-product .wrapper .container .item:nth-child(2) .product-item,
+#all-product .wrapper .container .item:nth-child(7) .product-item,
+#all-product .wrapper .container .item:nth-child(12) .product-item{background-color: var(--item-2);}
+
+#all-product .wrapper .container .item:nth-child(3) .product-item,
+#all-product .wrapper .container .item:nth-child(5) .product-item,
+#all-product .wrapper .container .item:nth-child(10) .product-item,
+#all-product .wrapper .container .item:nth-child(14) .product-item{background-color: var(--item-3);}
+
+#all-product .wrapper .container .item:nth-child(4) .product-item,
+#all-product .wrapper .container .item:nth-child(9) .product-item,
+#all-product .wrapper .container .item:nth-child(11) .product-item,
+#all-product .wrapper .container .item:last-child .product-item{background-color: var(--item-4);}
+
+#all-product .floating-buble{
+    position: absolute;
+    top: 7%;
+    margin-left: -7%;
+}
+
+#all-product .floating-buble img{transform: rotate(10deg);}
+
+
+@media (min-width: 429px) and (max-width: 768px){
+    #all-product .wrapper .container .item{width: 45%;}
+    #all-product .wrapper .container{margin: 40px 0;}
+}
+
+@media (max-width: 428px){
+    #all-product .wrapper .container{display: block;position: relative;margin-top: 16px;}
+    #all-product .wrapper .container .item{
+        width: 100%;
+        position: relative;}
+}
+
+/* new flavour */
+#new{
+    height: fit-content;
+    overflow: hidden;
+}
+#new .title{
+    position: relative;
+    width: 84%;
+    padding: 4% 0;
+    margin: 0 auto;
+}
+
+#new .content{
+    width: 84%;
+    height: fit-content;
+    padding: 60px 0;
+    margin: 0 auto;
+    position: relative;
+    
+}
+#new .content .name{
+    font-size: 4.2rem;
+    margin-bottom: 40px;
+}
+#new .content .description{
+    margin-bottom: 40px;
+    padding-right: 40px;
+    line-height: 40px;
+}
+
+#new .content .flavour-content{
+    position: relative;
+    right: -24%;
+    top: 0;
+}
+#new .content .flavour-content .flavour-image{
+    
+    margin: 0;
+}
+#new .content .flavour-content .new-flavour{
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    text-align: right;
+    line-height: 40px;
+}
+#new .content .flavour-content .new-flavour span{
+    background-color: var(--primary-color);
+    padding: 6px;
+    color: white;
+}
+
+#new .content .flavour-content .new-flavour p:nth-child(2){
+    
+    width: 60%;
+    margin: 20px 0 10px auto;
+}
+
+#new .content .flavour-content .new-flavour p:last-child{
+    color: var(--primary-color);
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #new .content .name{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+    }
+    #new .content  .text p{
+        padding-right: 20px;
+        line-height: 2.8rem;
+        font-size: 1.7rem;
+    }
+    #new .content .flavour-content p{
+        padding: 2px;
+        line-height: 1.7rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 428px){
+    
+    #new .content .name{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 10px;
+    }
+    #new .content  .text p{
+        padding-right: 0px;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    #new .content input{
+        font-size: 0.8rem;
+    }
+    #new .content .flavour-content p{
+        padding: 1px;
+        line-height: 1rem;
+        font-size: 1rem;
+    }
+    #new .content .flavour-content .new-flavour p:last-child{
+        color: var(--background);
+    }
+}
+
+/*sale*/
+#all-product .sale2{
+    position: absolute;
+    top: 65%;
+    right: -7%;
+}
+
+#all-product .sale2 img{transform: rotate(120deg);}
+
+/* offer */
+#offer{
+    margin-top: 15%;
+    height: fit-content;
+}
+
+#offer .content{
+    position: relative;
+    width: 84%;
+    height: fit-content;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+#offer .content .flavour-content{
+    position: relative;
+    left: -26%;
+}
+#new .content .flavour-content .flavour-image{
+    width: 100%;
+    margin: 0;
+}
+#offer .content .flavour-content .offer-flavour{
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    text-align: left;
+    line-height: 40px;
+}
+#offer .content .flavour-content .offer-flavour span{
+    background-color: var(--primary-color);
+    padding: 6px;
+    color: white;
+}
+
+#offer .content .flavour-content .offer-flavour p:nth-child(2){
+    
+    width: 60%;
+    margin: 20px auto 10px 0;
+}
+
+#offer .content .flavour-content .offer-flavour p:last-child{
+    color: var(--primary-color);  
+}
+#offer .content .text{
+    vertical-align: top;
+    padding-left: 3%;
+}
+
+#offer .content .text .title{
+    margin-bottom: 15%;
+    margin-left: 0px;
+    margin-top: -15%;
+}
+
+#offer .content .text .name{
+    font-size: 4.2rem;
+    margin-bottom: 10%;
+}
+
+#offer .content .text img{
+    width: 85px;
+    float: left;
+    margin-right: 5%;
+}
+#offer .content .text .description{
+    margin-bottom: 10%;
+    line-height: 40px;
+}
+
+#offer .content .text input{
+    margin-bottom: 10%;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #offer .content .text .name{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+    }
+    #offer .content  .flavour-content p{
+        line-height: 2rem;
+        font-size: 1.7rem;
+    }
+    #offer .content .text .description{
+        line-height: 2.2rem;
+        font-size: 1.7rem;
+        margin-right: -5%;
+    }
+    #offer .content .text img{
+        width: 60px;
+    }
+}
+
+@media (max-width: 428px){
+    
+    #offer .content .text .name{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    #offer .content  .flavour-content p{
+        line-height: 1.2rem;
+        font-size: 1rem;
+    }
+    #offer .content .text .description{
+        line-height: 1.2rem;
+        font-size: 1rem;
+        margin-right: -5%;
+    }
+    #offer .content .text img{
+        width: 40px;
+    }
+    #offer .content .text input{
+        font-size: 0.8rem;
+    }
+}
+
+/*combo in offer*/
+#combo{
+    padding-top: 12%;
+    overflow: hidden;
+}
+
+#combo .wrapper{
+    width: 88%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+#combo .wrapper .item{
+    width: 50%;
+    float: left;
+    padding: 0 40px;
+    text-align: center;
+}
+
+#combo .wrapper .item .title{
+    margin-bottom: 7%;
+}
+
+#combo .wrapper .item .container{
+    width: 100%;
+    height: 650px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+#combo .wrapper .item .container .content .combo,
+#combo .wrapper .item .container .content .name{
+    font-size: 2.4rem;
+    margin: 20px 0;
+}
+
+#combo .wrapper .item .container .content .price{
+    font-size: 2rem;
+    margin: 28px 0;
+    color: var(--primary-color);
+}
+
+#combo .wrapper .item .container .content .price b{
+    font-size: 2.2rem;
+}
+#combo .wrapper .item .left{
+    margin-top: 20px;
+    background-image: url(https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/home_image_5.jpg);
+}
+
+#combo .wrapper .item .right{
+    background-image: url(https://eatsy.bold-themes.com/burger/wp-content/uploads/sites/2/2021/02/donut_gallery_03.jpg);
+}
+
+#combo .wrapper .item .right .content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#combo .wrapper .item .right .pad{
+    width: 100%;
+    height: 650px;
+    opacity: 0.8;
+    position: relative;
+    background: linear-gradient(rgba(239, 191, 187, 1), rgba(239, 191, 187, 0.9), rgba(255, 255, 255, 0.3));
+}
+
+@media (max-width:428px){
+    #combo .wrapper .item{width: 100%; margin-bottom: 20px;}
+}
+
+@media (min-width:429px) and (max-width:768px){
+    #combo .wrapper .item{padding: 0 10px;}
+}
+
+/* macaron box */
+#box{
+    height: fit-content;
+}
+
+#box .content{
+    position: relative;
+    width: 84%;
+    padding-top: 7%;
+    margin: 0 auto;
+}
+#box .content .image{
+    position: relative;
+    width: 60%;
+}
+
+#box .content .text{
+    vertical-align: top;
+    padding-left: 3%;
+    width: 40%;
+}
+
+#box .content .text .title{
+    margin-bottom: 7%;
+    margin-left: 0px;
+    line-height: 60px;
+}
+
+#box .content .text .description{
+    margin-bottom: 10%;
+    line-height: 40px;
+}
+#box .content .text .price{
+    margin-bottom: 10%;
+    line-height: 40px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #box .content .image{
+        width: 55%;
+    }
+    #box .content .text{
+        width: 45%;
+    }
+    #box .content .text .title{
+        line-height: 3.5rem;
+        font-size: 3.5rem;
+    }
+    #box .content .text .description{
+        line-height: 2.2rem;
+        font-size: 1.7rem;
+    }
+    #box .content .text .price{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 428px){
+    #box .content .text .title{
+        line-height: 2.2rem;
+        font-size: 2.2rem;
+    }
+    #box .content .text .price{
+        font-size: 1.5rem;
+    }
+    #box .content .text .description{
+        display: none;
+    }
+
+    #box .content .text a{
+        font-size: 0.8rem;
+    }
+}
+
+/* macaron infor */
+#infor{
+    height: fit-content;
+}
+
+#infor .content{
+    position: relative;
+    width: 84%;
+    padding-top: 7%;
+    margin: 0 auto;
+}
+#infor .content .image{
+    position: relative;
+    width: 60%;
+}
+
+#infor .content .text{
+    vertical-align: top;
+    padding-right: 3%;
+    width: 40%;
+}
+
+#infor .content .text .title{
+    margin-bottom: 7%;
+    margin-left: 0px;
+    line-height: 60px;
+}
+
+#infor .content .text .description{
+    margin-bottom: 10%;
+    line-height: 40px;
+    text-align: justify;
+}
+
+@media (min-width: 429px) and (max-width: 768px){
+    #infor .content .text{
+        width: 50%;
+    }
+    #infor .content .image{
+        width: 50%;
+    }
+    #infor .content .text .description{
+        line-height: 2.6rem;
+        font-size: 2.2rem;
+    }
+    #infor .content .text .description .des{
+        display: none;
+    }
+}
+
+@media (max-width: 428px){
+    #infor .content .text{
+        width: 50%;
+    }
+    #infor .content .image{
+        width: 50%;
+    }
+    #infor .content .text .title{
+        line-height: 2.2rem;
+        font-size: 2.2rem;
+    }
+    #infor .content .text .description{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    #infor .content .text .description .des{
+        display: none;
+    }
+
+}
