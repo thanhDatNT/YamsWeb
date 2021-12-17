@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams | Đặt hàng</title>
+    <!-- link icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    
+    <link rel="stylesheet" href="./css/order.css">
+</head>
+<body>
+    <div id="container">
+        <section id="logo">
+            <div class="logo">
+                <a href="index.html" class="home">
+                    <img src="./images/logo/Logo_NoBg_Pink.png" alt="logo">
+                </a>
+                <h1 class="font-xl">Yams </h1>
+            </div>
+        </section>
+        <section id="subheading">
+            <ul class="breadcrumb">
+                <li class="tab">
+                    <a href="#">Giỏ hàng</a>
+                    <span class="iconify" data-icon="akar-icons:chevron-right"></span>
+                </li>
+                <li class="tab tab-2">
+                    <a href="#">Thông tin giao hàng</a>
+                    <span class="iconify" data-icon="akar-icons:chevron-right"></span>
+                </li>
+                <li class="tab tab-3">
+                    <a href="#">Phương thức thanh toán</a>
+                </li>
+            </ul>
+        </section>
+        <div class="content">
+            <div class="content-left">
+                <!-- Getting item methods -->
+                <section id="shipping">
+                    <h3 class="title">Cách thức nhận hàng</h3>
+                    <div class="methods">
+                        <div class="deli">
+                            <label for="deli">
+                                <input type="radio" name="delivery" value="deli" checked id="deli"/>
+                                <span class="sub-title" >Giao hàng tận nơi</span>
+                            </label>
+                            <span class="price" >30 000đ</span>
+                        </div>
+                        <div class="pickup">
+                            <label for="pickup">
+                                <input type="radio" id="pickup" name="delivery" value="pick-up" />
+                                <span class="sub-title" >Đến lấy tại cửa hàng</span>
+                            </label>
+                            <span class="price">0đ</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- Delivery Information -->
+                <section id="delivery-infor" class="deli-infor active">
+                    <h3 class="title">Thông tin giao hàng</h3>
+                    <form id="form-cus-infor" name="form-infor-delivery">
+                        <div class="name">
+                            <label for="txtname">Họ và tên <i>*</i></label>
+                            <input id="txtname" class="field-input" type="text" name="name" autofocus >
+                        </div>
+                        <div class="email-phone">
+                            <div class="email">
+                                <label for="txtemail">Email <i>*</i></label>
+                                <input id="txtemail" class="field-input" type="email" name="email">
+                            </div>
+                            <div class="phone-number">
+                                <label for="txtphone">Số điện thoại <i>*</i></label>
+                                <input id="txtphone" class="field-input" type="tel" maxlength="15" name="numberphone" >
+                            </div>
+                        </div>
+                        <div class="address">
+                            <div class="address-item">
+                                <label for="city">Tỉnh/Thành phố <i>*</i></label>
+                                <select id="city" name="city" class="field-input" onchange="pickAddress(this.value)">
+                                    <option selected="selected">Chọn tỉnh</option>"+
+                                    <option value="1">Hồ Chí Minh</option>"+
+                                    <option value="71">Thái Nguyên</option>"+
+                                    <option value="78">Hải Phòng</option>"+
+                                    <option value="81">Bắc Giang</option>"+
+                                    <option value="84">Vĩnh Phúc</option>"+
+                                    <option value="90">Thanh Hóa</option>"+
+                                    <option value="92">Hà Tĩnh</option>"+
+                                    <option value="97">Quảng Nam</option>"+
+                                    <option value="100">Phú Yên</option>"+
+                                    <option value="101">Khánh Hoà</option>"+
+                                    <option value="104">Gia Lai</option>"+
+                                    <option value="112">Tây Ninh</option>"+
+                                    <option value="113">Đồng Nai</option>"+
+                                    <option value="115">Long An</option>"+
+                                    <option value="117">An Giang</option>"+
+                                    <option value="119">Tiền Giang</option>"+
+                                    <option value="120">Bến Tre</option>"+
+                                    <option value="121">Vĩnh Long</option>"+
+                                    <option value="122">Trà Vinh</option>"+
+                                    <option value="123">Cần Thơ</option>"+
+                                    <option value="124">Sóc Trăng</option>"+
+                                    <option value="125">Kiên Giang</option>"+
+                                    <option value="126">Bạc Liêu</option>"+
+                                    <option value="127">Cà Mau</option>"+
+                                    <option value="128">Quảng Bình</option>"+
+                                    <option value="129">Bắc Ninh</option>"+
+                                    <option value="130">Bình Dương</option>"+
+                                    <option value="131">Bình Định</option>"+
+                                    <option value="132">Đà Nẵng</option>"+
+                                    <option value="133">Đồng Tháp</option>"+
+                                    <option value="135">Hưng Yên</option>"+
+                                    <option value="136">Kon Tum</option>"+
+                                    <option value="137">Nam Định</option>"+
+                                    <option value="138">Ninh Bình</option>"+
+                                    <option value="139">Phú Thọ</option>"+
+                                    <option value="140">Quảng Ninh</option>"+
+                                    <option value="141">Thái Bình</option>"+
+                                    <option value="142">Đắk Lắk</option>"+
+                                    <option value="143">Hậu Giang</option>"+
+                                    <option value="144">Hải Dương</option>"+
+                                    <option value="145">Lạng Sơn</option>"+
+                                    <option value="146">Lào Cai</option>"+
+                                    <option value="147">Yên Bái</option>"+
+                                    <option value="148">Tuyên Quang</option>"+
+                                    <option value="149">Hà Giang</option>"+
+                                    <option value="150">Cao Bằng</option>"+
+                                    <option value="151">Điện Biên</option>"+
+                                    <option value="152">Sơn La</option>"+
+                                    <option value="153">Hòa Bình</option>"+
+                                    <option value="154">Lai Châu</option>"+
+                                    <option value="155">Hà Nam</option>"+
+                                    <option value="156">Nghệ An</option>"+
+                                    <option value="157">Ninh Thuận</option>"+
+                                    <option value="158">Bình Thuận</option>"+
+                                    <option value="159">Lâm Đồng</option>"+
+                                    <option value="160">Đắk Nông</option>"+
+                                    <option value="161">Quảng Ngãi</option>"+
+                                    <option value="162">Quảng Trị</option>"+
+                                    <option value="163">Thừa Thiên - Huế</option>"+
+                                    <option value="164">Bà Rịa - Vũng Tàu</option>"+
+                                    <option value="165">Bắc Kạn</option>"+
+                                    <option value="166">Bình Phước</option>"+
+                                    <option value="167">Hà Nội</option>"+
+                                </select>
+                            </div>
+                            <div class="address-item">
+                                <label for="district">Quận/Huyện <i>*</i></label>
+                                <select id="district" name="district" class="field-input">
+                                </select>
+                            </div>
+                            <div class="address-item">
+                                <label for="wards">Phường/ xã <i>*</i></label>
+                                <input type="text" class="field-input" id="wards" name="wards">
+                            </div>
+                        </div>
+                        <div class="detail-address">
+                            <label for="location">Địa chỉ cụ thể (số nhà, đường)<i>*</i></label>
+                            <input id="location" class="field-input" type="text" name="location" value=""  >
+                        </div>   
+                        <div class="note">
+                            <label for="note">Ghi chú</label>
+                            <textarea id="note" class="field-note full-width" cols="30" rows="6"></textarea>
+                        </div>                    
+                    </form>
+                    <div class="footer-content-infor">
+                        <div class="question">
+                            <span>Bạn đã có tài khoản? &nbsp;</span>
+                            <a href="login.html"><u> Đăng nhập</u></a>
+                        </div>
+                        <input type="submit" value="Xác nhận" id="submit-infor" class="btn btn-primary"/>
+                    </div>      
+                </section>
+                <!-- Payment method -->
+                <section id="payment-method" class="payment">
+                    <div class="pay-by">
+                        <h3 class="title">Phương thức thanh toán</h3>
+                        <div class="cod">
+                            <label >
+                                <input class="rad" type="radio" name="radio-button" value=""  />
+                                <span class="sub-title" >Thanh toán khi nhận hàng (COD)</span>
+                            </label>     
+                        </div>
+                        <div class="momo">
+                            <label >
+                                <input class="rad" type="radio" name="radio-button" value=""  />
+                                <span class="sub-title" >Momo</span>
+                            </label>
+                        </div>
+                        <div class="bank">
+                            <label >
+                                <input class="rad" type="radio" name="radio-button" value=""  />
+                                <span class="sub-title" >Chuyển khoản ngân hàng</span>
+                            </label>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary complete">Đặt hàng</a>
+                </section>
+            </div>
+            <div class="content-right">
+                <section id="cart_payment">
+                    <div class="wrapper">
+                        <div class="title">
+                            <h3 class="delivery-title">Đơn hàng của bạn</h3>
+                        </div>
+                        <div class="product-cart">
+                            <ul class="list-items">
+                                <li class="products-item">
+                                    <img class="image-item" src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" alt="">     
+                                    <div class="product-infor">
+                                        <h5 class="name">America  Banana Cake</h5>
+                                        <div  class="quantity_price">
+                                            <p class="quantity">2 </p>
+                                            <span class="iconify" data-icon="carbon:close"></span>
+                                            <p class="price">65 000đ</p>
+                                        </div>
+                                    </div>
+                                    <button class="remove"><span class="iconify" data-icon="carbon:close"></span></button>
+                                </li>
+                                <li class="products-item">
+                                    <img class="image-item" src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" alt="">     
+                                    <div class="product-infor">
+                                        <h5 class="name">Summer Pudding</h5>
+                                        <div  class="quantity_price">
+                                            <p class="quantity">1</p>
+                                            <span class="iconify" data-icon="carbon:close"></span>
+                                            <p class="price">50 000đ</p>
+                                        </div>
+                                    
+                                    </div>
+                                    <button class="remove"><span class="iconify" data-icon="carbon:close"></span></button>
+                                </li>
+                                <li class="products-item">
+                                    <img class="image-item" src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" alt="">     
+                                    <div class="product-infor">
+                                        <h5 class="name">Delish Snowfalte Cookies</h5>
+                                        <div  class="quantity_price">
+                                            <p class="quantity">2</p>
+                                            <span class="iconify" data-icon="carbon:close"></span>
+                                            <p class="price">20 000đ</p>
+                                        </div>
+                                    
+                                    </div>
+                                    <button class="remove"><span class="iconify" data-icon="carbon:close"></span></button>   
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div class="bottom-cart">
+                            <div class="total-sub">
+                                <span class="total">Tạm tính</span>
+                                <span class="money">220 000đ</span>
+                            </div>
+                            <div class="fee-delivery">
+                                <span class="txtfee">Phí vận chuyển</span>
+                                <span class="fee">_</span>
+                            </div>
+                            
+                        </div>
+                        <div class="sum">
+                            <span class="txtsum">Tổng cộng</span>
+                            <span class="sum-bill">220 000đ</span>
+                                
+                        </div>
+                    </div>
+                
+                </section> 
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- ===========Start Footer============ -->
+    <footer>
+        <div class="wrapper">
+            <div class="big-logo">
+                <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                <a href="index.html">Yams Bakery</a>
+            </div>
+            <div class="links">
+                <div class="aboutus">
+                    <h3>Về chúng tôi</h3>
+                    <a href="aboutus.html" class="item">Về chúng tôi</a>
+                    <a href="policy.html" class="item">Chính sách</a>
+                </div>
+                <div class="contact">
+                    <h3>Liên Hệ</h3>
+                    <ul>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                            <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                            <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                        <li>
+                            <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                            <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                    </ul>
+                </div>
+                <div class="follow">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="media">
+                        <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                        <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <!-- Script -->
+    <script src="./js/order.js"></script>
+</body>
+</html>

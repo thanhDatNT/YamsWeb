@@ -96,7 +96,9 @@ table{width: 100%;}
 input[type='checkbox'], input[type='radio']{
     filter: hue-rotate(130deg);
 }
+
 /* COMMON ELEMENTS */
+
 .clear{clear: both;}
 /* clear: Handle float for a group of child elements when using float*/
 
@@ -113,6 +115,7 @@ input[type='checkbox'], input[type='radio']{
 }
 
 .inactive{display: none;}
+
 /* Button Types */
 /* General button */
 .btn{
