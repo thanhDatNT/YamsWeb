@@ -184,16 +184,16 @@ section{
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding-top: 10%;
 }
 #story .content{
     width: 100%;
-    
     display: flex;
     position: relative;
     z-index: 1;
+    justify-content: space-between;
 }
  #story .content .text{
-    padding-left: 80px;
     width: 65%;
  
 } 
@@ -253,6 +253,10 @@ section{
         line-height: 3.2rem;
     
     }
+    #story {padding-top: 0%;}
+    #story .content .text {
+        padding-left: 5vh;
+    }
 
 }
 @media (min-width: 429px) and (max-width: 768px){
@@ -276,15 +280,6 @@ section{
 }
 @media (max-width: 428px){
     
-
-    #story .title-box hr{
-        display: none;
-    }
-    #story .title-box .title{
-        margin-bottom: 5vh;
-        text-align: center;
-       
-    }
     #story .content .name{
         font-size: 2.8rem;
         line-height: 3rem;
@@ -319,12 +314,14 @@ section{
     display: flex;
     position: relative; 
     z-index: 1; 
+    justify-content: space-between;
 }
 
-    #material .content .text{
-    padding-right: 80px;
+#material .content .text {
     width: 65%;
-} 
+    display: flex;
+    flex-direction: column;
+}
 
     #material .image-box img{
     border-radius: 10px;
@@ -336,9 +333,10 @@ section{
     margin-bottom: 12vh;
     float: right;
     width: fit-content;
+
 }
 
-#material .title-box hr{
+#material .title-box .hr{
     float: left;
     width:45%;
     border: 0.5px solid var(--primary-color); opacity: 50%;
@@ -369,33 +367,44 @@ section{
         
 /* icon */
 
-#material  .content .icon{
-    padding-left: 16vh;
-}
-#material  .content .icon .item{
-    width: 16%; 
-    float: left;
+#material .text .icon{
+    justify-content: space-evenly;
+    display: flex;
     margin-top: 5vh;
-    }
+    align-items: center;
+    margin-inline: 15%;
+}
+#material .content .text .icon .item {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+
+}
+#material .text .icon .item img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+}
+#material .content .text .icon .item hr {
+    margin-bottom: 8vh;
+    width: 60%;
+    border: 0.5px solid var(--primary-color);
+}
     
-    #material .content  .icon hr{
-        width:60%;
-        border: 0.5px solid var(--primary-color);
-        margin-left: 2.5vh; margin-top: 50px;
-    }
     
-    
-    #material .content .icon .item .description{
-        font-size: 1.8rem;
-        line-height: 2.8rem;
-        text-align: center;
-    }
-    /* end icon */
+#material .content .text .icon .item .description{
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    text-align: center;
+}
+
+/* end icon */
         #material .floating-buble img{transform: rotate(120deg);}
         @media  (max-width: 1366px){
-            #story .title-box .hr{
-                display: none;
-            }
+         
             #material .title-box .hr{
                 display: none;
             }
@@ -427,14 +436,20 @@ section{
             }
             #policy .title-box .title{
                 margin-bottom: 5vh;
+                justify-content: center;
             }
-            #material .content .icon {
-                padding-left: 1vh;
-            }
-            #material .content  .icon hr{
-                width:60%;
+           
+            #material .content .text .icon hr {
+                width: 60%;
                 border: 0.5px solid var(--primary-color);
-                margin-left: 4vh; margin-top: 30px;
+                margin-inline: 2vh;
+            }
+            #material .content .text {
+                padding-right: 5vh;
+            }
+            #material .content .text .icon .item .description{
+                font-size: 3.2rem;
+                line-height: 3.2rem;
             }
         }
         @media (min-width: 429px) and (max-width: 768px){
@@ -453,52 +468,51 @@ section{
         
             #material .content{width: 100%; margin: 0;padding: 32px 0;}
             #material .content .text{width: 100%; padding-right: 30px;}
-            #material .content .icon {
-                padding-left: 4vh;
-            }
+       
             #material .content  .icon hr{
                 width:60%;
                 border: 0.5px solid var(--primary-color);
                 margin-left: 1.5vh; margin-top: 30px;
             }
             
+    }
+    
+    @media (max-width: 428px){          
+        #material .title-box hr{
+            display: none;
+        }
+        #material .title-box .title {
+            float: none;
+        }
+        #material .content .name{
+            font-size: 2.8rem;
+            line-height: 3rem;
+            text-align: center;
+        }
+        #material .content .text{width: 100%; padding-left: 0; padding-right: 0;}
+        #material .content .image-box {
+            float: none;
+            width: 60%;
+            padding-top: 20px;
+            margin: 0 auto;
         }
         
-        @media (max-width: 428px){
-            
-        
-            #material .title-box hr{
-                display: none;
-            }
-            #material .title-box .title{
-                margin-bottom: 5vh;
-                text-align: center;
-               
-            }
-            #material .content .name{
-                font-size: 2.8rem;
-                line-height: 3rem;
-                text-align: center;
-            }
-            #material .content .text{width: 100%; padding-left: 0; padding-right: 0;}
-            #material .content .image-box {
-                float: none;
-                width: 60%;
-                padding-top: 20px;
-                margin: 0 auto;
-            }
-          
-            #material .content{ flex-direction: column; }
-            #material .content .icon {
-                padding-left: 2vh;
-            }
-            #material .content  .icon hr{
-                width:60%;
-                border: 0.5px solid var(--primary-color);
-                margin-left: 1vh; margin-top: 22px;
-            }
-            
-        }
+    #material .content{ flex-direction: column; }
+    #material .content .text .icon .item {
+        width: 60px;
+    }
+    #material .content .text .icon .item hr {
+        width:60%;
+        border: 0.5px solid var(--primary-color);
+        margin-left: 1vh;
+    }
+
+    #material .content .text .icon .item .description {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    
+}
     
 
 /* ========policy========= */
@@ -512,19 +526,17 @@ section{
 }
 #policy .content{
     width: 100%;
-    
+    justify-content: space-between;
     display: flex;
     position: relative;
     z-index: 1;
 }
  #policy .content .text{
-    padding-left: 80px;
     width: 65%;
  
 } 
  #policy .image-box img{
     border-radius: 10px;
-    width: 100%;
 }
 
 #policy .title-box .title{
@@ -572,6 +584,9 @@ section{
 
     #policy .title-box .title{
         margin-bottom: 5vh;
+    }
+    #policy .content .text {
+        padding-left: 5vh;
     }
 }
 @media (min-width: 429px) and (max-width: 768px){
@@ -631,9 +646,9 @@ section{
      text-align: center;
  
  }
- #certi .content.title{
+ #certi .content .title{
      color: var(--primary-color);
-     padding-bottom: 60px;
+     padding-bottom: 5vh;
  
      text-align: center;
  }
@@ -642,6 +657,7 @@ section{
      line-height: 2.8rem;
      margin: 20px 0;
      text-align: justify;
+     padding-bottom: 40px;
  }
  #certi .image-box img{width: 70%;
      justify-content: space-between;}
@@ -650,8 +666,8 @@ section{
  
  /* ========Founder============ */
  .person-item{
-    width: 100%;
-    height: 500px;
+    width: 90%;
+    height: 600px;
     border-radius: 24px;
     overflow: hidden;
     position: relative;
@@ -674,13 +690,16 @@ section{
 .person-item .detail .add:hover{transform: scale(1.2);}
 
 
+
+#founder{
+    width: 84%;
+    margin: 0 auto;
+    position: relative;
+}
  #founder .wrapper{
-     width: 84%;
+     width: 100%;
      height: fit-content;
-   
      margin: 0 auto;
-  
- 
      
  }
  #founder .wrapper h2{
