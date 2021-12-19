@@ -4,7 +4,7 @@ const $$= document.querySelectorAll.bind(document)
 const radDeli = $('#deli')
 const radPickUp= $('#pickup')
 const deliInforBox= $('.deli-infor')
-const pickUpBox
+
 
 radDeli.onclick = function(){
     deliInforBox.classList.add('active')
