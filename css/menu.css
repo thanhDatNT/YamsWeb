@@ -417,6 +417,24 @@ section{
 
 #macaron .wrapper .container .item:nth-child(2) .product-item{background-color: var(--item-3);}
 
+<<<<<<< HEAD
+@media (min-width: 429px) and (max-width: 768px){
+    #macaron .wrapper .container .item{width: 45%;}
+    #macaron .wrapper .container{margin: 40px 0;}
+    #macaron .wrapper .title{margin-left: 0;}
+}
+    
+@media (max-width: 428px){
+    #macaron .wrapper .container{display: block;position: relative;margin-top: 16px;}
+    #macaron .wrapper .container .item{
+        width: 100%;
+        position: relative;
+    }
+    #macaron .wrapper .title{margin-left: 0;}
+}
+
+=======
+>>>>>>> f2cfa67a3c4e117d96195a5eaec8d22bf4d5b12b
 /* cheese cake */
 #cheesecake{
     margin-top: 8%;
