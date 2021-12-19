@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/view-all.css">
+    
+</head>
+<body>
+    <div class="app">
+        <!-- ==========Start Header=========== -->
+        <header>
+            <nav >
+                <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+                <!-- Logo Yams -->
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+                </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <li><a href="index.html" class="item">Home</a></li>
+                    <li id="menu"><a id="menu-id" href="menu.html" class="item">Menu</a>
+                        <div class="child-1">
+                            <ul class="menu-item">
+                                <li><a href="best-seller.html" class="sub-item-1 active">Phổ biến</a></li>
+                                <li><a href="new.html" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="sale.html" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="offer.html" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="macaron.html" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="cheesecake.html" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="pudding.html" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="tiramisu.html" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                    <li><a href="blog.html" class="item">Yams Blog</a></li>
+                    <li><a href="aboutus.html" class="item">About us</a></li>
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                    <datalist id="cakes">
+                        <option value="Macaron">
+                        <option value="Pudding">
+                        <option value="Cupcake">
+                        <option value="Sweet cake">
+                        <option value="Bread">
+                        <option value="Donut">
+                    </datalist>
+                    <button id="find-btn">Tìm</button>
+                    <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                    <!-- Cart icon and status -->
+                    <a href="cart.html" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <div class="non-empty"></div>
+                        </div>
+                    </a>
+                    <!-- Account icon -->
+                    <a href="admin.html" id="account-icon">
+                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    </a>
+                </div>
+            </nav>
+
+        </header>
+        <!-- ==========Start layout container============= -->
+        <div id="container">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item cheesecake"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Cheese cake</h1>
+                    <h3 class="description">Mang cảm giác béo ngậy, thơm lừng và ngọt ngào!</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start cheesecake box-->
+            <section id="infor">
+                <table class="content" >
+                    <tr>
+                        <td class="text">
+                            <h2 class="title font-xl">Bạn có biết?</h2> 
+                            <div class="description">
+                                <p >Cheesecake là một món tráng miệng ngọt ngào bao gồm một hoặc nhiều lớp. Lớp chính và dày nhất bao gồm hỗn hợp phô mai mềm, tươi (thường là phô mai, phô mai kem), trứng và đường. </p>
+                                <p class="des"><br/>Nếu có một lớp dưới cùng, nó thường bao gồm một lớp vỏ làm từ bánh quy nghiền.</p>
+                            </div>
+                        </td>
+                        <td class="image">
+                            <div class="flavour-content">
+                                <img class="flavour-image" src="https://i.ibb.co/KVjv2qJ/New-York-cheesecake.jpg" alt="macaron box">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Start cheesecake product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Cheese cake</h2>
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                        <div class="product-item">
+                                <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Cupcake with strawberry cream</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                        </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                                <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                                <div class="detail">
+                                    <h3 class="name">Macaron</h3>
+                                    <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
+                                    <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- 1 Product item -->
+                        <div class="item offer">
+                            <div class="product-item">
+                            <div class="thumb"><img src="https://i.ibb.co/1nHfWFS/Peanut-butter-cheesecake.jpg" alt=""></div>
+                            <div class="detail">
+                                <h3 class="name">Pudding with strawberry and coffee</h3>
+                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>120.000 <u>đ</u></p>
+                                <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_01.svg" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/04/floating_image_07.svg" alt="">
+                </div>
+            </section>
+        </div>
+        
+        <!-- ===========Start Footer============ -->
+        <footer>
+            <div class="wrapper">
+                <div class="big-logo">
+                    <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                    <a href="index.html">Yams Bakery</a>
+                </div>
+                <div class="links">
+                    <div class="aboutus">
+                        <h3>Về chúng tôi</h3>
+                        <a href="aboutus.html" class="item">Về chúng tôi</a>
+                        <a href="#" class="item">Chính sách</a>
+                    </div>
+                    <div class="contact">
+                        <h3>Liên Hệ</h3>
+                        <ul>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                                <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                                <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                                <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="media">
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </footer>
+        <!-- ========== Start scripts ============-->
+        <!-- Compulsory -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        <script src="/js/view-all.js"></script>
+    </div>
+</body>
+</html>

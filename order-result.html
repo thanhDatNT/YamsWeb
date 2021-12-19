@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams | Successful payment</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- Custom file -->
+    <style>
+        #container{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--background);
+        }
+        .clock{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            box-shadow: 1px 1px 4px 0 var(--black-4);
+        }
+        .title{
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding: 100px 0;
+            font-size: 4rem;
+            color: var(--primary-color);
+        }
+        .title .dot1{
+            display: inline-block;
+            transform-origin: left;
+            animation: scale 1s ease-in infinite;
+        }
+        .title .dot2{
+            display: inline-block;
+            transform-origin: left;
+            animation: scale 1.1s ease-in infinite;
+        }
+        .title .dot3{
+            display: inline-block;
+            transform-origin: left;
+            animation: scale 1.2s ease-in infinite;
+        }
+        
+        @keyframes scale{
+            0%{
+                transform: scale(0.5);
+            }
+            25%{
+                transform: scale(0.4);
+            }
+            75%{
+                transform: scale(0.7);
+            }
+            100%{
+                transform: scale(0.5);
+            }
+        }
+        #countdown{
+            font-size: 10rem;
+            line-height: 200px;
+            color: var(--text-color);
+        }
+        #notify{
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            width: 400px;
+            height: 60px;
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--item-2);
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            transition: opacity 1s ease-in;
+            animation: enterAnim 0.5s ease-in;
+        }
+        #notify .head{
+            width: 4%;
+            height: 60px;
+            background-color: var(--primary-color);
+        }
+        #notify .message{
+            padding: 12px;
+            font-size: 3rem;
+            align-self: center;
+        }
+        #notify .close{
+            width: 40px;
+            align-self: center;
+            font-size: 2rem;
+            color: var(--inactive);
+        }
+        @keyframes enterAnim{
+            from{
+                transform: translateX(400px);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h3 class="title">
+            Trở về trang chủ sau
+            <span class="dot1">.</span>
+            <span class="dot2">.</span>
+            <span class="dot3">.</span>
+        </h3>
+        <div class="clock">
+            <div class="circle-bg">
+                <h3 id="countdown">5</h3>
+            </div>
+        </div>
+        <div id="notify">
+            <div class="head"></div>
+            <div class="message">
+                <h6>Đặt hàng thành công</h6>
+            </div>
+            <button class="close">
+                <span class="iconify" data-icon="ep:circle-close-filled"></span>
+            </button>
+        </div>
+    </div>
+    <script>
+        // Config Countdown timer
+        let time= 5;
+        const countDown= document.getElementById('countdown');
+        
+        setInterval(updateCountDown, 1000)
+        function updateCountDown(){
+            countDown.innerHTML = time;
+            if(time == 0){
+                time = 5;
+                window.location.href = 'index.html'
+            }
+            time--;
+        }
+
+        // Config notification
+        setTimeout(() => {
+            document.getElementById('notify').style.opacity= 0
+        }, 3000)
+        document.querySelector('#notify button').onclick= function(){
+            document.getElementById('notify').style.opacity= 0
+        }
+    </script>
+</body>
+</html>

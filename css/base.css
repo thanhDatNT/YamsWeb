@@ -16,8 +16,9 @@ font-family: 'Nunito', sans-serif;
     --item-2: #F3DFE0;
     --item-3: #E4EEE3;
     --item-4: #E8E1CF;
+    --item-5: #fce3e8;
     --black: #000;
-    --black-1: #252627;
+    --black-1: #ccc;
     --black-2: #666;
     --black-3: #262626;
     --black-4: rgba(38,38,38,0.5);
@@ -96,7 +97,9 @@ table{width: 100%;}
 input[type='checkbox'], input[type='radio']{
     filter: hue-rotate(130deg);
 }
+
 /* COMMON ELEMENTS */
+
 .clear{clear: both;}
 /* clear: Handle float for a group of child elements when using float*/
 
@@ -113,6 +116,7 @@ input[type='checkbox'], input[type='radio']{
 }
 
 .inactive{display: none;}
+
 /* Button Types */
 /* General button */
 .btn{
@@ -230,6 +234,12 @@ input[type='checkbox'], input[type='radio']{
 .product-item .detail .name{margin-bottom: 22px; font-size: 2.5rem; line-height: 2.6rem;}
 
 .product-item .detail .price{color: var(--primary-color); font-size: 2rem;}
+
+.product-item .detail .price a{
+    text-decoration: line-through;
+    font-size: 1.7rem;
+    color: var(--inactive);
+}
 
 .product-item .detail .price .iconify{margin-right: 6px; font-size: 1.7rem; vertical-align: baseline;}
 

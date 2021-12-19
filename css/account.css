@@ -181,6 +181,7 @@
 /* ACCOUNT PASSWORD CONFIGURATION DIALOG */
 
 .container .fragments .config .change-pw{
+    font-size: 1.4rem;
     position: absolute;
     display: block;
     width: 100px;
