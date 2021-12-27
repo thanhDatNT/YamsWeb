@@ -36,19 +36,20 @@
             <!-- Right side: Login Form -->
             <div class="form-login">
                 <h1 class="font-xl">Đăng nhập</h1>
-                <form action="/php/sendmail.php">
+                <form>
                     <p>Tên đăng nhập</p>
-                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập">
+                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập" required>
                     <p>Email</p>
                     <input type="email" name="email" id="email" placeholder="Email">
                     <p>Mật khẩu</p>
-                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <input type="password" id="password" placeholder="Mật khẩu" required>
+                    
                     <div class="pw-tasks">
                         <input type="checkbox" id="save" name="Save" value="save">
                         <span>Lưu mật khẩu</span>
                         <a href="#" class="forget">Quên mật khẩu?</a>
                     </div>
-                    <input type="submit" id="submit" class="btn btn-primary">
+                    <input type="submit" id="submit" value="Đăng nhập" class="btn btn-primary">
                 </form>
                 <p class="sign-up">Chưa có tài khoản? <a href="#" ><u><b>Đăng ký</b></u></a></p>
             </div>
