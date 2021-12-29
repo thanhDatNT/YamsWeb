@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yams | Login</title>
+    <title>Yams | Signup</title>
     <!-- Logo on Tabs -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
@@ -22,7 +22,7 @@
         <div class="heading">
             <a href="index.html">
                 <img src="./images/logo/Logo_NoBg_Pink.png" alt=""></a>
-            <h3>Đăng nhập</h3>
+            <h3>Đăng ký</h3>
         </div>
         <!-- Body session -->
         <div class="body">
@@ -34,20 +34,23 @@
             </div>
             <!-- Right side: Login/Sign-up Form -->
             <div class="form-login">
-                <h1 class="font-xl">Đăng nhập</h1>
+                <h1 class="font-xl">Đăng ký</h1>
                 <form>
+                    <p>Tên đăng nhập</p>
+                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập" required>
                     <p>Email</p>
                     <input type="email" name="email" id="email" placeholder="Email">
+                    <p>Số điện thoại</p>
+                    <input type="phone" name="phone" id="phone" placeholder="Số điện thoại">
                     <p>Mật khẩu</p>
                     <input type="password" id="password" placeholder="Mật khẩu" required>
                     <div class="pw-tasks">
                         <input type="checkbox" id="save" name="Save" value="save">
-                        <span>Lưu mật khẩu</span>
-                        <a href="#" class="forget">Quên mật khẩu?</a>
+                        <span>Tôi đồng ý nhận email thông báo đến từ Yams</span>
                     </div>
-                    <input type="submit" id="submit" value="Đăng nhập" class="btn btn-primary">
+                    <input type="submit" id="submit" value="Đăng ký" class="btn btn-primary">
                 </form>
-                <p class="sign-up">Chưa có tài khoản? <a href="sign-up.html" ><u><b>Đăng ký</b></u></a></p>
+                <p class="sign-up">Đã có tài khoản? <a href="login.html" ><u><b>Đăng nhập</b></u></a></p>
             </div>
             
         </div>
