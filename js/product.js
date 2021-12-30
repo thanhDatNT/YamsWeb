@@ -97,7 +97,7 @@ async function showPromotion(){
   var product = item.join('');
   $('#sale .container').innerHTML = product;
   showMacaron(products);
-  showChessCake(products);
+  showCheeseCake(products);
   showPudding(products);
   showTiramisu(products);
 }
@@ -124,7 +124,7 @@ function showMacaron(products){
   $('#macaron .container').innerHTML = product;
 }
 
-function showChessCake(products){
+function showCheeseCake(products){
   let chessCake = products.filter((product) => {
     return product.category == '2'
   });
@@ -173,6 +173,228 @@ function showTiramisu(products){
     return product.category == '8'
   });
   tiramisu = tiramisu.slice(0, 3);
+	var item = tiramisu.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag" style="display: none;">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#tiramisu .container').innerHTML = product;
+}
+
+// ======= FILTER PAGE =========
+
+function navigateFilter(){
+  window.scrollTo(0, 0);
+  var urlParams = window.location.hash;
+  $$('.fragment').forEach(item => {
+    item.classList.remove('active')
+  })
+
+  switch (urlParams){
+    case '#bestseller':
+      $('#bestseller').classList.add('active');
+      showBestSellerFilter();
+      break;
+    case '#new':
+      $('#new-pro').classList.add('active');
+      showNewFilter();
+      break;
+    case '#promotion':
+      $('#promotion').classList.add('active');
+      showPromoFilter();
+      break;
+    case '#offer':
+      $('#offer-pro').classList.add('active');
+      showOfferFilter();
+      break;
+    case '#macaron':
+      $('#macaron').classList.add('active');
+      showMacaronFilter();
+      break;
+    case '#cheesecake':
+      $('#cheese-cake').classList.add('active');
+      showCheeseCakeFilter();
+      break;
+    case '#pudding':
+      $('#pudding').classList.add('active');
+      showPuddingFilter();
+      break;
+    case '#tiramisu':
+      $('#tiramisu').classList.add('active');
+      showTiramisuFilter();
+      break;
+  }
+  $('.loading').style.display = 'none';
+}
+
+async function showBestSellerFilter(){
+  const products = await getProducts();
+  let top_products = products.filter((product) => {
+    return product.tag == 'Top'
+  });
+	var item = top_products.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#bestseller .container').innerHTML = product;
+}
+
+async function showNewFilter(){
+  const products = await getProducts();
+  let new_products = products.filter((product) => {
+    return product.tag == 'New'
+  });
+	var item = new_products.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#new-pro .container').innerHTML = product;
+}
+
+async function showOfferFilter(){
+  const products = await getProducts();
+  let offer_products = products.filter((product) => {
+    return product.tag == ''
+  });
+	var item = offer_products.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag" style="display: none;">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#offer-pro .offer-list').innerHTML = product;
+}
+
+async function showPromoFilter(){
+  const products = await getProducts();
+  let new_products = products.filter((product) => {
+    return product.tag == 'Promo'
+  });
+	var item = new_products.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag" style="font-size: 1.2rem;">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span><del>${item.price}</del> ${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#promotion .container').innerHTML = product;
+}
+
+async function showMacaronFilter(){
+  const products = await getProducts();
+  let macarons = products.filter((product) => {
+    return product.category == '6'
+  });
+	var item = macarons.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag" style="display: none;">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#macaron .container').innerHTML = product;
+}
+
+async function showCheeseCakeFilter(){
+  const products = await getProducts();
+  let chessCake = products.filter((product) => {
+    return product.category == '2'
+  });
+	var item = chessCake.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag" style="display: none;">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#cheese-cake .container').innerHTML = product;
+}
+
+async function showPuddingFilter(){
+  const products = await getProducts();
+  let pudding = products.filter((product) => {
+    return product.category == '7'
+  });
+	var item = pudding.map(item => {
+			return `<div class="item">
+            <div class="product-item">
+                 <div class="tag" style="display: none;">${item.tag}</div>
+                 <div class="thumb"><img src="${item.image}" alt=""></div>
+                 <div class='detail'>
+                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
+                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
+                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
+                 </div>
+                </div>
+            </div>`
+	});
+  var product = item.join('');
+  $('#pudding .container').innerHTML = product;
+}
+
+async function showTiramisuFilter(){
+  const products = await getProducts();
+  let tiramisu = products.filter((product) => {
+    return product.category == '8'
+  });
 	var item = tiramisu.map(item => {
 			return `<div class="item">
             <div class="product-item">
@@ -355,7 +577,12 @@ window.onload = function(){
   }
   else if(urlParams.toString().includes('menu.html')){
     showBestSeller();
-    showPromotion()
+    showPromotion();
+  }
+  else if(urlParams.toString().includes('filter.html')){
+    setTimeout(function(){
+      navigateFilter();
+    }, 1000);
   }
   loadCartTotal();
   updateCart();
