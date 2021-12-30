@@ -65,7 +65,7 @@
     margin: 20px 0;
 }
 
-#username, #email, #password{
+#username, #email, #password, #phone{
     padding: 8px;
     width: 100%;
     border: 1px solid var(--primary-color);
