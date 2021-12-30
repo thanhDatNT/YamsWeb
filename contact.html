@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <!-- link icon -->
+    <title>Liên hệ</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
     <link rel="manifest" href="./images/favicons/site.webmanifest">
     <!-- CSS base source, Header - Footer and Icons for all HTML files -->
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-    <link rel="stylesheet" href="./css/cart.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/contact.css">
 </head>
 <body>
     <header>
@@ -28,17 +28,17 @@
                 <li id="menu"><a href="menu.html" class="item">Menu</a>
                     <div class="child-1">
                         <ul>
-                            <li><a href="best-seller.html" class="sub-item-1">Phổ biến</a></li>
-                            <li><a href="new.html" class="sub-item-1">Sản phẩm mới</a></li>
-                            <li><a href="best-seller.html" class="sub-item-1">Khuyến mãi</a></li>
-                            <li><a href="offer.html" class="sub-item-1">Đề xuất</a></li>
+                            <li><a href="#" class="sub-item-1">Phổ biến</a></li>
+                            <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
+                            <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
+                            <li><a href="#" class="sub-item-1">Đề xuất</a></li>
                             <li><a href="#" class="sub-item-1">Phân loại</a>
                                 <div class="child-2">
                                     <ul>
-                                        <li><a href="macaron.html" class="sub-item-2">Macaron</a></li>
-                                        <li><a href="cheesecake.html" class="sub-item-2">Cheese cake</a></li>
-                                        <li><a href="pudding.html" class="sub-item-2">Pudding</a></li>
-                                        <li><a href="tiramisu.html" class="sub-item-2">Tiramisu</a></li>
+                                        <li><a href="#" class="sub-item-2">Macaron</a></li>
+                                        <li><a href="#" class="sub-item-2">Cheese cake</a></li>
+                                        <li><a href="#" class="sub-item-2">Pudding</a></li>
+                                        <li><a href="#" class="sub-item-2">Tiramisu</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -117,132 +117,65 @@
         </nav>
 
     </header>
-    <div class="container_cart">
-        <div class="banner-text">
-            <h1 class=" main-title">Giỏ hàng</h1>
-            <h3 class="description">Ways to your heart - Sweet, tasty & delicious</p>
-        </div>
-        <!-- <section id="banners">
-        </section> -->
+    <div id="container">
+        <section class="content">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6298703251264!2d106.79684221475016!3d10.91570839222707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d920bf4a58a5%3A0x1322f2a8e5ef8510!2zNjY5IFF14buRYyBs4buZIDFLLCBUw6JuIMSQw7RuZyBIaeG7h3AsIETEqSBBbiwgQsOsbmggRMawxqFuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1640752150741!5m2!1svi!2s" width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    <div class="contact"> 
+                        <h3 class="title">Liên hệ</h3>
+                        <div class="address infor">
+                            <h5> Địa chỉ của chúng tôi</h5>
+                            <p>Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</p>
+                        </div>
+                        <div class="email infor">
+                            <h5> Email của chúng tôi</h5>
+                            <p>yamsbakery@gmail.com</p>
+                        </div>
+                        <div class="phone infor">
+                            <h5> Điện thoại</h5>
+                            <p>028 3724 4555</p>
+                        </div>
+                        <div class="time infor">
+                            <h5> Thời gian mở cửa</h5>
+                            <p>8:00 - 22:00</p>
+                            <p>Tất cả các ngày trong tuần</p>
+                        </div>
+                        <div id="infor_customer">
+                            <h3 class="title">Gửi thắc mắc cho chúng tôi</h3>
+                            <form name="information" id="form-cus-infor">
+                                <div class="name">
+                                    <input id="txtname" class="field-input" type="text" name="name" value="" placeholder="Họ và tên">
+                                </div>
+                                <div class="email-phone">
+                                    <div class="email">
+                                        <input id="txtemail" class="field-input" type="email" name="email" value="" placeholder="Email của bạn">
+                                    </div>
+                                    <div class="phone">
+                                        <input id="txtphone" class="field-input" type="tel" maxlength="15" name="numberphone"
+                                            value="" placeholder="Số điện thoại">
+                                    </div>
+                       
+                                </div>
+                                <div class="note">
+    
+                                    <textarea id="note" class="field-note full-width" cols="30" rows="6" placeholder="Nội dung" name="note"></textarea>
+                                </div> 
+                                <div class="btn-group">
+                            
+                                    <input id="send-infor" class=" btn btn-primary" type="button" value="Gửi cho chúng tôi" />
+                                  
+                              </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+                
+           
+        </section>
     </div>
-    <section class="content">
-        <form name="form_cart">
-            <table class="cart">
-                    <thead>
-                        <tr>
-                            <th class="product-remove">&nbsp;</th>
-                            <th class="product-thumbnail">&nbsp;</th>
-                            <th class="product-name">Sản phẩm</th>
-                            <th class="product-price">Giá</th>
-                            <th class="product-quantity">Số lượng</th>
-                            <th class="product-subtotal">Tổng cộng</th>
-                        </tr>
-                    </thead>
-                    <tr class="cart-item">
-
-                        <td class="product-remove">
-                            <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
-
-                        <td class="product-image">
-                            <a href="#"><img class="image-item"src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" ></a></td>
-
-                        <td class="product-name" data-title="Product">
-                            <a class="name" href="#">America-Banana-Cake</a>	</td>
-
-                        <td class="product-price" data-title="Price">
-                                    <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
-                                    60 000 <input type="hidden" name="price1" value="60000">VND
-                             
-                         </td>
-
-                        <td class="product-quantity">
-                         <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
-                         <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
-                        <td class="product-subtotal">
-                            <span>
-                                <input type="text" name="total1" value="60 000" > VND
-                            </span>
-                                
-                        </td>
-                    </tr>
-                    <tr class="cart-item">
-
-                        <td class="product-remove">
-                            <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
-
-                        <td class="product-image">
-                            <a href="#"><img class="image-item"src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" ></a></td>
-
-                        <td class="product-name" data-title="Product">
-                            <a class="name" href="#">America-Banana-Cake</a>	</td>
-
-                        <td class="product-price" data-title="Price">
-                                    <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
-                                    50 000 <input type="hidden" name="price1" value="50000">VND
-                             
-                         </td>
-
-                        <td class="product-quantity">
-                         <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
-                         <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
-                        <td class="product-subtotal">
-                            <span>
-                                <input type="text" name="total1" value="50 000" > VND
-                            </span>
-                                
-                        </td>
-                    </tr>
-                    <tr class="cart-item">
-
-                        <td class="product-remove">
-                            <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
-
-                        <td class="product-image">
-                            <a href="#"><img class="image-item"src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" ></a></td>
-
-                        <td class="product-name" data-title="Product">
-                            <a class="name" href="#">Delish-Christmas-Brownie</a>	</td>
-
-                        <td class="product-price" data-title="Price">
-                                    <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
-                                    20 000 <input type="hidden" name="price1" value="20000">VND
-                             
-                         </td>
-
-                        <td class="product-quantity">
-                         <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
-                         <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
-                        <td class="product-subtotal">
-                            <span>
-                                <input type="text" name="total1" value="20 000" > VND
-                            </span>
-                                
-                        </td>
-                    </tr>
-                    <tr >
-                        <td class="btn-update" colspan="6">
-                           <a href="index.html"> <input class="btncart btn-primary" type="button" value="TIẾP TỤC MUA SẮM"></a>
-                        </td>
-                    </tr>
-                    <tr class="sum">
-                        <td colspan="5">
-                            <div class="Title-total">Tổng cộng</div>
-                        </td>
-                        <td class="main-sum">
-                            <span>
-                                <input class="sum-money" type="text" name="main_total" value="130 000" > VND
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="btn-payment" colspan="6">
-                           <a href="order.html"><input class="btncart btn-primary " type="button" value="THANH TOÁN"  ></a> 
-                        </td>
-                    </tr>
-            </table>
-        </form>
-    </section>
+    
     <footer>
+        
         <div class="wrapper">
             <div class="big-logo">
                 <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
@@ -253,6 +186,7 @@
                     <h3>Về chúng tôi</h3>
                     <a href="aboutus.html" class="item">Về chúng tôi</a>
                     <a href="policy.html" class="item">Chính sách</a>
+                    <a href="contact.html" class="item">Liên hệ</a>
                 </div>
                 <div class="contact">
                     <h3>Liên Hệ</h3>
@@ -282,9 +216,7 @@
             <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="/js/header-footer.js"></script>
-        <!-- Customize your script here -->
-        <script src="./js/cart.js"></script>
+    <script src="./js/header-footer.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
 </html>

@@ -74,15 +74,48 @@ section{
 }
 @media (max-width: 428px){
   #banners{height: 40vh;}
-  #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
-  #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+  #banners .banner-text .main-title{
+    font-size: 40px; 
+    line-height: 40px;
+    text-align: center;
+  }
+  #banners .banner-text{
+    
+    right: -40%;
+    
+  }
+  #banners .banner-text .description{font-size: 1.5rem; line-height: 2rem; text-align: center;}
 }
 
 @media (min-width: 429px) and (max-width: 768px){
   #banners{height: 50vh;}
+  #banners .banner-text .main-title{
+    text-align: center;
+    font-size: 60px;
+  }
+  #banners .banner-text{
+    
+    right: -40%;
+    
+  }
+  #banners .banner-text .description{font-size: 2.5rem; line-height: 1.5rem; text-align: center;}
 }
 
- /* Tính BMI */
+@media (min-width:769px) and (max-width:1024px) {
+   
+  #banners{height: 50vh;}
+  #banners .banner-text .main-title{ text-align: center;}
+  #banners .banner-text{right: -40%; }
+  
+}
+@media (min-width: 992px) and (max-width:1999.98px)
+{
+  #banners .banner-text .main-title{ text-align: center;}
+  #banners .banner-text{right: -40%; }
+}
+
+
+ /*====== Tính BMI===== */
 
 .content{
   width: 84%;
@@ -98,7 +131,7 @@ section{
  .title{
     text-align: center;
     text-decoration: underline;
-    font-size: 30px;    
+        
 }
 
 .bmi-sex{
@@ -225,6 +258,17 @@ label > input[type="radio"] + * {
   text-align: center;
  
   }
+  .btncart{
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 4px;
+    margin: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
 
   .suggest-product:hover, .retype:hover,.calculateBMI:hover{
     color: var(--primary-color);
@@ -265,21 +309,23 @@ label > input[type="radio"] + * {
      }    
      #cart_diet .btn-cart{
       margin: 0 30px 0 0;
+    
     }
     #diet .wrapper .sort{
       margin: 20px;
       
     }
+ 
   }
   @media (min-width: 429px) and (max-width: 768px){
     .content{
       display: block;    
     }
     
-    label > input[type="radio"] + *{
-      margin-left: 50px;
+    /* label > input[type="radio"] + *{
+      margin-left: 4vh;
     }
-    
+     */
     .result{
       margin-left: 70px;
     }
@@ -287,8 +333,16 @@ label > input[type="radio"] + * {
       margin-top: 5%;
     }
     #cart_diet .btn-cart{
-      margin: 0 150px;
+      /* margin: 0 150px; */
+      margin: 0 25%;
     }
+  }
+  @media (min-width:769px) and (max-width:1024px) {
+   
+    .bmi-calculator{
+      width: 60vh;
+    }
+    
   }
 /* ======END BMI====== */
 
@@ -364,16 +418,13 @@ label > input[type="radio"] + * {
 
 
 
- /* .floating-buble{
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  right: 0;
-  margin-right: -50px;
-} */
 
   /*===== product diet==== */
+  #diet .wrapper .title-suggest{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 3rem;
+  }
   
 #diet .wrapper .sort{
   
@@ -436,7 +487,10 @@ label > input[type="radio"] + * {
 #diet .wrapper .container .item:nth-child(5) .product-item{background-color: var(--item-4);}
 
 @media (min-width: 769px) and (max-width: 1200px){
-  #diet .wrapper .container{height: 940px;}
+  #diet .wrapper .container{height: 940px;
+  
+  }
+ 
 }
 
 @media (min-width: 429px) and (max-width: 768px){
@@ -452,6 +506,8 @@ label > input[type="radio"] + * {
       position: relative;}
 }
  /*===== End product diet==== */
+
+
  /* =======Page number======== */
  #pagination .page-numbers {
     display:flex;
@@ -476,12 +532,16 @@ label > input[type="radio"] + * {
    border-radius: 50%;
    justify-content: center;
  }
-
- 
+ #pagination .current-page{
+   background: var(--primary-color);
+   color: white;
+ }
+ #pagination .current{
+   color: white;
+ }
  #pagination .page-item:hover{
    background: var(--primary-color);
    
-  
  }
  .page-link:hover{
    color: white;

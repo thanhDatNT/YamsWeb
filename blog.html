@@ -22,7 +22,6 @@
         <!-- ==========Start Header=========== -->
         <header>
             <nav >
-                
                 <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
                 <!-- Logo Yams -->
                 <div class="logo">
@@ -30,23 +29,21 @@
                 </div>
                 <!-- Menu -->
                 <ul class="menu">
-                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
-                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                     <li><a href="index.html" class="item">Home</a></li>
                     <li id="menu"><a href="menu.html" class="item">Menu</a>
                         <div class="child-1">
                             <ul>
-                                <li><a href="#" class="sub-item-1">Phổ biến</a></li>
-                                <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
-                                <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
-                                <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="best-seller.html" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="new.html" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="best-seller.html" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="offer.html" class="sub-item-1">Đề xuất</a></li>
                                 <li><a href="#" class="sub-item-1">Phân loại</a>
                                     <div class="child-2">
                                         <ul>
-                                            <li><a href="#" class="sub-item-2">Macaron</a></li>
-                                            <li><a href="#" class="sub-item-2">Cheese cake</a></li>
-                                            <li><a href="#" class="sub-item-2">Pudding</a></li>
-                                            <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                            <li><a href="macaron.html" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="cheesecake.html" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="pudding.html" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="tiramisu.html" class="sub-item-2">Tiramisu</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -55,32 +52,75 @@
                     </li>
                     <li><a href="diet.html" class="item">Diet with Yams</a></li>
                     <li><a href="blog.html" class="item">Yams Blog</a></li>
-                    <li><a href="aboutus.html" class="item">About us</a></li>
-                    
+                    <li id="menu"><a href="aboutus.html" class="item">About us</a>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="contact.html" class="sub-item-1">Liên hệ</a></li>
+                                
+                            </ul>
+                        </div>
+                       
+                    </li>
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                 </ul>
                 <!-- Search, account, cart icons -->
                 <div class="group-icons">
                     <!-- Search icon and input -->
-                    <input type="search" id="search-input" placeholder="Bạn cần tìm gì?...">
+                    <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                    <datalist id="cakes">
+                        <option value="Macaron">
+                        <option value="Pudding">
+                        <option value="Cupcake">
+                        <option value="Sweet cake">
+                        <option value="Bread">
+                        <option value="Donut">
+                    </datalist>
                     <button id="find-btn">Tìm</button>
                     <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                     <!-- Cart icon and status -->
-                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <div id="cart">
+                        <a class="cart-icon" href="cart.html">
+                            <span class="iconify" data-icon="mdi:cart-outline"></span>
+                        </a>
                         <div class="cart-box">
                             <div class="empty-cart">
                                 <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
                             </div>
-                            <div class="non-empty"></div>
+                            <!-- Cart has items -->
+                            <div class="non-empty">
+                                <header>Sản phẩm mới thêm</header>
+                                <div class="wrapper">
+                                    <div class="item">
+                                        <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                                        <div class="detail">
+                                            <h6 class="name">Matcha-Tiramisu</h6>
+                                            <p class="quantity">x2</p>
+                                        </div>
+                                        <h6 class="price">65000 <u>đ</u></h6>
+                                    </div>
+                                    <div class="item">
+                                        <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
+                                        <div class="detail">
+                                            <h6 class="name">Matcha-Tiramisu Vani</h6>
+                                            <p class="quantity">x2</p>
+                                        </div>
+                                        <h6 class="price">65000 <u>đ</u></h6>
+                                    </div>
+                                </div>
+                                <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                            </div>
                         </div>
-                    </a>
-                    
+                    </div>
                     <!-- Account icon -->
-                    <a href="#" id="account-icon">
-                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    <a href="login.html" id="account-icon">
+                        <div class="acc-photo">
+                            <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                            <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
                     </a>
                 </div>
             </nav>
-
+    
         </header>
 
         <!-- ==========Start layout container============= -->
