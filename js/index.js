@@ -84,15 +84,3 @@
     ScrollEvent();
     ShowPost();
 })()
-
-const productItem= $$('#bestseller .product-item')
-productItem.forEach(function(product){
-    product.onclick= function(){
-        window.location.href= 'product-detail.html'
-    }
-})
-
-const btnAddtoCart= $('#bestseller .item .product-item .add')
-btnAddtoCart.onclick= function(e){
-    e.preventDefault()
-}

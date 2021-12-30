@@ -27,7 +27,7 @@
     font-size: 1.6rem;
 }
 
-.tab-3{display: none;}
+#subheading .breadcrumb li.tab-3{display: none;}
 
 #subheading .breadcrumb .tab.active a{
     color: var(--primary-color);

@@ -278,6 +278,10 @@ section{
     overflow: hidden;
 }
 
+#sale .wrapper .container .tag{
+    font-size: 1.2rem;
+}
+
 #sale .wrapper .container .item:first-child .product-item{background-color: var(--item-4);} 
 #sale .wrapper .container .item:last-child .product-item{background-color: var(--item-1);}
 

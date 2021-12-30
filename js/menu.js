@@ -18,14 +18,3 @@
     ScrollEvent();
 })()
 
-const productItem= $$('.product-item')
-productItem.forEach(function(product){
-    product.onclick= function(){
-        window.location.href= 'product-detail.html'
-    }
-})
-
-const btnAddtoCart= $('.item .product-item .add')
-btnAddtoCart.onclick= function(e){
-    e.preventDefault()
-}

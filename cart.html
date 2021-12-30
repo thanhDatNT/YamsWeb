@@ -17,7 +17,6 @@
 <body>
     <header>
         <nav >
-            
             <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
             <!-- Logo Yams -->
             <div class="logo">
@@ -25,16 +24,14 @@
             </div>
             <!-- Menu -->
             <ul class="menu">
-                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
-                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                 <li><a href="index.html" class="item">Home</a></li>
                 <li id="menu"><a href="menu.html" class="item">Menu</a>
                     <div class="child-1">
                         <ul>
-                            <li><a href="#" class="sub-item-1">Phổ biến</a></li>
-                            <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
-                            <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
-                            <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                            <li><a href="best-seller.html" class="sub-item-1">Phổ biến</a></li>
+                            <li><a href="new.html" class="sub-item-1">Sản phẩm mới</a></li>
+                            <li><a href="sale.html" class="sub-item-1">Khuyến mãi</a></li>
+                            <li><a href="offer.html" class="sub-item-1">Đề xuất</a></li>
                             <li><a href="#" class="sub-item-1">Phân loại</a>
                                 <div class="child-2">
                                     <ul>
@@ -51,7 +48,8 @@
                 <li><a href="diet.html" class="item">Diet with Yams</a></li>
                 <li><a href="blog.html" class="item">Yams Blog</a></li>
                 <li><a href="aboutus.html" class="item">About us</a></li>
-                
+                <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
             </ul>
             <!-- Search, account, cart icons -->
             <div class="group-icons">
@@ -68,18 +66,28 @@
                 <button id="find-btn">Tìm</button>
                 <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                 <!-- Cart icon and status -->
-                <!-- <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                <div id="cart">
+                    <a class="cart-icon" href="cart.html">
+                        <p class="item-count"></p>
+                        <span class="iconify" data-icon="mdi:cart-outline"></span>
+                    </a>
                     <div class="cart-box">
                         <div class="empty-cart">
                             <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
                         </div>
-                        <div class="non-empty"></div>
+                        <!-- Cart has items -->
+                        <div class="non-empty">
+                            <header>Sản phẩm mới thêm</header>
+                            <div class="wrapper"></div>
+                            <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                        </div>
                     </div>
-                </a> -->
-                
+                </div>
                 <!-- Account icon -->
-                <a href="#" id="account-icon">
-                    <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                <a href="login.html" id="account-icon">
+                    <div class="acc-photo">
+                        <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                        <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
                 </a>
             </div>
         </nav>
@@ -96,124 +104,31 @@
             </div>
         </section>
         <section class="content">
-            <form name="form_cart">
-                <table class="cart">
-                        <thead>
-                            <tr>
-                                <th class="product-remove">&nbsp;</th>
-                                <th class="product-thumbnail">&nbsp;</th>
-                                <th class="product-name">Sản phẩm</th>
-                                <th class="product-price">Giá</th>
-                                <th class="product-quantity">Số lượng</th>
-                                <th class="product-subtotal">Tổng cộng</th>
-                            </tr>
-                        </thead>
-                        <tr class="cart-item">
-
-                            <td class="product-remove">
-                                <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
-    
-                            <td class="product-image">
-                                <a href="#"><img class="image-item"src="https://i.ibb.co/rfvmkqQ/America-Banana-Cake.jpg" ></a></td>
-    
-                            <td class="product-name" data-title="Product">
-                                <a class="name" href="#">America-Banana-Cake</a>	</td>
-    
-                            <td class="product-price" data-title="Price">
-                                        <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
-                                        60 000 <input type="hidden" name="price1" value="60000">VND
-                                 
-                             </td>
-    
-                            <td class="product-quantity">
-                             <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
-                             <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
-                            <td class="product-subtotal">
-                                <span>
-                                    <input type="text" name="total1" value="60 000" > VND
-                                </span>
-                                    
-                            </td>
-                        </tr>
-                        <tr class="cart-item">
-
-                            <td class="product-remove">
-                                <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
-    
-                            <td class="product-image">
-                                <a href="#"><img class="image-item"src="https://i.ibb.co/M9kvJCr/summer-pudding.jpg" ></a></td>
-    
-                            <td class="product-name" data-title="Product">
-                                <a class="name" href="#">America-Banana-Cake</a>	</td>
-    
-                            <td class="product-price" data-title="Price">
-                                        <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
-                                        50 000 <input type="hidden" name="price1" value="50000">VND
-                                 
-                             </td>
-    
-                            <td class="product-quantity">
-                             <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
-                             <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
-                            <td class="product-subtotal">
-                                <span>
-                                    <input type="text" name="total1" value="50 000" > VND
-                                </span>
-                                    
-                            </td>
-                        </tr>
-                        <tr class="cart-item">
-
-                            <td class="product-remove">
-                                <a href="#" class="remove" ><span class="iconify close" data-icon="carbon:close"></span></a></td>
-    
-                            <td class="product-image">
-                                <a href="#"><img class="image-item"src="https://i.ibb.co/F0PqqNt/delish-christmas-brownie.jpg" ></a></td>
-    
-                            <td class="product-name" data-title="Product">
-                                <a class="name" href="#">Delish-Christmas-Brownie</a>	</td>
-    
-                            <td class="product-price" data-title="Price">
-                                        <!-- <span class="money">60 000 <input type="hidden" name="price1" value="60000"></span>VND -->
-                                        20 000 <input type="hidden" name="price1" value="20000">VND
-                                 
-                             </td>
-    
-                            <td class="product-quantity">
-                             <input type="number" id="quantity" class="quality-item" step="1" min="0" max="" name="quality_cart" value="1" onchange="sum1()" ></td>
-                             <!-- <input type="text" name="txtsl1" onchange="sum1()"> -->
-                            <td class="product-subtotal">
-                                <span>
-                                    <input type="text" name="total1" value="20 000" > VND
-                                </span>
-                                    
-                            </td>
-                        </tr>
-                        <tr >
-                            <td class="btn-update" colspan="6">
-                                <input class="btn btn-primary" type="button" value="Cập nhật giỏ hàng">
-                            </td>
-                        </tr>
-                        <tr class="sum">
-                            <td colspan="5">
-                                <div class="Title-total">Tổng cộng</div>
-                            </td>
-                            <td class="main-sum">
-                                <span>
-                                    <input class="sum-money" type="text" name="main_total" value="130 000" > VND
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="btn-payment" colspan="6">
-                               <a href="order.html"><input class="btn btn-primary" type="button" value="THANH TOÁN"  ></a> 
-                            </td>
-                        </tr>
-                </table>
-
-            </form>
+            <table class="cart">
+                <thead>
+                    <tr>
+                        <th class="product-remove">&nbsp;</th>
+                        <th class="product-thumbnail">&nbsp;</th>
+                        <th class="product-name">Sản phẩm</th>
+                        <th class="product-price">Đơn giá</th>
+                        <th class="product-quantity">Số lượng</th>
+                        <th class="product-subtotal">Tổng cộng</th>
+                    </tr>
+                </thead>
+                <tbody class="cart-list"></tbody>
+            </table>
+            <div class="total-session">
+                <div class="sum">
+                    <p>VND</p>
+                    <p class="sum-money"></p>
+                    <h4 class="title-total">Tổng cộng:</h4>
+                </div>
+                <input class="btn btn-primary" type="button" value="Cập nhật giỏ hàng">
+                <div class="btn-payment">
+                    <a href="order.html" class="btn btn-primary">THANH TOÁN</a> 
+                </div>
+            </div>
         </section>
-    
     </div>
     <footer>
         <div class="wrapper">
@@ -256,8 +171,9 @@
         </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="/js/header-footer.js"></script>
-        <!-- Customize your script here -->
-        <script src="./js/cart.js"></script>
+    <script src="/js/header-footer.js"></script>
+    <!-- Customize your script here -->
+    <script src="/js/product.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 </html>

@@ -182,13 +182,12 @@ section{
     padding: 0 20px;
     transform: translateY(0);
     transition: transform 0.3s ease;
+    margin: 20px 0;
 }
 
 #relevant .wrapper .item:hover{
     transform: translateY(-3px);
 }
-
-#relevant .wrapper .item .product-item{background-color: var(--item-4);}
 
 @media (min-width: 429px) and (max-width: 768px){
     #relevant .wrapper .item{width: 50%; margin-top: 20px;}
