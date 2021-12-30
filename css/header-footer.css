@@ -218,10 +218,10 @@ header nav .group-icons a:hover{
     transform: scaleY(1);
 }
 
-#cart .cart-icon::before{
-    content: "2";
-    width: 14px;
-    height: 14px;
+#cart .cart-icon{display: block;}
+
+#cart .cart-icon .item-count{
+    padding: 0 2px;
     color: white;
     border-radius: 50%;
     background-color: var(--primary-color);
@@ -285,7 +285,6 @@ header nav .group-icons .cart-box .non-empty .wrapper .item{
     display: flex;
     width: 100%;
     padding: 4px 0;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -298,12 +297,18 @@ header nav .group-icons .cart-box .non-empty .wrapper .item .thumb{
 }
 
 header nav .group-icons .cart-box .non-empty .wrapper .item .detail{
-    padding: 0 8px;
+    padding: 0 12px;
 }
 
 header nav .group-icons .cart-box .non-empty .wrapper .item .detail h6,
-header nav .group-icons .cart-box .non-empty .wrapper .item .detail p{
+header nav .group-icons .cart-box .non-empty .wrapper .item .detail .quantity{
     font-size: 1.6rem;
+}
+
+header nav .group-icons .cart-box .non-empty .wrapper .item .name{
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 8px 0;
 }
 
 header nav .group-icons .cart-box .non-empty .wrapper .item .price{

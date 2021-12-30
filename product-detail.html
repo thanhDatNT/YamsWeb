@@ -7,7 +7,6 @@
     <title>Yams</title>
     <!-- Mandatory links -->
     <!-- Logo on Tabs -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png"> -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
     <link rel="manifest" href="./images/favicons/site.webmanifest">
     <!-- CSS base source, Header - Footer and Icons for all HTML files -->
@@ -33,10 +32,10 @@
                     <li id="menu"><a href="menu.html" class="item">Menu</a>
                         <div class="child-1">
                             <ul>
-                                <li><a href="#" class="sub-item-1">Phổ biến</a></li>
-                                <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
-                                <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
-                                <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="best-seller.html" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="new.html" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="sale.html" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="offer.html" class="sub-item-1">Đề xuất</a></li>
                                 <li><a href="#" class="sub-item-1">Phân loại</a>
                                     <div class="child-2">
                                         <ul>
@@ -71,17 +70,28 @@
                     <button id="find-btn">Tìm</button>
                     <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                     <!-- Cart icon and status -->
-                    <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                    <div id="cart">
+                        <a class="cart-icon" href="cart.html">
+                            <p class="item-count"></p>
+                            <span class="iconify" data-icon="mdi:cart-outline"></span>
+                        </a>
                         <div class="cart-box">
                             <div class="empty-cart">
                                 <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
                             </div>
-                            <div class="non-empty"></div>
+                            <!-- Cart has items -->
+                            <div class="non-empty">
+                                <header>Sản phẩm mới thêm</header>
+                                <div class="wrapper"></div>
+                                <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                     <!-- Account icon -->
-                    <a href="admin.html" id="account-icon">
-                        <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                    <a href="login.html" id="account-icon">
+                        <div class="acc-photo">
+                            <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                            <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
                     </a>
                 </div>
             </nav>
@@ -94,66 +104,41 @@
                 <!-- Left side: Current Product detail-->
                 <div class="product-wrapper">
                     <div class="thumbnail">
-                        <img src="https://yt.cdnxbvn.com/medias/uploads/186/186906-trang-tri-banh-flan-gato.jpg" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="detail">
-                        <h3 class="name">Special gato chocolate cake</h3>
-                        <p class="price">45000<u>đ</u></p>
+                        <h3 class="name"></h3>
+                        <p class="price"></p>
                         <h4>Nguyên liệu</h4>
-                        <p class="material">Chocolate, vanilla, flour, eggs, fresh milk, sugar, whipped cream</p>
+                        <p class="material"></p>
                         <div class="choose">
-                            <input type="number" class="btn btn-second" name="quantity" min="1" max="100" value="1">
-                            <button class="btn btn-second">Thêm vào giỏ hàng</button>
+                            <input type="number" id="quantity" class="btn btn-second" name="quantity" min="1" max="100" value="1">
+                            <button id="add-cart" class="btn btn-second">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="clear"></div>
                     <div class="description">
                         <h3 class="title">Mô tả</h3>
-                        <p class="content">Nếu valentine đã quá quen thuộc với những viên socola. 
-                            Vậy tại sao không tạo bất ngờ cho nửa yêu thương bằng cách tự tay làm 
-                            1 chiếc bánh Gato phủ chocolate ngọt ngào</p>
+                        <p class="content"></p>
                     </div>
                 </div>
                 <!-- Right side: Cart -->
                 <div class="cart-wrapper">
                     <h3 class="title">GIỎ HÀNG</h3>
                     <div class="item-list">
-                        <!-- 1 Item -->
-                        <div class="item">
-                            <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
-                            <div class="detail">
-                                <p class="name">Mango CupCake</p>
-                                <p><span class="quantity">2</span> x <span class="price">20000đ</span></p>
-                            </div>
-                        </div>
-                        <!-- 1 Item -->
-                        <div class="item">
-                            <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
-                            <div class="detail">
-                                <p class="name">Mango CupCake</p>
-                                <p><span class="quantity">2</span> x <span class="price">20000đ</span></p>
-                            </div>
-                        </div>
-                        <!-- 1 Item -->
-                        <div class="item">
-                            <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
-                            <div class="detail">
-                                <p class="name">Mango CupCake</p>
-                                <p><span class="quantity">2</span> x <span class="price">20000đ</span></p>
-                            </div>
-                        </div>
                     </div>
+                    <p>(Một số sản phẩm có thể bị ẩn bớt do danh sách quá dài)</p>
                     <!-- End list -->
                     <hr>
                     <!-- Total of bill -->
                     <div class="total">
                         <h3>Tổng cộng</h3>
-                        <p class="total-bill">120000<u>đ</u></p>
+                        <p class="total-bill"></p>
                     </div>
                     <!-- Buttons check list -->
                     <div class="btn-group">
-                        <button class="btn btn-primary to-cart">Xem giỏ hàng</button>
-                        <button class="btn btn-primary pay">Thanh toán</button>
+                        <a href="cart.html" class="btn btn-primary to-cart">Xem giỏ hàng</a>
+                        <a href="order.html" class="btn btn-primary pay">Thanh toán</a>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -161,44 +146,7 @@
             <!-- Relevant products -->
             <section id="relevant">
                 <h3 class="font-xl title">Sản phẩm liên quan</h3>
-                <div class="wrapper">
-                    <!-- 1 Product item -->
-                    <div class="item">
-                        <div class="product-item">
-                             <div class="tag">Top</div>
-                             <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
-                             <div class="detail">
-                                 <h3 class="name">Cupcake with strawberry cream</h3>
-                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
-                                 <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                             </div>
-                        </div>
-                    </div>
-                    <!-- 1 Product item -->
-                    <div class="item">
-                         <div class="product-item">
-                             <div class="tag">Top</div>
-                             <div class="thumb"><img src="https://subtitlesdino.com/wp-content/uploads/2021/04/macaron-4.jpg" alt=""></div>
-                             <div class="detail">
-                                 <h3 class="name">Macaron</h3>
-                                 <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>39.500 <u>đ</u></p>
-                                 <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                             </div>
-                         </div>
-                    </div>
-                    <!-- 1 Product item -->
-                    <div class="item">
-                        <div class="product-item">
-                            <div class="tag">Top</div>
-                            <div class="thumb"><img src="https://cf.shopee.vn/file/22ce3acfd6d8928d32534c5a7e7cf8e4" alt=""></div>
-                            <div class="detail">
-                                <h3 class="name">Donut vani</h3>
-                                <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>105.000 <u>đ</u></p>
-                                <a href="#" class="add"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="wrapper"></div>
             </section>
             <!-- Evaluation -->
             <section id="evaluate">
@@ -218,30 +166,9 @@
                             <p class="comment">Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
                                 và có thể đặt trước nữa.</p>
                             <div class="image">
-                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
-                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
+                                <img src="" alt="">
                             </div>
-                            <p class="time">23:10, 21-12-2021</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="avatar"><img src="https://static01.nyt.com/images/2021/10/29/arts/29sheeran-review/29sheeran-review-mediumSquareAt3X.jpg" alt=""></div>
-                        <div class="content">
-                            <h3 class="name">Ed Sheeran</h3>
-                            <div class="star">
-                                <span class="iconify" data-icon="bi:star-fill"></span>
-                                <span class="iconify" data-icon="bi:star-fill"></span>
-                                <span class="iconify" data-icon="bi:star-fill"></span>
-                                <span class="iconify" data-icon="bi:star-fill"></span>
-                                <span class="iconify" data-icon="bi:star-half"></span>
-                            </div>
-                            <p class="comment">Bánh nhiều loại để lựa chọn, thời gian giao hàng cũng nhanh, 
-                                và có thể đặt trước nữa.</p>
-                            <div class="image">
-                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
-                                <img src="https://file.hstatic.net/200000247739/file/188953160_1222757024823537_7577988039688951933_n_b128c1e735324e78aff8d1d3ff18a88d_1024x1024.jpg" alt="">
-                            </div>
-                            <p class="time">23:10, 21-12-2021</p>
+                            <p class="time">23:10, 29-12-2021</p>
                         </div>
                     </div>
                 </div>
@@ -318,6 +245,7 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="/js/header-footer.js"></script>
         <!-- Customize your script here -->
+        <script src="./js/product.js"></script>
         <script src="./js/product-detail.js"></script>
     </div>
 </body>

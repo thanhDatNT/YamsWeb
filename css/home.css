@@ -252,10 +252,13 @@ section{
 #bestseller .wrapper .container .item:last-child .product-item{background-color: var(--item-1);}
 
 #bestseller .wrapper .container .item:nth-child(2) .product-item, 
-#bestseller .wrapper .container .item:nth-child(4) .product-item{background-color: var(--item-3);}
+#bestseller .wrapper .container .item:nth-child(4) .product-item
+{background-color: var(--item-3);}
 
 #bestseller .wrapper .container .item:nth-child(3) .product-item, 
-#bestseller .wrapper .container .item:nth-child(5) .product-item{background-color: var(--item-4);}
+#bestseller .wrapper .container .item:nth-child(5) .product-item,
+#bestseller .wrapper .container .item:nth-child(7) .product-item
+{background-color: var(--item-4);}
 
 @media (min-width: 429px) and (max-width: 768px){
     #bestseller .wrapper .container .item{width: 45%;}
@@ -319,11 +322,11 @@ section{
 }
 #offer .wrapper .item .left{
     margin-top: 20px;
-    background-image: url(https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/home_image_5.jpg);
+    background-image: url(https://i.ibb.co/K7fVCMw/image.png);
 }
 
 #offer .wrapper .item .right{
-    background-image: url(https://eatsy.bold-themes.com/burger/wp-content/uploads/sites/2/2021/02/donut_gallery_03.jpg);
+    background-image: url(https://i.ibb.co/rFpkLFc/image.png);
 }
 
 #offer .wrapper .item .right .content{
@@ -372,7 +375,7 @@ section{
     margin: 40px 0;
     overflow: hidden;
     position: relative;
-    background-image: url(https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/hero_contact.jpg);
+    background-image: url(https://i.ibb.co/rMjHNjY/image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;

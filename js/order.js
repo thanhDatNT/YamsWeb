@@ -1,28 +1,12 @@
 const $= document.querySelector.bind(document)
 const $$= document.querySelectorAll.bind(document)
 
-const radDeli = $('#deli')
-const radPickUp= $('#pickup')
-const deliInforBox= $('.deli-infor')
-
-
-radDeli.onclick = function(){
-    deliInforBox.classList.add('active')
-    
-    if ($('.payment').classList.contains('active')){
-        $('.payment').classList.remove('active')
-        $('.tab-3').classList.remove('active')
-    }
-    $('.tab-2').classList.add('active')
-}
-
-radPickUp.onclick = function(){
-    $('.payment').classList.add('active')
-    if ($('.deli-infor').classList.contains('active')){
-        $('.deli-infor').classList.remove('active')
-        $('.tab-2').classList.remove('active')
-    }
-    $('.tab-3').classList.add('active')
+$('.tab-2').onclick = function(){
+    this.classList.remove('inactive')
+    this.classList.add('active')
+    $('.tab-3').classList.remove('active')
+    $('.payment').classList.remove('active')
+    $('.deli-infor').classList.add('active')
 }
 
 function pickAddress(v) {
@@ -894,6 +878,7 @@ $('#submit-infor').onclick = function checkMissingField() {
         $('.payment').classList.add('active')
         $('.deli-infor').classList.remove('active')
         $('.tab-2').classList.remove('active')
+        $('.tab-3').classList.remove('inactive')
         $('.tab-3').classList.add('active')
     }
 }
