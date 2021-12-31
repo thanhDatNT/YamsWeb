@@ -50,19 +50,19 @@
 }
 
 .container .body .form-login h1{
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
-.container .body .form-login form{
+.container .body .form-login .form{
     text-align: left;
     padding-left: 80px;
     padding-right: 80px;
     margin-bottom: 40px;
 }
 
-.container .body .form-login form p{
+.container .body .form-login .form p{
     font-size: 1.8rem;
-    margin: 20px 0;
+    margin: 16px 0;
 }
 
 #username, #email, #password, #phone{
@@ -77,14 +77,14 @@
     margin: 0;
 }
 
-.container .body .form-login form .pw-tasks{
+.container .body .form-login .form .pw-tasks{
     margin: 20px 0;
     width: 100%;
     justify-content: space-between;
     font-size: 1.6rem;
 }
 
-.container .body .form-login form .pw-tasks .forget{
+.container .body .form-login .form .pw-tasks .forget{
     font-style: italic;
     font-size: 1.4rem;
     color: var(--primary-color);
@@ -125,7 +125,7 @@
         
 
 @media (max-width:968px){
-    .container .body .form-login form{
+    .container .body .form-login .form{
         padding-left: 40px;
         padding-right: 40px;
         margin-bottom: 20px;

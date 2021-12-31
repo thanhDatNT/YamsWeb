@@ -20,8 +20,8 @@
 </head>
 <body>
     <div class="app">
-              <!-- ==========Start Header=========== -->
-              <header>
+            <!-- ==========Start Header=========== -->
+            <header>
                 <nav >
                     <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
                     <!-- Logo Yams -->
@@ -30,23 +30,21 @@
                     </div>
                     <!-- Menu -->
                     <ul class="menu">
-                        <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
-                        <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                         <li><a href="index.html" class="item">Home</a></li>
                         <li id="menu"><a href="menu.html" class="item">Menu</a>
                             <div class="child-1">
                                 <ul>
-                                    <li><a href="#" class="sub-item-1">Phổ biến</a></li>
-                                    <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
-                                    <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
-                                    <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                                    <li><a href="filter.html#bestseller" class="sub-item-1">Phổ biến</a></li>
+                                    <li><a href="filter.html#new" class="sub-item-1">Sản phẩm mới</a></li>
+                                    <li><a href="filter.html#promotion" class="sub-item-1">Khuyến mãi</a></li>
+                                    <li><a href="filter.html#offer" class="sub-item-1">Đề xuất</a></li>
                                     <li><a href="#" class="sub-item-1">Phân loại</a>
                                         <div class="child-2">
                                             <ul>
-                                                <li><a href="#" class="sub-item-2">Macaron</a></li>
-                                                <li><a href="#" class="sub-item-2">Cheese cake</a></li>
-                                                <li><a href="#" class="sub-item-2">Pudding</a></li>
-                                                <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                                <li><a href="filter.html#macaron" class="sub-item-2">Macaron</a></li>
+                                                <li><a href="filter.html#cheesecake" class="sub-item-2">Cheese cake</a></li>
+                                                <li><a href="filter.html#pudding" class="sub-item-2">Pudding</a></li>
+                                                <li><a href="filter.html#tiramisu" class="sub-item-2">Tiramisu</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -56,7 +54,8 @@
                         <li><a href="diet.html" class="item">Diet with Yams</a></li>
                         <li><a href="blog.html" class="item">Yams Blog</a></li>
                         <li><a href="aboutus.html" class="item">About us</a></li>
-                        
+                        <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                        <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
                     </ul>
                     <!-- Search, account, cart icons -->
                     <div class="group-icons">
@@ -73,22 +72,33 @@
                         <button id="find-btn">Tìm</button>
                         <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
                         <!-- Cart icon and status -->
-                        <a href="#" id="cart-icon"><span class="iconify" data-icon="mdi:cart-outline"></span>
+                        <div id="cart">
+                            <a class="cart-icon" href="cart.html">
+                                <p class="item-count"></p>
+                                <span class="iconify" data-icon="mdi:cart-outline"></span>
+                            </a>
                             <div class="cart-box">
                                 <div class="empty-cart">
                                     <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
                                 </div>
-                                <div class="non-empty"></div>
+                                <!-- Cart has items -->
+                                <div class="non-empty">
+                                    <header>Sản phẩm mới thêm</header>
+                                    <div class="wrapper"></div>
+                                    <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem tất cả</a></div>
+                                </div>
                             </div>
-                        </a>
-                        
+                        </div>
                         <!-- Account icon -->
                         <a href="#" id="account-icon">
-                            <div class="acc-photo"><span class="iconify" data-icon="mdi:account-circle-outline"></span></div>
+                            <div class="acc-photo">
+                                <img class="user-photo" src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                                <p class="temp-user"><span class="iconify" data-icon="mdi:account-circle-outline"></span></p>
+                            </div>
                         </a>
                     </div>
                 </nav>
-
+    
             </header>
             <!-- ==========Start layout container============= -->
     <div id="container">
@@ -342,6 +352,7 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="/js/header-footer.js"></script>
         <!-- Customize your script here -->
+        <script src="./js/product.js"></script>
         <script src="./js/aboutus.js"></script>
     </div>
 </body>
