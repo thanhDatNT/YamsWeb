@@ -45,3 +45,43 @@ function updateImageDisplay() {
         return fileTypes.includes(file.type);
     }
 }
+
+$('#cus-evaluate .submit').onclick = function(){
+  var today= new Date();
+  var dd= String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var yyyy = today.getFullYear();
+  var hh = today.getHours();
+  var m = today.getMinutes();
+  var time = hh + ":"+ m + ", " + dd +"-" + mm + "-"+ yyyy;
+  var avatar = $('#account-icon img').src;
+  var comment = $('#cus-evaluate .text').value;
+  if(comment != '' && preview.hasChildNodes()){
+    var imgSource = $('#cus-evaluate .image img').src;
+    var node = `<div class="item">
+        <div class="avatar"><img src="${avatar}" alt=""/></div>
+          <div class="content">
+              <h3 class="name">User</h3>
+              <div class="star">
+                  <span class="iconify" data-icon="bi:star-fill"></span>
+                  <span class="iconify" data-icon="bi:star-fill"></span>
+                  <span class="iconify" data-icon="bi:star-fill"></span>
+                  <span class="iconify" data-icon="bi:star-fill"></span>
+                  <span class="iconify" data-icon="bi:star-fill"></span>
+              </div>
+              <p class="comment">${comment}</p>
+              <div class="image">
+                <img src="${imgSource}" alt="">
+              </div>
+              <p class="time">${time}</p>
+          </div>
+      </div>`
+    confirm('Nhận xét đã được đăng')
+    $('#evaluate .container .cus-comment').innerHTML = node;
+    $('#cus-evaluate').style.display = 'none';
+  }
+  else{
+    alert('Vui lòng tải ít nhất 1 hình ảnh kèm lời nhận xét của bạn');
+    return;
+  }
+}

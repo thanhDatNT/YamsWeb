@@ -94,6 +94,7 @@ section{
 #bestseller {
     margin-top: 6%;
 }
+
 .wrapper{
     width: 84%;
     height: fit-content;
@@ -101,6 +102,10 @@ section{
     margin: 0 auto;
     position: relative;
     z-index: 1;
+}
+
+header nav .group-icons .cart-box .non-empty .wrapper{
+    padding: 0 !important;
 }
 
 .wrapper .title{

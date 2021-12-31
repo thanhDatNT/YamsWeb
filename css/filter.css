@@ -23,7 +23,7 @@
 .loading svg{
     width: 150px;
     height: 150px;
-    animation: rotate 2s linear infinite;
+    animation: rotate 1.5s linear infinite;
 }
 
 .loading svg circle{
@@ -36,7 +36,7 @@
     stroke-dashoffset: 440;
     stroke: var(--primary-color);
     transform: translate(5px, 5px);
-    animation: animate 4s linear infinite;
+    animation: animate 3s linear infinite;
 }
 
 @keyframes animate{

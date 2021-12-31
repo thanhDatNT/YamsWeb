@@ -46,6 +46,54 @@ function loadFullCart(){
   $('.content .total-session .sum-money').innerText = totalBill;
 }
 
+// ======== ORDER PAGE ========
+
+function loadPurchasingList(){
+  var carts = loadCart();
+  var subTotal = 0;
+  var deliFee = 30000;
+
+  carts.forEach(item => subTotal += item.product.price * item.quantity);
+  var cartWarpper = carts.map(function(item){
+    return `<li class="products-item">
+      <img class="image-item" src="${item.product.image}" alt="">     
+      <div class="product-infor">
+          <h5 class="name">${item.product.name}</h5>
+          <div  class="quantity_price">
+              <p class="quantity">${item.quantity} </p>
+              <span class="iconify" data-icon="carbon:close"></span>
+              <p class="price">${item.product.price} <u>đ</u></p>
+          </div>
+      </div>
+      <button class="remove"><span class="iconify" data-icon="carbon:close"></span></button>
+    </li>`
+  })
+  var html = cartWarpper.join('');
+  $('.content-right .list-items').innerHTML = html;
+  $('.content-right .total-sub .money').innerText = subTotal + "VND";
+  // Calculate with delivery fee
+  calcInvoice(deliFee, subTotal);
+  $('#deli').onclick = function(){
+    deliFee = 30000;
+    calcInvoice(deliFee, subTotal);
+  }
+  $('#pickup').onclick = function(){
+    deliFee = 0;
+    calcInvoice(deliFee, subTotal);
+  }
+  $('.complete').onclick = function(){
+    localStorage.clear();
+    loadCartTotal();
+    updateCart();
+  }
+}
+
+function calcInvoice(deliFee, subTotal){
+  var totalBill = subTotal + deliFee;
+  $('.content-right .fee-delivery .fee').innerText = deliFee + "VND";
+  $('.content-right .sum .sum-bill').innerText = totalBill + "VND";
+}
+
 // ======= HOME PAGE =========
 // Best seller session
 
@@ -583,6 +631,12 @@ window.onload = function(){
     setTimeout(function(){
       navigateFilter();
     }, 1000);
+  }
+  else if(urlParams.toString().includes('order.html')){
+    loadPurchasingList()
+  }
+  else if(urlParams.toString().includes('diet.html')){
+    //updateCart();
   }
   loadCartTotal();
   updateCart();

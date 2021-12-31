@@ -883,6 +883,3 @@ $('#submit-infor').onclick = function checkMissingField() {
     }
 }
 
-$('.complete').onclick = function(){
-    window.location.href = 'order-result.html'
-}
