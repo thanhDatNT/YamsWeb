@@ -274,6 +274,14 @@ input[type='checkbox'], input[type='radio']{
 }
 
 /* =========== KEYFRAMES FOR ANIMATIONS =========== */
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 @keyframes display{
     from{
         transform:scaleX(0);

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yams</title>
+    <!-- Mandatory links -->
+    <!-- Logo on Tabs -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <!-- CSS base source, Header - Footer and Icons for all HTML files -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Custom file -->
+    <link rel="stylesheet" href="./css/filter.css">
+    
+</head>
+<body>
+    <div class="app">
+        <!-- LOADING PROGRESS -->
+        <div class="loading">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+        </div>
+        <!-- ==========Start Header=========== -->
+        <header>
+            <nav >
+                <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
+                <!-- Logo Yams -->
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
+                </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <li><a href="index.html" class="item">Home</a></li>
+                    <li id="menu"><a href="menu.html" class="item">Menu</a>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="filter.html#bestseller" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="filter.html#new" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="filter.html#promotion" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="filter.html#offer" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="filter.html#macaron" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="filter.html#cheesecake" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="filter.html#pudding" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="filter.html#tiramisu" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                    <li><a href="blog.html" class="item">Yams Blog</a></li>
+                    <li><a href="aboutus.html" class="item">About us</a></li>
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                    <datalist id="cakes">
+                        <option value="Macaron">
+                        <option value="Pudding">
+                        <option value="Cupcake">
+                        <option value="Sweet cake">
+                        <option value="Bread">
+                        <option value="Donut">
+                    </datalist>
+                    <button id="find-btn">Tìm</button>
+                    <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                    <!-- Cart icon and status -->
+                    <div id="cart">
+                        <a class="cart-icon" href="cart.html">
+                            <p class="item-count"></p>
+                            <span class="iconify" data-icon="mdi:cart-outline"></span>
+                        </a>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <!-- Cart has items -->
+                            <div class="non-empty">
+                                <header>Sản phẩm mới thêm</header>
+                                <div class="wrapper"></div>
+                                <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Account icon -->
+                    <a href="login.html" id="account-icon">
+                        <div class="acc-photo">
+                            <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                            <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
+                    </a>
+                </div>
+            </nav>
+
+        </header>
+        <!-- ==========Start BEST SELLER layout container============= -->
+        <div class="fragment" id="bestseller">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item best-seller"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Best sellers</h1>
+                    <h3 class="description">Khám phá những loại bánh được ưa thích nhất nào!</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start Best Sellers -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <div class="container">
+                        <!-- 1 Product item -->
+                        <div class="item best-seller">
+                            <div class="product-item">
+                                    <div class="tag">Top</div>
+                                    <div class="thumb"><img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/02/cupcake_02.jpg" alt=""></div>
+                                    <div class="detail">
+                                        <h3 class="name">Cupcake with strawberry cream</h3>
+                                        <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>75.000 <u>đ</u></p>
+                                        <button class="add"><span class="iconify" data-icon="carbon:add-filled"></span></button>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+            </section>
+        </div>
+        <!-- ==========Start NEW PRODUCT layout container============= -->
+        <div class="fragment" id="new-pro">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item new"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Newest</h1>
+                    <h3 class="description">Thưởng thức những chiếc bánh mới ra lò của Yams</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start new flavour -->
+            <section id="new">
+                <h2 class="title font-xl">Hương vị mới</h2> 
+                <div class="content">
+                    <table with="100">
+                        <tr>
+                            <td>
+                                <div class="text">
+                                    <h3 class="name">Dark chocolate with Berries</h3>
+                                    <p class="description">Chúng tôi mang đến bạn chiếc bánh nướng với hương vị mới trong bao bì có thể tái chế</p>
+                                    <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
+                                </div>
+                                
+                            </td>
+                            <td>
+                                <div class="flavour-content">
+                                    <img class="flavour-image" src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/hero_image_02.png" alt="">
+                                    <div class="new-flavour">
+                                        <p><span>NEW FLAVOUR</span></p>
+                                        <p>Dark chocolate with Berries</p>
+                                        <p><b>40.000 <u>đ</u></b></p>
+                                    </div>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!-- Start new product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Sản phẩm mới</h2>
+                    <div class="container"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+            </section>
+        </div>
+        <!-- ==========Start PROMOTION layout container============= -->
+        <div class="fragment" id="promotion">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item sale"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Big sales</h1>
+                    <h3 class="description">Khuyến mãi lên đến 20% - sale sập sàn!</h3>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start sale product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <div class="container"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://i.ibb.co/MS4B3cW/floating-image-07.png" alt="">
+                </div>
+            </section>
+            
+        </div>
+        <!-- ==========Start OFFER layout container============= -->
+        <div class="fragment" id="offer-pro">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item offer"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Đề xuất</h1>
+                    <h3 class="description">Bánh ngon đến từng mẫu nhỏ!</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start offer weekend -->
+            <section id="offer">
+                <table class="content" >
+                    <tr>
+                        <td>
+                            <div class="flavour-content">
+                                <img class="flavour-image" src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/hero_image_03.png" alt="">
+                                <div class="offer-flavour">
+                                    <p><span>WEEKLY OFFER</span></p>
+                                    <p>Tropical Fruits</p>
+                                    <p><b>35.000 <u>đ</u></b></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text">
+                            <h2 class="title font-xl">Cuối tuần ăn gì?</h2> 
+                            <h3 class="name">Tropical Fruits Pack</h3>
+                            <div>
+                                <img src="https://eatsy.bold-themes.com/cupcakes/wp-content/uploads/sites/3/2021/03/image_logo_01.png" alt="">
+                                <p class="description">Gluten Free là xu hướng nói không với Gluten – hỗn hợp của hai loại protein là glutenin và gliadin.</p>
+                            </div>
+                            <input class="btn btn-second" type="button" value="ĐẶT MUA NGAY">
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <!-- Start combo -->
+            <section id="combo">
+                <div class="wrapper">
+                    <div class="item">
+                        <h2 class="title font-xl">Amazing Combo</h2>
+                        <!-- 1 Item -->
+                        <div class="container left">
+                            <div class="content">
+                                <h3 class="combo"><u>Combo</u></h3>
+                                <h4 class="name">Trái cây nhiệt đới</h4>
+                                <p class="price"><del>120000đ</del><b> 99000đ</b></p>
+                                <a href="#" class="btn btn-third">Đặt mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container right">
+                            <div class="pad"></div>
+                            <div class="content">
+                                <h3 class="combo"><u>Combo</u></h3>
+                                <h4 class="name">Donut kẹo que</h4>
+                                <p class="price"><del>140000đ</del><b> 119000đ</b></p>
+                                <a href="#" class="btn btn-third">Đặt mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="all-product">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Đề xuất cho bạn</h2>
+                    <div class="offer-list container"></div>
+                </div>  
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://i.ibb.co/MS4B3cW/floating-image-07.png" alt="">
+                </div>
+            </section>      
+        </div>
+        <!-- ==========Start MACARON layout container============= -->
+        <div class="fragment" id="macaron">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item macaron"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Macaron</h1>
+                    <h3 class="description">Macaron mang vẻ đẹp yêu kiều và lãng mạn!</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start macaron box-->
+            <section id="box">
+                <table class="content" >
+                    <tr>
+                        <td class="image">
+                            <div class="flavour-content">
+                                <img class="flavour-image" src="https://i.ibb.co/gRLmptF/macaron-box.jpg" alt="macaron box">
+                            </div>
+                        </td>
+                        <td class="text">
+                            <h2 class="title font-xl">Color Macaron box gift</h2> 
+                            <div>
+                                <p class="description">Yams cam kết sẽ giao tận tay món quà này đến người bạn yêu thương!</p>
+                                <p class="price">200.000 <u>đ</u></p>
+                            </div>
+                            <a class="btn btn-second">ĐẶT MUA NGAY</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Start macaron product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Sản phẩm khác</h2>
+                    <div class="container"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://i.ibb.co/MS4B3cW/floating-image-07.png" alt="">
+                </div>
+            </section>
+        </div>
+        <!-- ==========Start CHEESE CAKE layout container============= -->
+        <div class="fragment" id="cheese-cake">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item cheesecake"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Cheese cake</h1>
+                    <h3 class="description">Mang cảm giác béo ngậy, thơm lừng và ngọt ngào!</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start cheesecake box-->
+            <section id="infor">
+                <table class="content" >
+                    <tr>
+                        <td class="text">
+                            <h2 class="title font-xl">Bạn có biết?</h2> 
+                            <div class="description">
+                                <p >Cheesecake là một món tráng miệng ngọt ngào bao gồm một hoặc nhiều lớp. Lớp chính và dày nhất bao gồm hỗn hợp phô mai mềm, tươi (thường là phô mai, phô mai kem), trứng và đường. </p>
+                                <p class="des"><br/>Nếu có một lớp dưới cùng, nó thường bao gồm một lớp vỏ làm từ bánh quy nghiền.</p>
+                            </div>
+                        </td>
+                        <td class="image">
+                            <div class="flavour-content">
+                                <img class="flavour-image" src="https://i.ibb.co/KVjv2qJ/New-York-cheesecake.jpg" alt="macaron box">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Start cheesecake product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <h2 class="title font-xl">Cheese cake</h2>
+                    <div class="container"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://i.ibb.co/MS4B3cW/floating-image-07.png" alt="">
+                </div>
+            </section>
+        </div>
+        <!-- ==========Start PUDDING layout container============= -->
+        <div class="fragment" id="pudding">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item pudding"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Pudding</h1>
+                    <h3 class="description">Bánh tráng miệng có nguồn gốc từ Pháp</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            <!-- Start pudding product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <div class="container"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://i.ibb.co/MS4B3cW/floating-image-07.png" alt="">
+                </div>
+            </section>
+        </div>
+        <!-- ==========Start TIRAMISU layout container============= -->
+        <div class="fragment" id="tiramisu">
+            <!-- Banner -->
+            <section id="banners">
+                <div class="slide-wrapper">
+                    <div class="slider-item tiramisu"></div>
+                </div>
+                <div class="banner-text">
+                    <h1 class="font-xxl main-title">Tiramisu</h1>
+                    <h3 class="description">Linh hồn trong thế giới bánh ngọt của người Ý</p>
+                </div>
+            </section>
+            <!-- Filter -->
+            <select id="filter">
+                <option>Lọc theo giá</option>
+                <option>Dưới 50.000</option>
+                <option>Từ 50.000 đến 99.000</option>
+                <option>Từ 100.000 đến 200.000</option>
+                <option>Trên 200.000</option>
+            </select>
+            
+            <!-- Start tiramisu product -->
+            <section id="all-product">
+                <div class="wrapper">
+                    <div class="container"></div>
+                </div>
+                <div class="floating-buble">
+                    <img src="https://i.ibb.co/Z8MGHvB/floating-image-01.png" alt="">
+                </div>
+                <div class="floating-buble sale2">
+                    <img src="https://i.ibb.co/MS4B3cW/floating-image-07.png" alt="">
+                </div>
+            </section>
+        </div>
+        
+        <!-- ===========Start Footer============ -->
+        <footer>
+            <div class="wrapper">
+                <div class="big-logo">
+                    <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
+                    <a href="index.html">Yams Bakery</a>
+                </div>
+                <div class="links">
+                    <div class="aboutus">
+                        <h3>Về chúng tôi</h3>
+                        <a href="aboutus.html" class="item">Về chúng tôi</a>
+                        <a href="#" class="item">Chính sách</a>
+                    </div>
+                    <div class="contact">
+                        <h3>Liên Hệ</h3>
+                        <ul>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:location-filled"></span></div>
+                                <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
+                                <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <li>
+                                <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
+                                <a href="tel:02837244555">(028) 3 7244 555</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="media">
+                            <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                            <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </footer>
+        <!-- ========== Start scripts ============-->
+        <!-- Compulsory -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/header-footer.js"></script>
+        <!-- Customize your script here -->
+        
+        <script src="/js/product.js"></script>
+        <script src="/js/filter.js"></script>
+    </div>
+</body>
+</html>

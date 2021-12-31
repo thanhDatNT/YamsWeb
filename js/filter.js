@@ -1,5 +1,5 @@
 "use strict";
-(function(){
+function g(){
 // Scroll reveal effect for #container
     function ScrollEvent(){
         ScrollReveal({
@@ -16,16 +16,7 @@
         ScrollReveal().reveal('#macaron .title, #cheesecake .title, #pudding .title, #tiramisu .title', { delay: 50, origin:'bottom', interval: 100});
     }
     ScrollEvent();
-})()
-
-const productItem= $$('#all-product .product-item')
-productItem.forEach(function(product){
-    product.onclick= function(){
-        window.location.href= 'product-detail.html'
-    }
-})
-
-const btnAddtoCart= $('#all-product .item .product-item .add')
-btnAddtoCart.onclick= function(e){
-    e.preventDefault()
 }
+
+// Important
+window.onhashchange = window.onload
