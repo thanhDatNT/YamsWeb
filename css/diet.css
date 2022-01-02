@@ -110,6 +110,8 @@ section{
   text-align: center;
   text-decoration: underline;
   font-size: 3rem;
+  color: var(--primary-color);
+
 }
 
 .bmi-sex{
@@ -232,26 +234,12 @@ label > input[type="radio"] + * {
   text-align: center;
  
   }
-  .btncart{
-    font-family: 'Mulish', sans-serif;
-    font-size: 20px;
+   .retype{
     width: 150px;
     height: 50px;
-    border-radius: 4px;
-    margin: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-}
-
-  .suggest-product:hover, .retype:hover,.calculateBMI:hover{
-    color: var(--primary-color);
-    background-color: white;
-    box-shadow:0px 0px 0px 2px var(--primary-color) inset;
-  }
-   .retype{
-    margin:20px 60px 20px 20px;   
-  }
+    font-size: 2rem;
+  } 
+   
 
 
  
@@ -271,7 +259,11 @@ label > input[type="radio"] + * {
      .btn-group{
        display: flex;
      }
-     .content  .title{
+      .title{
+       font-size: 2.5rem;
+       margin-top: 2rem;
+     }
+     #cart_diet .cart-wrapper .title{
        font-size: 2.5rem;
      }
      .calculateBMI{
@@ -288,6 +280,9 @@ label > input[type="radio"] + * {
     #diet .wrapper .sort{
       margin: 20px;
       
+    }
+    .font-xl{
+      font-size: 4rem;
     }
  
   }
@@ -324,10 +319,10 @@ label > input[type="radio"] + * {
 /* ========CART========= */
 
 #cart_diet .cart-wrapper hr{
-  border: 1px solid var(--inactive);
+  border-top: 1px solid var(--inactive);
 }
 
-#cart_diet .cart-wrapper .title{font-size: 4.4rem; line-height: 4.8rem;width: 100%;text-align: center;color: var(--primary-color);}
+#cart_diet .cart-wrapper .title{font-size: 3rem; line-height: 4.8rem;width: 100%;text-align: center;color: var(--primary-color);}
 
 #cart_diet .cart-wrapper .item-list{margin: 40px 0;}
 

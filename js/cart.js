@@ -34,3 +34,6 @@ function sum1(){
     // document.cart_form.total1.value = sum ;
     // return sum;
 }
+function update(){
+    window.location.href='menu.html'
+}
