@@ -34,7 +34,7 @@ section{
     position: relative;
 }
 
-#product-detail .product-wrapper .detail .name{font-size: 5rem;line-height: 5.4rem;}
+#product-detail .product-wrapper .detail .name{font-size: 4.8rem;line-height: 4.6rem;}
 
 #product-detail .product-wrapper .detail .price{
     color: var(--primary-color);
@@ -94,15 +94,6 @@ section{
     height: 80px;
     margin: 4px 0;
     position: relative;
-}
-
-#product-detail .cart-wrapper .item-list .item::after{
-    content: "x";
-    position: absolute;
-    top: 16px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
 }
 
 #product-detail .cart-wrapper .item-list .item .thumb{
@@ -188,6 +179,8 @@ section{
 #relevant .wrapper .item:hover{
     transform: translateY(-3px);
 }
+
+del{display: none;}
 
 @media (min-width: 429px) and (max-width: 768px){
     #relevant .wrapper .item{width: 50%; margin-top: 20px;}

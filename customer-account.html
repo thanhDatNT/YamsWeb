@@ -31,17 +31,17 @@
                 <li id="menu"><a href="menu.html" class="item">Menu</a>
                     <div class="child-1">
                         <ul>
-                            <li><a href="#" class="sub-item-1">Phổ biến</a></li>
-                            <li><a href="#" class="sub-item-1">Sản phẩm mới</a></li>
-                            <li><a href="#" class="sub-item-1">Khuyến mãi</a></li>
-                            <li><a href="#" class="sub-item-1">Đề xuất</a></li>
+                            <li><a href="filter.html#bestseller" class="sub-item-1">Phổ biến</a></li>
+                            <li><a href="filter.html#new" class="sub-item-1">Sản phẩm mới</a></li>
+                            <li><a href="filter.html#promotion" class="sub-item-1">Khuyến mãi</a></li>
+                            <li><a href="filter.html#offer" class="sub-item-1">Đề xuất</a></li>
                             <li><a href="#" class="sub-item-1">Phân loại</a>
                                 <div class="child-2">
                                     <ul>
-                                        <li><a href="#" class="sub-item-2">Macaron</a></li>
-                                        <li><a href="#" class="sub-item-2">Cheese cake</a></li>
-                                        <li><a href="#" class="sub-item-2">Pudding</a></li>
-                                        <li><a href="#" class="sub-item-2">Tiramisu</a></li>
+                                        <li><a href="filter.html#macaron" class="sub-item-2">Macaron</a></li>
+                                        <li><a href="filter.html#cheesecake" class="sub-item-2">Cheese cake</a></li>
+                                        <li><a href="filter.html#pudding" class="sub-item-2">Pudding</a></li>
+                                        <li><a href="filter.html#tiramisu" class="sub-item-2">Tiramisu</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -71,6 +71,7 @@
                 <!-- Cart icon and status -->
                 <div id="cart">
                     <a class="cart-icon" href="cart.html">
+                        <p class="item-count"></p>
                         <span class="iconify" data-icon="mdi:cart-outline"></span>
                     </a>
                     <div class="cart-box">
@@ -80,33 +81,17 @@
                         <!-- Cart has items -->
                         <div class="non-empty">
                             <header>Sản phẩm mới thêm</header>
-                            <div class="wrapper">
-                                <div class="item">
-                                    <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
-                                    <div class="detail">
-                                        <h6 class="name">Matcha-Tiramisu</h6>
-                                        <p class="quantity">x2</p>
-                                    </div>
-                                    <h6 class="price">65000 <u>đ</u></h6>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb"><img src="https://i.ibb.co/w4qBXc0/Matcha-Tiramisu.jpg" alt=""></div>
-                                    <div class="detail">
-                                        <h6 class="name">Matcha-Tiramisu Vani</h6>
-                                        <p class="quantity">x2</p>
-                                    </div>
-                                    <h6 class="price">65000 <u>đ</u></h6>
-                                </div>
-                            </div>
-                            <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem giỏ hàng</a></div>
+                            <div class="wrapper"></div>
+                            <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem tất cả</a></div>
                         </div>
                     </div>
                 </div>
                 <!-- Account icon -->
-                <a href="login.html" id="account-icon">
+                <a href="#" id="account-icon">
                     <div class="acc-photo">
-                        <img src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
-                        <span class="iconify inactive" data-icon="mdi:account-circle-outline"></span></div>
+                        <img class="user-photo" src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                        <p class="temp-user"><span class="iconify" data-icon="mdi:account-circle-outline"></span></p>
+                    </div>
                 </a>
             </div>
         </nav>
@@ -124,7 +109,7 @@
                     <input type="file" id="myfile" name="myfile" accept="image/png, image/jpeg">
                 </div>
             </div>
-            <h3 class="user-name">Trần Thị Minh Xuân</h3>
+            <h3 class="user-name"></h3>
             <!-- Menu navigation -->
             <ul class="menu">
                 <li class="item active"><span class="iconify" data-icon="ic:outline-account-circle"></span>
@@ -143,12 +128,9 @@
                 <h3 class="title">Thông tin tài khoản</h3>
                 <div class="wrapper">
                     <p>Tên khách hàng</p>
-                    <div class="name">
-                        <input type="text" class="first-name" value="Trần Thị Minh">
-                        <input type="text" class="last-name" value="Xuân">
-                    </div>
+                    <input type="text" class="first-name">
                     <p>Số điện thoại</p>
-                    <input type="text" class="phone-num" value="099 999 999">
+                    <input type="text" class="phone-num">
                     <p>Địa chỉ</p>
                     <input type="text" class="address" value="Đường Phạm Văn Đồng, TP. Thủ Đức, TP. HCM">
                 </div>
@@ -216,11 +198,11 @@
                 <h3 class="title">Thiết lập tài khoản</h3>
                 <div class="wrapper">
                     <p>Số điện thoại</p>
-                    <input type="text" class="phone-num" value="099 999 999">
+                    <input type="text" class="phone-num">
                     <p>Địa chỉ</p>
                     <input type="text" class="address" value="Đường Phạm Văn Đồng, TP. Thủ Đức, TP. HCM">
                     <p>Email</p>
-                    <input type="email" class="email" value="xuanttm19411@gmail.com">
+                    <input type="email" class="email">
                     <p>Mật khẩu</p>
                     <input type="password" class="password" value="12345678">
                 </div>
@@ -300,6 +282,7 @@
     </footer>
     <!-- ========= Start scripts ==========-->
     <script src="./js/header-footer.js"></script>
+    <script src="./js/product.js"></script>
     <script src="./js/account.js"></script>
 </body>
 </html>

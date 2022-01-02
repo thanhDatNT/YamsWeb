@@ -20,7 +20,7 @@ function loadFullCart(){
     var subTotal = item.quantity * item.product.price;
     return `<tr class="cart-item">
         <td class="product-remove">
-          <button class="remove" ><span class="iconify close" data-icon="carbon:close"></span></button>
+          <button class="remove" onclick="removeItem(${item.product.id})"><span class="iconify close" data-icon="carbon:close"></span></button>
         </td>
         <td class="product-image">
             <a href="#"><img class="image-item"src="${item.product.image}" ></a>
@@ -32,7 +32,7 @@ function loadFullCart(){
             <p class="price">${item.product.price} VND</p>
         </td>
         <td class="product-quantity">
-            <input type="number" id="quantity" class="quality-item" step="1" min="1" max="100" value="${item.quantity}" name="quality_cart" onchange="sum1()" >
+            <input type="number" id="quantity" class="quality-item" step="1" min="1" max="100" value="${item.quantity}" name="quality_cart" onchange="cartQuantityChange(${item.product.id}, this)" >
         </td>
         <td class="product-subtotal">
             <span>
@@ -46,6 +46,27 @@ function loadFullCart(){
   $('.content .total-session .sum-money').innerText = totalBill;
 }
 
+function removeItem(id) {
+  let cart = JSON.parse(localStorage.getItem('cart'));
+	cart = cart.filter(x => x.product.id != id);
+	localStorage.setItem('cart', JSON.stringify(cart));
+	loadCartTotal();
+  loadFullCart();
+  updateCart();
+}
+
+function cartQuantityChange(item_id, e){
+  let quantity = e.value;
+	let cart = loadCart() || [];
+	let target_index = cart.findIndex(x => x.product.id == item_id);
+	if (quantity > 0) {
+		cart[target_index].quantity = parseInt(quantity);
+	};
+	saveCart(cart);
+	loadCartTotal();
+	loadFullCart();
+  updateCart();
+}
 // ======== ORDER PAGE ========
 
 function loadPurchasingList(){
@@ -65,7 +86,6 @@ function loadPurchasingList(){
               <p class="price">${item.product.price} <u>đ</u></p>
           </div>
       </div>
-      <button class="remove"><span class="iconify" data-icon="carbon:close"></span></button>
     </li>`
   })
   var html = cartWarpper.join('');
@@ -548,10 +568,9 @@ function loadSuggestion(products, tag){
   });
   suggestion_products = suggestion_products.slice(0, 6);
 	var item = suggestion_products.map(item => {
-    if(item.tag == "Promo"){
-      return `<div class="item">
+    return `<div class="item">
             <div class="product-item">
-                 <div class="tag" style="font-size: 1.2rem;">${item.tag}</div>
+                 <div class="tag">${item.tag}</div>
                  <div class="thumb"><img src="${item.image}" alt=""></div>
                  <div class='detail'>
                      <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
@@ -560,36 +579,20 @@ function loadSuggestion(products, tag){
                  </div>
                 </div>
             </div>`
-    }
-    else if(item.tag == ''){
-      return `<div class="item">
-            <div class="product-item">
-                 <div class="tag" style="display: none;">${item.tag}</div>
-                 <div class="thumb"><img src="${item.image}" alt=""></div>
-                 <div class='detail'>
-                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
-                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
-                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                 </div>
-                </div>
-            </div>`
-    }
-    else{
-			return `<div class="item">
-            <div class="product-item">
-                 <div class="tag">${item.tag}</div>
-                 <div class="thumb"><img src="${item.image}" alt=""></div>
-                 <div class='detail'>
-                     <a href="product-detail.html?id=${item.id}" class="name" data-id="${item.id}">${item.name}</a>
-                     <p class="price"><span class="iconify" data-icon="ion:pricetag"></span>${item.currentPrice} <u>đ</u></p>
-                     <a href="product-detail.html?id=${item.id}" class="add" data-id="${item.id}"><span class="iconify" data-icon="carbon:add-filled"></span></a>
-                 </div>
-                </div>
-            </div>`
-    }
 	});
   var product = item.join('');
   $('#relevant .wrapper').innerHTML = product;
+  var tags = $$('#relevant .wrapper .tag');
+  var oldPrice = $$('#relevant .wrapper del');
+  tags.forEach((tag, i) => {
+    if(tag.innerHTML == ''){
+      tag.style.display = 'none';
+    }
+    else if(tag.innerHTML == 'Promo'){
+      tag.style.fontSize = '1.2rem';
+      oldPrice[i].style.display = 'inline-block';
+    }
+  })
 }
 
 function loadCartTotal() {
@@ -628,15 +631,12 @@ window.onload = function(){
     showPromotion();
   }
   else if(urlParams.toString().includes('filter.html')){
-    setTimeout(function(){
+    setTimeout(() => {
       navigateFilter();
     }, 1000);
   }
   else if(urlParams.toString().includes('order.html')){
     loadPurchasingList()
-  }
-  else if(urlParams.toString().includes('diet.html')){
-    //updateCart();
   }
   loadCartTotal();
   updateCart();

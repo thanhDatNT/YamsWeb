@@ -14,6 +14,10 @@
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
+.user-photo{
+    display: block !important;
+}
+
 .container .nav-panel .user-photo .photo{
     width: 100px;
     height: 100px;
@@ -132,11 +136,6 @@
     padding: 8px 12px;
     border: 1px solid var(--text-color);
     border-radius: 4px;
-}
-
-.container .fragments .infor .wrapper .name input{
-    width: 49%;
-    display: inline-block;
 }
 
 /* ORDER MANAGEMENT FRAGMENT */

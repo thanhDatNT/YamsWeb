@@ -19,6 +19,7 @@
     })()
 
 
+
 function sum1(){
     // var p1 = parseFloat(document.form_cart.quality_cart.value);
      var price = parseFloat(document.form_cart.price1.value);
@@ -37,3 +38,4 @@ function sum1(){
 function update(){
     window.location.href='menu.html'
 }
+

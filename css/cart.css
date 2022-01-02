@@ -61,11 +61,6 @@ section{
     display: none;
   }
 
-  /* .slide-wrapper .slider-item:first-child{background-image: url(../images/banners/cart.png); display: block;} */
-  /* .banner-text .main-title{
-
-  #banners .slide-wrapper .slider-item:first-child{background-image: url(../images/banners/cart.png); display: block;}
-   */
   #banners .banner-text{
     position: absolute;
     text-align: center;
