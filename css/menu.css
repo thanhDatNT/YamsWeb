@@ -1,4 +1,5 @@
-#menu-id{
+
+#menu-item{
     color: var(--primary-color);
 }
 
@@ -173,7 +174,7 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 /* new flavour */
 #new{
-    margin-top: 8%;
+    margin-top: 5%;
     height: fit-content;
     overflow: hidden;
 }
@@ -187,7 +188,6 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 #new .content{
     width: 84%;
     height: fit-content;
-    padding: 50px 0;
     margin: 0 auto;
     position: relative;
     
@@ -279,7 +279,7 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 /* sale */
 #sale{
-    margin-top: 8%;
+    margin-top: 5%;
     overflow: hidden;
 }
 
@@ -303,7 +303,7 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 /* offer */
 #offer{
-    margin-top: 12%;
+    margin-top: 3%;
     height: fit-content;
 }
 
@@ -350,9 +350,8 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 }
 
 #offer .content .text .title{
-    margin-bottom: 15%;
+    margin-bottom: 8%;
     margin-left: 0px;
-    margin-top: -15%;
 }
 
 #offer .content .text .name{
@@ -418,7 +417,7 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 /* Macaron */
 #macaron{
-    margin-top: 8%;
+    margin-top: 3%;
 }
 
 #macaron .wrapper .container .item:first-child .product-item{background-color: var(--item-2);} 
@@ -426,7 +425,6 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 #macaron .wrapper .container .item:nth-child(2) .product-item{background-color: var(--item-3);}
 
-<<<<<<< HEAD
 @media (min-width: 429px) and (max-width: 768px){
     #macaron .wrapper .container .item{width: 45%;}
     #macaron .wrapper .container{margin: 40px 0;}
@@ -442,11 +440,9 @@ header nav .group-icons .cart-box .non-empty .wrapper{
     #macaron .wrapper .title{margin-left: 0;}
 }
 
-=======
->>>>>>> f2cfa67a3c4e117d96195a5eaec8d22bf4d5b12b
 /* cheese cake */
 #cheesecake{
-    margin-top: 8%;
+    margin-top: 3%;
 }
 
 #cheesecake .wrapper .container .item:first-child .product-item{background-color: var(--item-4);} 
@@ -464,7 +460,7 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 /* pudding */
 #pudding{
-    margin-top: 8%;
+    margin-top: 3%;
 }
 
 #pudding .wrapper .container .item:first-child .product-item{background-color: var(--item-1);} 
@@ -474,7 +470,7 @@ header nav .group-icons .cart-box .non-empty .wrapper{
 
 /* tiramisu */
 #tiramisu{
-    margin-top: 8%;
+    margin-top: 3%;
     padding-bottom: 100px;
 }
 

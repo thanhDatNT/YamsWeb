@@ -181,7 +181,7 @@
 #all-product .wrapper .title{
     float: left;
     margin-bottom: 40px;
-    margin-top: 15%;
+    margin-top: 12%;
 }
 
 #all-product .wrapper .container{
@@ -253,14 +253,14 @@
 #new .title{
     position: relative;
     width: 84%;
-    padding: 4% 0;
+    padding: 3% 0 1% 0;
     margin: 0 auto;
 }
 
 #new .content{
     width: 84%;
     height: fit-content;
-    padding: 60px 0;
+    padding: 0;
     margin: 0 auto;
     position: relative;
     
@@ -369,7 +369,6 @@
     position: relative;
     width: 84%;
     height: fit-content;
-    padding: 60px 0;
     margin: 0 auto;
 }
 #offer .content .flavour-content{
@@ -476,7 +475,7 @@
 
 /*combo in offer*/
 #combo{
-    padding-top: 12%;
+    padding-top: 10%;
     overflow: hidden;
 }
 
@@ -564,7 +563,7 @@
 #box .content{
     position: relative;
     width: 84%;
-    padding-top: 7%;
+    padding-top: 3%;
     margin: 0 auto;
 }
 #box .content .image{
@@ -640,12 +639,12 @@
 #infor .content{
     position: relative;
     width: 84%;
-    padding-top: 7%;
+    padding-top: 3%;
     margin: 0 auto;
 }
 #infor .content .image{
     position: relative;
-    width: 60%;
+    width: 50%;
 }
 
 #infor .content .text{
@@ -662,6 +661,7 @@
 
 #infor .content .text .description{
     margin-bottom: 10%;
+    font-size: 2.4rem;
     line-height: 40px;
     text-align: justify;
 }
@@ -694,7 +694,7 @@
         font-size: 2.2rem;
     }
     #infor .content .text .description{
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.2rem;
     }
     #infor .content .text .description .des{
