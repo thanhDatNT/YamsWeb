@@ -15,11 +15,9 @@ var weightSlider = document.getElementById("myWeight");
 var weightOutput = document.getElementById("inputWeight");
 var heightSlider = document.getElementById("myHeight");
 var heightOutput = document.getElementById("inputHeight");
-
 // Display slider value
 weightOutput.innerHTML = weightSlider.value;
 heightOutput.innerHTML = heightSlider.value;
-
 // Update sliders while dragging it
   weightSlider.oninput = function () {
   weightOutput.innerHTML = this.value;
@@ -27,29 +25,22 @@ heightOutput.innerHTML = heightSlider.value;
 heightSlider.oninput = function () {
   heightOutput.innerHTML = this.value;
 }
-
 // Change weight-slider value on weight-number, height-numer input
 function showValWeight(newVal) {
   weightSlider.value=newVal;
 };
-
 function showValHeight(newVal) {
   heightSlider.value=newVal;
 };
-
 // *** Change number input when dragging slider ***
-// Add 2 eventListeners for weight and input sliders
 weightSlider.addEventListener("input", updateValueWeight);
 heightSlider.addEventListener("input", updateValueHeight);
-
 function updateValueWeight(e) {
   weightOutput.value = e.srcElement.value;
 }
-
 function updateValueHeight(e) {
   heightOutput.value = e.srcElement.value;
 }
-
 function calculateBmi() {
   var weight = document.bmiForm.realweight.value;
   var height = (document.bmiForm.realheight.value)/100;

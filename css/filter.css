@@ -192,8 +192,9 @@ header nav .menu > li:nth-child(2) > a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    align-content: stretch;
 }
 
 .all-product .wrapper .container .item{
