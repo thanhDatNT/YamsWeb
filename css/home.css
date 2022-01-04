@@ -1,6 +1,4 @@
-/* Set primary color for the current navigation menu item
-    :nth-child(2/3/...), :last-child
-*/
+
 header nav .menu li:first-child a{
     color: var(--primary-color);
 }

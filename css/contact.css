@@ -2,10 +2,8 @@
     width: 100%;
     background-color: var(--background);
    
-  } 
- .content{
-    width: 90%;
-    
+} 
+.content{
     position: relative;
     z-index: 1;
     display: flex;
@@ -67,13 +65,9 @@ h5{
 }
  #infor_customer  #txtemail{
   width: 100%
-  
-  
-
 }
 #infor_customer #txtphone {
     width: 100%
-    
   } 
    
   #infor_customer  .note .field-note{

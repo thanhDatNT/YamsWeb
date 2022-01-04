@@ -1,3 +1,6 @@
+header nav .menu > li:nth-child(5) a{
+    color: var(--primary-color);
+}
 body{
     background-color: var(--background);
 }
@@ -635,31 +638,31 @@ section{
 
 
 /* certi */
-#certi{
+#certificate{
     padding-bottom: 60px;
     z-index: 1;
  }
- #certi .content{
+ #certificate .content{
      width: 80%;
      padding: 60px 0;
      margin: 0 auto;
      text-align: center;
  
  }
- #certi .content .title{
+ #certificate .content .title{
      color: var(--primary-color);
      padding-bottom: 5vh;
  
      text-align: center;
  }
- #certi .content .description{
+ #certificate .content .description{
      font-size: 1.8rem;
      line-height: 2.8rem;
      margin: 20px 0;
      text-align: justify;
      padding-bottom: 40px;
  }
- #certi .image-box img{width: 70%;
+ #certificate .image-box img{width: 70%;
      justify-content: space-between;}
  
      

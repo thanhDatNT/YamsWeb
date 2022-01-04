@@ -1,15 +1,13 @@
 // Scroll reveal effect for #container
 (function ScrollEvent(){
   ScrollReveal({
-      reset:true,
+      reset: true,
       distance: '60px',
       duration: 2500, 
       delay:400
   })
   ScrollReveal().reveal('.main-title', { delay: 400, origin:'left' });
   ScrollReveal().reveal('#banners .description', { delay: 500, origin:'right' });
-  // ScrollReveal().reveal('.summary, #diet .diet__proposal .container .item .product-item, #review .slider-wrapper .post:not(:last-child)', { delay: 400, origin:'bottom', interval: 200});
-  
 })()
 
 // =========BMI=======
@@ -55,7 +53,9 @@ function updateValueHeight(e) {
 function calculateBmi() {
   var weight = document.bmiForm.realweight.value;
   var height = (document.bmiForm.realheight.value)/100;
+
   var bmi = (weight)/Math.pow(height, 2);
+
   var index = document.getElementById("indexBMI");
   var messageOutput = document.getElementById("status");
  
@@ -87,19 +87,32 @@ function calculateBmi() {
 }
 // Đề xuất bánh
 async function suggestDiet(tag){
+  var flagBack = false;
+  var loadMore = $('.load-more');
+
   $('#diet').style.display = "block";
-  $('.load-more').style.display = 'inline';
   const products = await getProducts();
+
+  // Get product list by key "diet" in data
   let diet_products = products.filter((product) => {
     return product.diet == tag
   });
+
   var partOne = diet_products.slice(0, 9);
   loadMoreProduct(partOne);
   
-  $('.load-more').onclick = (e) =>{
-    var partTwo = diet_products.slice(9, diet_products.length - 1);
-    loadMoreProduct(partTwo);
-    $('.load-more').style.display = 'none';
+  loadMore.onclick = () =>{
+    if(flagBack){
+      loadMoreProduct(partOne);
+      flagBack = false;
+      loadMore.innerHTML = 'Xem thêm'
+    }
+    else{
+      var partTwo = diet_products.slice(9, diet_products.length - 1);
+      loadMoreProduct(partTwo);
+      flagBack = true;
+      loadMore.innerHTML = 'Trở lại';
+    }
   }
 }
 
@@ -132,7 +145,6 @@ function loadMoreProduct(diet_products){
     }
   })
 }
-
 
 function retype()
 {

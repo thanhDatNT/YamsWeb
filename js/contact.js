@@ -7,6 +7,6 @@ $('#send-infor').onclick = function checkMissingField() {
     else {
         confirm("Thông tin đã gửi thành công")
         window.location.href='contact.html'
-      
+        location.reload();
     }
 }

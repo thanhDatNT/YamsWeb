@@ -35,7 +35,7 @@
         })
         ScrollReveal().reveal('.main-title, .title, #offer .left, #order .left', { delay: 400, origin:'left' });
         ScrollReveal().reveal('#banners .description, #offer .right', { delay: 500, origin:'right' });
-        ScrollReveal().reveal('.summary, #bestseller .container .item .product-item, #review .slider-wrapper .post:not(:last-child)', { delay: 400, origin:'bottom', interval: 200});
+        ScrollReveal().reveal('.summary, #bestseller .container .item, #review .slider-wrapper .post:not(:last-child)', { delay: 400, origin:'bottom', interval: 200});
         ScrollReveal().reveal('.hl-box .content-box', { delay: 500, origin:'left'});
         ScrollReveal().reveal('.hl-box .image-box, #order .center', { delay: 500, origin:'right' });
         ScrollReveal().reveal('#order .right', { delay: 600, origin:'right'});

@@ -37,7 +37,7 @@
                                 <li><a href="filter.html#new" class="sub-item-1">Sản phẩm mới</a></li>
                                 <li><a href="filter.html#promotion" class="sub-item-1">Khuyến mãi</a></li>
                                 <li><a href="filter.html#offer" class="sub-item-1">Đề xuất</a></li>
-                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                <li><a href="filter.html#macaron" class="sub-item-1">Phân loại</a>
                                     <div class="child-2">
                                         <ul>
                                             <li><a href="filter.html#macaron" class="sub-item-2">Macaron</a></li>
@@ -276,7 +276,23 @@
         <script src="/js/header-footer.js"></script>
         <!-- Customize your script here -->
         <script src="/js/product.js"></script>
-        <script src="/js/menu.js"></script>
+        <script>
+            (function ScrollEvent(){
+                ScrollReveal({
+                    reset: false,
+                    distance: '80px',
+                    duration: 2500, 
+                    delay: 200
+                })
+                ScrollReveal().reveal('#banners .main-title, #offer .left', { delay: 300, origin:'left' });
+                ScrollReveal().reveal('#banners .description, #offer .right', { delay: 300, origin:'right' });
+                ScrollReveal().reveal('.container .item', { delay: 400, origin:'bottom', interval: 200});
+                ScrollReveal().reveal('.hl-box .content-box, #new .text, #offer .flavour-content', { delay: 200, origin:'left'});
+                ScrollReveal().reveal('.hl-box .image-box, #order .center, #new .flavour-content, #offer .text, #view-all, #offer .title', { delay: 400, origin:'right' });
+                ScrollReveal().reveal('#macaron .title, #cheesecake .title, #pudding .title, #tiramisu .title', { delay: 500, origin:'bottom'});
+                
+            })()
+        </script>
     </div>
 </body>
 </html>

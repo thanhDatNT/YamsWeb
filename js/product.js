@@ -261,7 +261,6 @@ function showTiramisu(products){
 // ======= FILTER PAGE =========
 
 function navigateFilter(){
-  window.scrollTo(0, 0);
   var urlParams = window.location.hash;
   $$('.fragment').forEach(item => {
     item.classList.remove('active')
@@ -632,6 +631,8 @@ window.onload = function(){
   }
   else if(urlParams.toString().includes('filter.html')){
     setTimeout(() => {
+      ScrollEvent();
+      window.scrollTo(0, 0);
       navigateFilter();
     }, 1000);
   }

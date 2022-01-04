@@ -1,3 +1,6 @@
+header nav .menu > li:nth-child(2) > a{
+    color: var(--primary-color);
+}
 
 .fragment{
     width: 100%;
@@ -58,7 +61,7 @@
 }
 
 /* Banner */
-#banners{
+.banners{
     width: 100%;
     position: relative;
     height: 60vh;
@@ -66,7 +69,7 @@
     overflow: hidden;
 }
   
-#banners .slide-wrapper{
+.banners .slide-wrapper{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -74,7 +77,7 @@
     left: 0;
 }
   
-#banners .slide-wrapper .slider-item{
+.banners .slide-wrapper .slider-item{
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -83,32 +86,32 @@
     transform-origin:center;
     display: block;
 }
-#banners .slide-wrapper .best-seller{
+.banners .slide-wrapper .best-seller{
     background-image: url(https://i.ibb.co/ctJVjrf/bestseller.jpg);
 }
-#banners .slide-wrapper .new{
+.banners .slide-wrapper .new{
     background-image: url(https://i.ibb.co/BsK7yjH/new.png);
 }
-#banners .slide-wrapper .sale{
+.banners .slide-wrapper .sale{
     background-image: url(https://i.ibb.co/G5Wwywh/sale.jpg);
 }
-#banners .slide-wrapper .offer{
+.banners .slide-wrapper .offer{
     background-image: url(https://i.ibb.co/2Myf0WF/offer.png);
 }
-#banners .slide-wrapper .macaron{
+.banners .slide-wrapper .macaron{
     background-image: url(https://i.ibb.co/1d0hT3j/macaron.png);
 }
-#banners .slide-wrapper .cheesecake{
+.banners .slide-wrapper .cheesecake{
     background-image: url(https://i.ibb.co/hZp9s31/White-chocolate-cheesecake.jpg);
 }
-#banners .slide-wrapper .pudding{
+.banners .slide-wrapper .pudding{
     background-image: url(https://i.ibb.co/2Fh3Mvf/pudidng.png);
 }
-#banners .slide-wrapper .tiramisu{
+.banners .slide-wrapper .tiramisu{
     background-image: url(https://i.ibb.co/BZZrHGB/Fruit-tiramisu.jpg);
 }
   
-#banners .banner-text{
+.banners .banner-text{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -116,13 +119,13 @@
     text-shadow: 1px 1px 2px var(--black-4);
     text-align: center;
 }
-#banners .banner-text .main-title{
+.banners .banner-text .main-title{
     color: var(--background);
     animation-name: moveInleft;
     animation-duration: 3s;
 }
   
-#banners .banner-text .description{
+.banners .banner-text .description{
     text-align: center;
     color: white;
     font-size: 3rem;
@@ -135,13 +138,13 @@
 }
   
   @media (max-width: 428px){
-    #banners{height: 40vh;}
-    #banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
-    #banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
+    .banners{height: 40vh;}
+    .banners .banner-text .main-title{font-size: 48px; line-height: 40px;}
+    .banners .banner-text .description{font-size: 1.4rem; line-height: 2rem;}
   }
   
   @media (min-width: 429px) and (max-width: 768px){
-    #banners{height: 50vh;}
+    .banners{height: 50vh;}
   }
 
 /* Filter */
@@ -164,13 +167,13 @@
 }
 
 /* products */
-#all-product {
+.all-product {
     width: 100%;
     position: relative;
     padding-bottom: 10%;
     overflow: hidden;
 }
-#all-product .wrapper{
+.all-product .wrapper{
     width: 84%;
     height: fit-content;
     margin: 0 auto;
@@ -178,13 +181,13 @@
     z-index: 1;
 }
 
-#all-product .wrapper .title{
+.all-product .wrapper .title{
     float: left;
     margin-bottom: 40px;
     margin-top: 12%;
 }
 
-#all-product .wrapper .container{
+.all-product .wrapper .container{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -193,7 +196,7 @@
     align-items: center;
 }
 
-#all-product .wrapper .container .item{
+.all-product .wrapper .container .item{
     width: 30%;
     margin: 20px 0;
     position: relative;
@@ -201,46 +204,46 @@
     transition: transform 0.3s ease;
 }
 
-#all-product .wrapper .container .item:hover{
+.all-product .wrapper .container .item:hover{
     transform: translateY(-3px);
 }
 
-#all-product .wrapper .container .item:first-child .product-item,
-#all-product .wrapper .container .item:nth-child(6) .product-item,
-#all-product .wrapper .container .item:nth-child(8) .product-item,
-#all-product .wrapper .container .item:nth-child(13) .product-item{background-color: var(--item-1);}
+.all-product .wrapper .container .item:first-child .product-item,
+.all-product .wrapper .container .item:nth-child(6) .product-item,
+.all-product .wrapper .container .item:nth-child(8) .product-item,
+.all-product .wrapper .container .item:nth-child(13) .product-item{background-color: var(--item-1);}
 
-#all-product .wrapper .container .item:nth-child(2) .product-item,
-#all-product .wrapper .container .item:nth-child(7) .product-item,
-#all-product .wrapper .container .item:nth-child(12) .product-item{background-color: var(--item-2);}
+.all-product .wrapper .container .item:nth-child(2) .product-item,
+.all-product .wrapper .container .item:nth-child(7) .product-item,
+.all-product .wrapper .container .item:nth-child(12) .product-item{background-color: var(--item-2);}
 
-#all-product .wrapper .container .item:nth-child(3) .product-item,
-#all-product .wrapper .container .item:nth-child(5) .product-item,
-#all-product .wrapper .container .item:nth-child(10) .product-item,
-#all-product .wrapper .container .item:nth-child(14) .product-item{background-color: var(--item-3);}
+.all-product .wrapper .container .item:nth-child(3) .product-item,
+.all-product .wrapper .container .item:nth-child(5) .product-item,
+.all-product .wrapper .container .item:nth-child(10) .product-item,
+.all-product .wrapper .container .item:nth-child(14) .product-item{background-color: var(--item-3);}
 
-#all-product .wrapper .container .item:nth-child(4) .product-item,
-#all-product .wrapper .container .item:nth-child(9) .product-item,
-#all-product .wrapper .container .item:nth-child(11) .product-item,
-#all-product .wrapper .container .item:last-child .product-item{background-color: var(--item-4);}
+.all-product .wrapper .container .item:nth-child(4) .product-item,
+.all-product .wrapper .container .item:nth-child(9) .product-item,
+.all-product .wrapper .container .item:nth-child(11) .product-item,
+.all-product .wrapper .container .item:last-child .product-item{background-color: var(--item-4);}
 
-#all-product .floating-buble{
+.all-product .floating-buble{
     position: absolute;
     top: 7%;
     margin-left: -7%;
 }
 
-#all-product .floating-buble img{transform: rotate(10deg);}
+.all-product .floating-buble img{transform: rotate(10deg);}
 
 
 @media (min-width: 429px) and (max-width: 768px){
-    #all-product .wrapper .container .item{width: 45%;}
-    #all-product .wrapper .container{margin: 40px 0;}
+    .all-product .wrapper .container .item{width: 45%;}
+    .all-product .wrapper .container{margin: 40px 0;}
 }
 
 @media (max-width: 428px){
-    #all-product .wrapper .container{display: block;position: relative;margin-top: 16px;}
-    #all-product .wrapper .container .item{
+    .all-product .wrapper .container{display: block;position: relative;margin-top: 16px;}
+    .all-product .wrapper .container .item{
         width: 100%;
         position: relative;}
 }
@@ -351,27 +354,27 @@
 }
 
 /*sale*/
-#all-product .sale2{
+.all-product .sale2{
     position: absolute;
     top: 65%;
     right: -7%;
 }
 
-#all-product .sale2 img{transform: rotate(120deg);}
+.all-product .sale2 img{transform: rotate(120deg);}
 
 /* offer */
-#offer{
+#offer-weekend{
     margin-top: 15%;
     height: fit-content;
 }
 
-#offer .content{
+#offer-weekend .content{
     position: relative;
     width: 84%;
     height: fit-content;
     margin: 0 auto;
 }
-#offer .content .flavour-content{
+#offer-weekend .content .flavour-content{
     position: relative;
     left: -26%;
 }
@@ -379,96 +382,96 @@
     width: 100%;
     margin: 0;
 }
-#offer .content .flavour-content .offer-flavour{
+#offer-weekend .content .flavour-content .offer-flavour{
     position: absolute;
     top: 4%;
     left: 10%;
     text-align: left;
     line-height: 40px;
 }
-#offer .content .flavour-content .offer-flavour span{
+#offer-weekend .content .flavour-content .offer-flavour span{
     background-color: var(--primary-color);
     padding: 6px;
     color: white;
 }
 
-#offer .content .flavour-content .offer-flavour p:nth-child(2){
+#offer-weekend .content .flavour-content .offer-flavour p:nth-child(2){
     
     width: 60%;
     margin: 20px auto 10px 0;
 }
 
-#offer .content .flavour-content .offer-flavour p:last-child{
+#offer-weekend .content .flavour-content .offer-flavour p:last-child{
     color: var(--primary-color);  
 }
-#offer .content .text{
+#offer-weekend .content .text{
     vertical-align: top;
     padding-left: 3%;
 }
 
-#offer .content .text .title{
+#offer-weekend .content .text .title{
     margin-bottom: 15%;
     margin-left: 0px;
     margin-top: -15%;
 }
 
-#offer .content .text .name{
+#offer-weekend .content .text .name{
     font-size: 4.2rem;
     margin-bottom: 10%;
 }
 
-#offer .content .text img{
+#offer-weekend .content .text img{
     width: 85px;
     float: left;
     margin-right: 5%;
 }
-#offer .content .text .description{
+#offer-weekend .content .text .description{
     margin-bottom: 10%;
     line-height: 40px;
 }
 
-#offer .content .text input{
+#offer-weekend .content .text input{
     margin-bottom: 10%;
 }
 
 @media (min-width: 429px) and (max-width: 768px){
-    #offer .content .text .name{
+    #offer-weekend .content .text .name{
         font-size: 3.2rem;
         line-height: 3.2rem;
     }
-    #offer .content  .flavour-content p{
+    #offer-weekend .content  .flavour-content p{
         line-height: 2rem;
         font-size: 1.7rem;
     }
-    #offer .content .text .description{
+    #offer-weekend .content .text .description{
         line-height: 2.2rem;
         font-size: 1.7rem;
         margin-right: -5%;
     }
-    #offer .content .text img{
+    #offer-weekend .content .text img{
         width: 60px;
     }
 }
 
 @media (max-width: 428px){
     
-    #offer .content .text .name{
+    #offer-weekend .content .text .name{
         font-size: 2rem;
         line-height: 2rem;
     }
-    #offer .content  .flavour-content p{
+    #offer-weekend .content  .flavour-content p{
         line-height: 1.2rem;
         font-size: 1rem;
     }
-    #offer .content .text .description{
+    #offer-weekend .content .text .description{
         line-height: 1.2rem;
         font-size: 1rem;
         margin-right: -5%;
     }
-    #offer .content .text img{
+    #offer-weekend .content .text img{
         width: 40px;
     }
-    #offer .content .text input{
+    #offer-weekend .content .text input{
         font-size: 0.8rem;
     }
 }

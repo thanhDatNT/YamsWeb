@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<members>
+  <item>
+    <name>Thành Đạt</name>
+    <position>CEO</position>
+    <describe>Lấy cảm hứng từ việc kinh doanh online thông qua website và app, anh đã thành lập nên thương hiệu Yams.</describe>
+    <photo>https://i.ibb.co/4WrY3Xh/T.png</photo>
+  </item>
+  <item>
+    <name>Minh Xuân</name>
+    <position>MAIN CHELF</position>
+    <describe>Học làm bánh ở Úc và có 10 năm kinh nghiệm trong nghề, đạt nhiều giải thưởng về làm bánh quốc tế</describe>
+    <photo>https://i.ibb.co/bNdym7d/MX.png</photo>
+  </item>
+  <item>
+    <name>Mai Trang</name>
+    <position>MARKETING MANAGER</position>
+    <describe>Tốt nghiệp chuyên ngành TMĐT trưởng Đại học Kinh tế Luật, chị được CEO tuyển về trở thành quản lý Marketing.</describe>
+    <photo>https://i.ibb.co/SVsFWdt/MT.png</photo>
+  </item>
+  <item>
+    <name>Như Quỳnh</name>
+    <position>CO-FOUNDER</position>
+    <describe>Cùng chung ý tưởng và chí hướng với CEO, chị đã đóng góp thêm ý tưởng và kinh phí để lập nên thương hiệu.</describe>
+    <photo>https://i.ibb.co/2vyNrMs/NQ.png</photo>
+  </item>
+  <item>
+    <name>Uyển Nhi</name>
+    <position>IT MANAGER</position>
+    <describe>Tốt nghiệp chuyên ngành IT trưởng Đại học Bách Khoa TPHCM, chị được CEO tuyển về trở thành quản lý IT.</describe>
+    <photo>https://i.ibb.co/K96NQxq/UN.png</photo>
+  </item>
+</members>

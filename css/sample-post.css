@@ -1,3 +1,6 @@
+header nav .menu > li:nth-child(4) a{
+    color: var(--primary-color);
+}
 #blog-item{
     color: var(--primary-color);
   }

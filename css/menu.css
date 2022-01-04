@@ -1,4 +1,6 @@
-
+header nav .menu > li:nth-child(2) > a{
+    color: var(--primary-color);
+}
 #menu-item{
     color: var(--primary-color);
 }

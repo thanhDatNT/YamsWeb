@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yams</title>
+    <title>Yams | Blog</title>
     <!-- Mandatory links -->
     <!-- Logo on Tabs -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
@@ -338,7 +338,19 @@
         <script src="/js/header-footer.js"></script>
         <!-- Customize your script here -->
         <script src="./js/product.js"></script>
-        <script src="./js/blog.js"></script>
+        <script>
+            (function ScrollEvent(){
+                ScrollReveal({
+                    reset: true,
+                    distance: '60px',
+                    duration: 2500, 
+                    delay:400
+                })
+                ScrollReveal().reveal('.main-title', { delay: 400, origin:'left' });
+                ScrollReveal().reveal('#banners .description, .blog-sidebar .popular-wraper, .hl-box .image-box, .hl-box .content-box', { delay: 300, origin:'right' });
+                ScrollReveal().reveal('.blog-content .post-item', { delay: 200, interval: 400, origin:'bottom'});
+            })()
+        </script>
     </div>
 </body>
 </html>
