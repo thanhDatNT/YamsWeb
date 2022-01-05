@@ -20,22 +20,6 @@
 
 
 
-function sum1(){
-    // var p1 = parseFloat(document.form_cart.quality_cart.value);
-     var price = parseFloat(document.form_cart.price1.value);
-    var p1 = document.getElementById("quantity").value;
-    
-    console.log(price);
-   
 
-    p1 = parseFloat(p1);
-    
-    // var sum = p1 * price;
 
-    // document.cart_form.total1.value = sum ;
-    // return sum;
-}
-function update(){
-    window.location.href='menu.html'
-}
 
