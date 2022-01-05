@@ -23,87 +23,151 @@
         <!-- ==========Start Header=========== -->
         <header>
             <nav >
-                
                 <div id="menu-icon"><span class="iconify" data-icon="bx:bx-menu-alt-left"></span></div>
                 <!-- Logo Yams -->
                 <div class="logo">
                     <a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a>
                 </div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <li><a href="index.html" class="item">Home</a></li>
+                    <li id="menu"><a href="menu.html" class="item">Menu</a>
+                        <div class="child-1">
+                            <ul>
+                                <li><a href="filter.html#bestseller" class="sub-item-1">Phổ biến</a></li>
+                                <li><a href="filter.html#new" class="sub-item-1">Sản phẩm mới</a></li>
+                                <li><a href="filter.html#promotion" class="sub-item-1">Khuyến mãi</a></li>
+                                <li><a href="filter.html#offer" class="sub-item-1">Đề xuất</a></li>
+                                <li><a href="#" class="sub-item-1">Phân loại</a>
+                                    <div class="child-2">
+                                        <ul>
+                                            <li><a href="filter.html#macaron" class="sub-item-2">Macaron</a></li>
+                                            <li><a href="filter.html#cheesecake" class="sub-item-2">Cheese cake</a></li>
+                                            <li><a href="filter.html#pudding" class="sub-item-2">Pudding</a></li>
+                                            <li><a href="filter.html#tiramisu" class="sub-item-2">Tiramisu</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="diet.html" class="item">Diet with Yams</a></li>
+                    <li><a href="blog.html" class="item">Yams Blog</a></li>
+                    <li class="aboutus"><a href="aboutus.html" class="item" >About us</a></li>
+                    <div class="logo-menu"><a href="index.html"><img src="./images/logo/Logo_NoBg_Pink.png" alt="Yams logo"></a></div>
+                    <div class="close-btn"><span class="iconify" data-icon="ci:close-big"></span></div>
+                </ul>
+                <!-- Search, account, cart icons -->
+                <div class="group-icons">
+                    <!-- Search icon and input -->
+                    <input type="search" id="search-input" name="cakes" list="cakes" placeholder="Bạn cần tìm gì?...">
+                    <datalist id="cakes">
+                        <option value="Macaron">
+                        <option value="Pudding">
+                        <option value="Cupcake">
+                        <option value="Sweet cake">
+                        <option value="Bread">
+                        <option value="Donut">
+                    </datalist>
+                    <button id="find-btn">Tìm</button>
+                    <button id="search-icon"><span class="iconify" data-icon="mdi:magnify"></span></button>
+                    <!-- Cart icon and status -->
+                    <div id="cart">
+                        <a class="cart-icon" href="cart.html">
+                            <p class="item-count"></p>
+                            <span class="iconify" data-icon="mdi:cart-outline"></span>
+                        </a>
+                        <div class="cart-box">
+                            <div class="empty-cart">
+                                <img src="https://mydigitech.in/ecommerce/img/Frontend/empty-cart%20%282%29.jpg" alt="empty cart">
+                            </div>
+                            <!-- Cart has items -->
+                            <div class="non-empty">
+                                <header>Sản phẩm mới thêm</header>
+                                <div class="wrapper"></div>
+                                <div class="view-cart"><a href="cart.html" class="btn btn-primary"> Xem tất cả</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Account icon -->
+                    <a href="#" id="account-icon">
+                        <div class="acc-photo">
+                            <img class="user-photo" src="https://i.ibb.co/2vyNrMs/NQ.png" alt="">
+                            <p class="temp-user"><span class="iconify" data-icon="mdi:account-circle-outline"></span></p>
+                        </div>
+                    </a>
+                </div>
             </nav>
         </header>
         <!-- ==========Start layout container============= -->
         <div id="container">
-    
-                <h1>CHÍNH SÁCH BÁN HÀNG</h1>
-                 <hr class="policy">
-                 <div class="sub-title"><h3>Nguyên liệu</h3></div>
-                    <p class="content"> Website bánh ngọt yams.vn do công ty cổ phần văn phòng tiện ích Việt Nam thực hiện hoạt động và vận hành. Đối tượng phục vụ là tất cả khách hàng trên 63 tỉnh thành Việt Nam có nhu cầu mua hàng nhưng không có thời gian đến cửa hàng hoặc đặt trước để khi đến cửa hàng là đảm bảo có hàng.
-                    <br><br>
-                    Sản phẩm được kinh doanh tại http://yams.vn phải đáp ứng đầy đủ các quy định của pháp luật, không bán hàng nháy, hàng không rõ nguồn gốc.
-                    <br><br>
-                    Hoạt động mua bán tại eset.vn phải được thực hiện công khai, minh bạch, đảm bảo quyền lợi của người tiêu dùng. 
-                    </p>
-                    <div class="sub-title"><h3>Quy định về hình thức thanh toán</h3></div>
-                    <p class="content">
+            <h1>CHÍNH SÁCH BÁN HÀNG</h1>
+            <hr class="policy">
+            <div class="sub-title"><h3>Nguyên liệu</h3></div>
+            <p class="content"> Website bánh ngọt yams.vn do công ty cổ phần văn phòng tiện ích Việt Nam thực hiện hoạt động và vận hành. Đối tượng phục vụ là tất cả khách hàng trên 63 tỉnh thành Việt Nam có nhu cầu mua hàng nhưng không có thời gian đến cửa hàng hoặc đặt trước để khi đến cửa hàng là đảm bảo có hàng.
+            <br><br>
+            Sản phẩm được kinh doanh tại http://yams.vn phải đáp ứng đầy đủ các quy định của pháp luật, không bán hàng nháy, hàng không rõ nguồn gốc.
+            <br><br>
+            Hoạt động mua bán tại eset.vn phải được thực hiện công khai, minh bạch, đảm bảo quyền lợi của người tiêu dùng. 
+            </p>
+            <div class="sub-title"><h3>Quy định về hình thức thanh toán</h3></div>
+            <p class="content">
 
-                    Người mua và bên bán có thể tham khảo các phương thức thanh toán sau đây và lựa chọn áp dụng phương thức phù hợp:<br><br>
+            Người mua và bên bán có thể tham khảo các phương thức thanh toán sau đây và lựa chọn áp dụng phương thức phù hợp:<br><br>
 
-                   <b>Cách 1: Thanh toán trực tiếp (người mua nhận hàng tại địa chỉ bên bán):</b> <br><br>
+            <b>Cách 1: Thanh toán trực tiếp (người mua nhận hàng tại địa chỉ bên bán):</b> <br><br>
 
-                    - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.<br><br>
+            - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.<br><br>
 
-                    - Bước 2: Người mua đến địa chỉ bán hàng<br><br>
+            - Bước 2: Người mua đến địa chỉ bán hàng<br><br>
 
-                    - Bước 3: Người mua thanh toán bằng tiền mặt, thẻ ATM nội địa hoặc thẻ tín dụng và nhận hàng.<br><br>
+            - Bước 3: Người mua thanh toán bằng tiền mặt, thẻ ATM nội địa hoặc thẻ tín dụng và nhận hàng.<br><br>
 
-                    <b>Cách 2: Thanh toán sau (COD – giao hàng và thu tiền tận nơi):</b><br><br>
+            <b>Cách 2: Thanh toán sau (COD – giao hàng và thu tiền tận nơi):</b><br><br>
 
-                    - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.<br><br>
+            - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.<br><br>
 
-                    - Bước 2: Người mua xác thực đơn hàng (điện thoại, tin nhắn, email).<br><br>
+            - Bước 2: Người mua xác thực đơn hàng (điện thoại, tin nhắn, email).<br><br>
 
-                    - Bước 3: Người bán xác nhận thông tin Người mua.<br><br>
+            - Bước 3: Người bán xác nhận thông tin Người mua.<br><br>
 
-                    - Bước 4: Người bán chuyển hàng.<br><br>
+            - Bước 4: Người bán chuyển hàng.<br><br>
 
-                    - Bước 5: Người mua nhận hàng và thanh toán bằng tiền mặt, thẻ ATM nội địa hoặc thẻ tín dụng.<br><br>
+            - Bước 5: Người mua nhận hàng và thanh toán bằng tiền mặt, thẻ ATM nội địa hoặc thẻ tín dụng.<br><br>
 
-                    <b>Cách 3: Thanh toán chuyển khoản/ ví điện tử</b><br><br>
+            <b>Cách 3: Thanh toán chuyển khoản/ ví điện tử</b><br><br>
 
-                    - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.<br><br>
+            - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.<br><br>
 
-                    - Bước 2: Người mua xác thực đơn hàng (điện thoại, tin nhắn, email).<br><br>
+            - Bước 2: Người mua xác thực đơn hàng (điện thoại, tin nhắn, email).<br><br>
 
-                    - Bước 3: Người bán xác nhận thông tin Người mua.<br><br>
+            - Bước 3: Người bán xác nhận thông tin Người mua.<br><br>
 
-                    - Bước 4: Người mua thanh toán.<br><br>
+            - Bước 4: Người mua thanh toán.<br><br>
 
-                    - Bước 5: Người bán chuyển hàng.<br><br>
+            - Bước 5: Người bán chuyển hàng.<br><br>
 
-                    - Bước 6: Người mua nhận hàng.
+            - Bước 6: Người mua nhận hàng.
 
-                </p>
-                <div class="sub-title"><h3>Quy định về giao nhận vận chuyển</h3></div>
-                <p class="content">
-                    Yams thực hiện giao hàng trên khu vực thành phố Hồ Chí Minh, Bình Dương, Thủ Đức. Khi nhận đơn hàng từ người mua và sau khi đã xác thông tin mua hàng qua điện thoại, Yams sẽ tiến hành giao hàng theo yêu cầu của quý khách hàng
+            </p>
+            <div class="sub-title"><h3>Quy định về giao nhận vận chuyển</h3></div>
+            <p class="content"> Yams thực hiện giao hàng trên khu vực thành phố Hồ Chí Minh, Bình Dương, Thủ Đức. Khi nhận đơn hàng từ người mua và sau khi đã xác thông tin mua hàng qua điện thoại, Yams sẽ tiến hành giao hàng theo yêu cầu của quý khách hàng</p>
 
-                    </p>
-                    <div class="sub-title"><h3>Chính sách bảo mật thông tin khách hàng</h3></div>
-                    <p class="content">
-                    Thông tin cá nhân của thành viên trên yams.vn được yams.vn cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của yams.vn. Việc thu thập và sử dụng thông tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.<br><br>
+            <div class="sub-title"><h3>Chính sách bảo mật thông tin khách hàng</h3></div>
+            <p class="content">
+            Thông tin cá nhân của thành viên trên yams.vn được yams.vn cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của yams.vn. Việc thu thập và sử dụng thông tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.<br><br>
 
-                    Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của thành viên khi không có sự cho phép đồng ý từ thành viên.<br><br>
+            Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của thành viên khi không có sự cho phép đồng ý từ thành viên.<br><br>
 
-                    Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân thành viên, yams.vn sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho thành viên được biết.
-                    <br><br>
-                    Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của Thành viên bao gồm thông tin hóa đơn kế toán chứng từ số hóa tại khu vực dữ liệu trung tâm an toàn cấp 1 của yams.vn.<br><br>
+            Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân thành viên, yams.vn sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho thành viên được biết.
+            <br><br>
+            Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của Thành viên bao gồm thông tin hóa đơn kế toán chứng từ số hóa tại khu vực dữ liệu trung tâm an toàn cấp 1 của yams.vn.<br><br>
 
-                    Ban quản lý yams.vn yêu cầu các cá nhân khi đăng ký/mua hàng là thành viên, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, email, số chứng minh nhân dân, điện thoại, số tài khoản, số thẻ thanh toán …., và chịu trách nhiệm về tính pháp lý của những thông tin trên. Ban quản lý không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi của Thành viên đó nếu xét thấy tất cả thông tin cá nhân của thành viên đó cung cấp khi đăng ký ban đầu là không chính xác.
-</p>
-
+            Ban quản lý yams.vn yêu cầu các cá nhân khi đăng ký/mua hàng là thành viên, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, email, số chứng minh nhân dân, điện thoại, số tài khoản, số thẻ thanh toán …., và chịu trách nhiệm về tính pháp lý của những thông tin trên. Ban quản lý không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi của Thành viên đó nếu xét thấy tất cả thông tin cá nhân của thành viên đó cung cấp khi đăng ký ban đầu là không chính xác.
+            </p>
        </div>
-        <!-- ===========Start Footer============ -->
-        <footer>
+           <!-- ===========Start Footer============ -->
+           <footer>
             <div class="wrapper">
                 <div class="big-logo">
                     <a href="index.html" class="logo"><img src="./images/logo/Logo_NoBg_White.png" alt="logo"></a>
@@ -114,6 +178,7 @@
                         <h3>Về chúng tôi</h3>
                         <a href="aboutus.html" class="item">Về chúng tôi</a>
                         <a href="policy.html" class="item">Chính sách</a>
+                        <a href="contact.html" class="item">Liên hệ</a>
                     </div>
                     <div class="contact">
                         <h3>Liên Hệ</h3>
