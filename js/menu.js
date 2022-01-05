@@ -3,7 +3,7 @@
 // Scroll reveal effect for #container
     function ScrollEvent(){
         ScrollReveal({
-            reset:true,
+            reset: false,
             distance: '60px',
             duration: 2500, 
             delay:50
