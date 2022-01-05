@@ -1,5 +1,5 @@
-header nav .menu li:nth-last-child(2) a{
-    color: var(--primary-color);
+#blog-item{
+  color: var(--primary-color);
 }
 
 #container{
@@ -15,6 +15,7 @@ section{
   .title{
       font-size: 4.5rem;
   }
+
 }
 
 @media (max-width: 428px){
@@ -163,6 +164,7 @@ section{
   .article-content{
     margin-bottom: 1em;
     font-size: 1.2rem;
+    text-align: justify;
     clear: both;
     }
   .read-more{
@@ -250,8 +252,9 @@ section{
 /* iPad */
 @media (min-width: 429px) and (max-width: 768px){
  #banners{
-  height: 40vh;
+  height: 30vh;
 }
+#banners .banner-text{right: -40%;}
 .blog-sidebar{
   width: 100%;
   float: left;
@@ -268,7 +271,7 @@ section{
  }
  .media-box img{
    width: 100%;
-   height: 50vh;
+   height: 45vh;
  }
 }
 /* Phone */
@@ -276,6 +279,7 @@ section{
   #banners{
     height: 30vh;
   }
+  #banners .banner-text{right: -40%;}
   .blog-sidebar{
     width: 100%;
     float: left;

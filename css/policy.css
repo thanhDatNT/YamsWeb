@@ -12,10 +12,11 @@ h1{
     font-family: 'Nunito', sans-serif;
 
 }
- hr{
+#container hr{
     width:35%; opacity: 1;
     border: 0.5px solid var(--primary-color);
     margin-top:  2vh;
+    margin-bottom: 4vh;
 }
 .content{
     font-size: 1.8rem;
@@ -31,7 +32,7 @@ ul.item > li:before{
 }
 
  
-@media  (max-width: 1366px){
+/* @media  (max-width: 1366px){
     #container h1{font-size: 2.8rem;line-height: 3rem;  text-align: center;}
     #container h3{  font-size: 2.8rem;
         line-height: 3.5rem;
@@ -39,5 +40,38 @@ ul.item > li:before{
   
    }
    #container hr{ display: none;} 
+} */
+
+
+@media (max-width: 428px){
+    #container h1{font-size: 2.4rem;line-height: 3rem;  text-align: center;}
+    #container h3{  font-size: 2.8rem;
+        line-height: 3.5rem;
+        text-align: center;
+  
+   }
+#container hr{
+    width:70%; opacity: 1;
+    border: 0.5px solid var(--primary-color);
+    margin-top:  2vh;
+    margin-bottom: 2vh;
+    margin-left: 6vh;
 }
+  }
+  
+  @media (min-width: 429px) and (max-width: 768px){
+    #container h1{font-size: 2.8rem;line-height: 3rem;  text-align: left;}
+    #container h3{  font-size: 2.8rem;
+        line-height: 3.5rem;
+        text-align: left;
+    }
+  #container hr{
+    width:35%; opacity: 1;
+    border: 0.5px solid var(--primary-color);
+    margin-top:  2vh;
+    margin-bottom: 2vh;
+}
+  
+   }
+  
 

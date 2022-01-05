@@ -1,6 +1,6 @@
-header nav .menu li:nth-last-child(2) a{
+#blog-item{
     color: var(--primary-color);
-}
+  }
 
 #sample-post{
     width: 100%;
@@ -69,6 +69,7 @@ header nav .menu li:nth-last-child(2) a{
 #sample-post .post-section .steps{
     list-style-type: decimal;
     font-size: 1.4rem;
+    text-align: justify;
     margin-left:  1.6rem;
 }
 #sample-post .post-section .ingredients .item{
@@ -201,6 +202,7 @@ ul.item > li:before{
     }
     #sample-post .post-section .steps{
         font-size: 1rem;
+        text-align: justify;
     }
     .ending{
         font-size: 1rem;
