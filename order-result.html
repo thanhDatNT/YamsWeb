@@ -130,7 +130,7 @@
         </h3>
         <div class="clock">
             <div class="circle-bg">
-                <h3 id="countdown">5</h3>
+                <h3 id="countdown">3</h3>
             </div>
         </div>
         <div id="notify">
@@ -145,14 +145,14 @@
     </div>
     <script>
         // Config Countdown timer
-        let time= 5;
+        let time= 3;
         const countDown= document.getElementById('countdown');
         
         setInterval(updateCountDown, 1000)
         function updateCountDown(){
             countDown.innerHTML = time;
             if(time == 0){
-                time = 5;
+                time = 3;
                 window.location.href = 'index.html'
             }
             time--;
@@ -161,7 +161,7 @@
         // Config notification
         setTimeout(() => {
             document.getElementById('notify').style.opacity= 0
-        }, 3000)
+        }, 2000)
         document.querySelector('#notify button').onclick= function(){
             document.getElementById('notify').style.opacity= 0
         }

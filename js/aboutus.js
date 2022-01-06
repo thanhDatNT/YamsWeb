@@ -1,5 +1,5 @@
 var memberList = []
-
+// Load data form members.xml
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
@@ -10,6 +10,7 @@ xhttp.onreadystatechange = function () {
 xhttp.open("GET", "../data/members.xml", true);
 xhttp.send();
 
+// Push data to member list array
 function changeToListData(xml) {
   var data = [];
   var xmlDoc = xml.responseXML;
@@ -28,6 +29,7 @@ function changeToListData(xml) {
   return data
 }
 
+// Update UI
 function display(list){
   var members = list.map(member => {
     console.log(member);
@@ -55,10 +57,10 @@ function display(list){
       duration: 2500, 
       delay:400
   })
-  ScrollReveal().reveal('.main-title, #hightlight .content-box,#story .title, #story .image-box, #material .hr, #material .content .text, #policy .title, #policy .image-box', { delay: 400, origin:'left' });
+  ScrollReveal().reveal('.main-title, #hightlight .content-box,#story .title, #story .image-box, #material .hr, #material .content .text, #policy .title, #policy .image-box', { delay: 200, origin:'left' });
 
-  ScrollReveal().reveal('#banners .description, #hightlight .image-box, #story .hr, #founder .title, #story .content .text ,#material .title, #material .image-box,  #policy .hr, #policy .content .text', { delay: 300, origin:'right' });
+  ScrollReveal().reveal('#banners .description, #hightlight .image-box, #story .hr, #story .content .text ,#material .title, #material .image-box,  #policy .hr, #policy .content .text', { delay: 200, origin:'right' });
 
-  ScrollReveal().reveal('#founder .container .item, #material .icon .item', { delay: 200, origin:'bottom', interval: 200});
+  ScrollReveal().reveal('#founder .container .item, #material .icon .item', { delay: 100, origin:'bottom', interval: 200});
 
 })()

@@ -83,4 +83,5 @@
     SlideShow();
     ScrollEvent();
     ShowPost();
+    window.onload();
 })()

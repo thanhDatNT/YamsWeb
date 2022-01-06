@@ -234,6 +234,36 @@
             <div class="clear"></div>
         </div>
     </div>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104829868153851");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- ===========Start Footer============ -->
     <footer>
         <div class="wrapper">
@@ -246,6 +276,7 @@
                     <h3>Về chúng tôi</h3>
                     <a href="aboutus.html" class="item">Về chúng tôi</a>
                     <a href="policy.html" class="item">Chính sách</a>
+                    <a href="contact.html" class="item">Liên hệ</a>
                 </div>
                 <div class="contact">
                     <h3>Liên Hệ</h3>
@@ -255,7 +286,7 @@
                             <a href="#">Số 669 Quốc lộ 1K, Khu phố 3, Phường Linh Xuân, Thủ Đức, TP. HCM</a></li>
                         <li>
                             <div class="icon"><span class="iconify" data-icon="fluent:mail-48-filled"></span></div>
-                            <a href="mailto:yamsbakery@gmail.com">yamsbakery@gmail.com</a></li>
+                            <a href="mailto:yams19411@gmail.com">yams19411@gmail.com</a></li>
                         <li>
                             <div class="icon"><span class="iconify" data-icon="carbon:phone-voice-filled"></span></div>
                             <a href="tel:02837244555">(028) 3 7244 555</a></li>
@@ -264,15 +295,15 @@
                 <div class="follow">
                     <h3>Theo dõi chúng tôi</h3>
                     <div class="media">
-                        <a href="#"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
-                        <a href="#"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
-                        <a href="#"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
+                        <a href="https://www.facebook.com/youaremysweeties"><span class="iconify" data-icon="ant-design:facebook-filled"></span></a>
+                        <a href="https://www.instagram.com/yams_bakery/"><span class="iconify" data-icon="ant-design:instagram-filled"></span></a>
+                        <a href="www.pinterest.com/yamsweb"><span class="iconify" data-icon="fa-brands:pinterest-square"></span></a>
                     </div>
                 </div>
             </div>
             <div class="clear"></div>
             <hr>
-            <p class="copyright">© 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
+            <p class="copyright">&copy; 2021 Yams Bakery. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
     <!-- Script -->

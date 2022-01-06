@@ -46,7 +46,10 @@ function updateImageDisplay() {
     }
 }
 
+// Click "Đánh giá" button
+
 $('#cus-evaluate .submit').onclick = function(){
+  // Get current time
   var today= new Date();
   var dd= String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -54,8 +57,11 @@ $('#cus-evaluate .submit').onclick = function(){
   var hh = today.getHours();
   var m = today.getMinutes();
   var time = hh + ":"+ m + ", " + dd +"-" + mm + "-"+ yyyy;
+
+  // Get user photo and comment
   var avatar = $('#account-icon img').src;
   var comment = $('#cus-evaluate .text').value;
+  // When user type comment and upload product image
   if(comment != '' && preview.hasChildNodes()){
     var imgSource = $('#cus-evaluate .image img').src;
     var node = `<div class="item">
