@@ -617,7 +617,7 @@ function saveCart(cart) {
 window.onload = function(){
   var urlParams = window.location.href;
   if(urlParams.toString().includes('index.html')){
-    showBestSeller();
+    // showBestSeller();
   }
   else if(urlParams.toString().includes('product-detail.html')){
     showProductDetail()
